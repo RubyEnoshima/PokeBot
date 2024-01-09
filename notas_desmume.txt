@@ -1,14 +1,3 @@
---PIDs--
-B706C5BD Kingdra
-C49E4613 Weavile
-8167C619 Mismagius
-F6F5E15B Ho-Oh
-
-D85F6ABB Doduo salvaje
-0FB759C3 Sandslash salvaje
-23E566D8 Ponyta salvaje
-9AE65B4A Cubone salvaje
-
 --Adreces--
 022AA250 - Doduo
 022AA284 - Sandslash
@@ -26,6 +15,10 @@ Nota importante: en USA he dejado un save state que da la casualidad que la dire
 
 Pointer: 226f234, (pointer + 38540 da la dirección que hemos de mirar para el pid)
 
-POINTER ESPAÑOL: 0x0211188C
+**POINTER ESPAÑOL**: 0x0211188C
+
 Para otros pointers:
 https://tasvideos.org/Userfiles/Info/45209523159510745
+
+Los offsets sirven con esta estructura:
+https://projectpokemon.org/home/forums/topic/55238-structure-of-pok%C3%A9mon-in-ram-from-generation-4-games/

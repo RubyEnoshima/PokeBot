@@ -1,4 +1,5 @@
-
+-- RubyBot --
+require "pokemondata"
 
 mdword = memory.readdwordunsigned
 mword = memory.readword
@@ -64,7 +65,6 @@ elseif mword(0x02FFFE08) == 0x5353 then
 end
 
 idsPointer = 0x021D1768 + seedsOffset
-print(tohex(seedsOffset))
 ids = mdword(mdword(idsPointer) + 0x84)
 sid = math.floor(ids / 0x10000)
 tid = ids % 0x10000
@@ -82,8 +82,10 @@ print("SID: "..sid)
 
 -- pointer = memory.readdword(0x0211186C) -- USA
 pointer = memory.readdword(0x0211188C) -- ESP
-pokepointer = pointer + 0x56EB4 -- primer byte del pokemon salvaje
-PIDaddr = pointer + 0x56F1C-- offset para el pid generado: 0x38540
+offsetPokeSalvaje = 0x56EB4
+pokepointer = pointer + offsetPokeSalvaje -- primer byte del pokemon salvaje
+
+PIDaddr = pokepointer + 0x68--pointer + 0x56F1C-- offset para el pid generado: 0x38540
 
 function xor(a,b)
     local result = 0
@@ -111,18 +113,23 @@ end
 
 
 function main()
-    pid = memory.readdword(PIDaddr)
-    gui.text(2, 1, esShiny())
-    gui.text(2, 11, pid)
-    gui.text(2, 21, tohex(pid))
+    if memory.readword(0x021DA704) == 16384 then
+        pid = memory.readdword(PIDaddr)
+        res = "No es shiny"
+        if esShiny() then res = "Es shiny!" end
+        gui.text(120, 2, res)
+        gui.text(120, 12, table["pokemon"][memory.readbyte(pokepointer)]..": "..string.format("%x",pid))
+
+    end 
 end
 
-print(string.format("%x",pokepointer))
-print("HP: "..memory.readword(pointer+0x56F00))
+print("Pointer poke salvaje: "..string.format("%x",pokepointer))
+print("Pokemon salvaje: "..table["pokemon"][memory.readbyte(pokepointer)])
+print("HP: "..memory.readword(pokepointer+0x4C))
+print("Move 1: "..table["move"][memory.readword(pokepointer+0x0C)])
+-- print("Move 2: "..table["move"][memory.readword(pokepointer+0x0E)])
+-- print("Move 3: "..table["move"][memory.readword(pokepointer+0x10)])
+-- print("Move 4: "..table["move"][memory.readword(pokepointer+0x12)])
+print("Hab: "..table["ability"][mbyte(pokepointer+0x27)])
+
 gui.register(main)
-
-
--- function main()
---     gui.text(0, 150, string.format("Frame: %d", frame))
--- end
--- emu.reset()
