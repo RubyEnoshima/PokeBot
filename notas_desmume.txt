@@ -1,0 +1,31 @@
+--PIDs--
+B706C5BD Kingdra
+C49E4613 Weavile
+8167C619 Mismagius
+F6F5E15B Ho-Oh
+
+D85F6ABB Doduo salvaje
+0FB759C3 Sandslash salvaje
+23E566D8 Ponyta salvaje
+9AE65B4A Cubone salvaje
+
+--Adreces--
+022AA250 - Doduo
+022AA284 - Sandslash
+022AA274 - Ponyta
+022AA31C - Cubone
+
+Entre las de arriba y las de abajo hay 2ADC de diferencia (170 bytes) y siempre son 170.
+
+022A7774 - Doduo (state 1)
+022A77A8 - Sandslash (state 8)
+022A7798 - Ponyta (state 5)
+022A7840 - Cubone (state 3)
+
+Nota importante: en USA he dejado un save state que da la casualidad que la dirección del doduo y del pidgey son iguales.
+
+Pointer: 226f234, (pointer + 38540 da la dirección que hemos de mirar para el pid)
+
+POINTER ESPAÑOL: 0x0211188C
+Para otros pointers:
+https://tasvideos.org/Userfiles/Info/45209523159510745
