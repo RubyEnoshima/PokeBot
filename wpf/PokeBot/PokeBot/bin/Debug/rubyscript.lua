@@ -2,10 +2,18 @@
 require "pokemondata"
 json = require "json"
 
+local clock = os.clock
+function sleep(n)-- seconds
+local t0 = clock()
+while clock() - t0 <= n do emu.frameadvance() end
+end
+
 mdword = memory.readdwordunsigned
 mword = memory.readword
 mbyte = memory.readbyte
 rshift = bit.rshift
+
+mode = 1 -- 0: nada; 1: spin; 2: static (Suicune, Lugia...)
 
 function tohex(a)
     return string.format("%x", a)
@@ -81,7 +89,7 @@ print("Idioma: "..language)
 print("TID: "..tid)
 print("SID: "..sid)
 
-
+offsetPokeSalvaje = 0x56EB4
 function resetPointer(newpointer)
     pointer = newpointer
     pokepointer = pointer + offsetPokeSalvaje -- primer byte del pokemon salvaje
@@ -147,13 +155,60 @@ function crearPoke(pid)
     return pokemon
 end
 
+function enCombate()
+    return memory.readword(0x021DA704) == 16384
+end
+
+orden = 1
+alt = 0
+function actuar(pid)
+    joyset = {}
+
+    if mode == 1 then
+        if enCombate()==false then 
+            if orden == 1 then
+                joyset.up = true
+                orden = 2
+            elseif orden == 2 then
+                joyset.right = true
+                orden = 3
+            elseif orden == 3 then
+                joyset.down = true
+                orden = 4
+            else -- 4
+                joyset.left = true
+                orden = 1
+            end
+        else
+            if esShiny(pid) then
+                mode = 0
+            else
+                gui.text(157,-170,"No es shiny","black","white")
+                if alt <= 4 then 
+                    stylus.set({x = 125, y = 170, touch = true})
+                    gui.text(125,170,"+")
+            
+                else 
+                    stylus.set({x = 125, y = 170, touch = false}) 
+
+                end
+                alt = alt + 1
+                if alt == 10 then alt = 0 end
+            end
+            orden = 1
+        end
+        joypad.set(joyset)
+    end
+
+end
+
 antPID = -1
 function main()
     newpointer = memory.readdword(0x0211188C) -- por si acaso reseteamos el emulador
     if newpointer ~= pointer then
         resetPointer(newpointer)
     end
-    if memory.readword(0x021DA704) == 16384 then -- si estamos en combate
+    if enCombate() then -- si estamos en combate
         pid = memory.readdword(PIDaddr)
         if pid ~= antPID then
             poke = crearPoke(pid)
@@ -166,11 +221,13 @@ function main()
         end
 
     end 
+
+    actuar(pid)
+    
 end
 
 -- pointer = memory.readdword(0x0211186C) -- USA
 pointer = memory.readdword(0x0211188C) -- ESP
-offsetPokeSalvaje = 0x56EB4
 resetPointer(pointer)
 
 gui.register(main)
