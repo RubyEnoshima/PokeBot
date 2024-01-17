@@ -13,7 +13,7 @@ mword = memory.readword
 mbyte = memory.readbyte
 rshift = bit.rshift
 
-mode = 1 -- 0: nada; 1: spin; 2: static (Suicune, Lugia...)
+mode = 2 -- 0: nada; 1: spin; 2: static (Suicune, Lugia...)
 
 function tohex(a)
     return string.format("%x", a)
@@ -159,26 +159,25 @@ function enCombate()
     return memory.readword(0x021DA704) == 16384
 end
 
-orden = 1
+antmode = mode
+orden = 0
 alt = 0
-function actuar(pid)
+function actuar(pid) -- Actúa acorde al mode actual
     joyset = {}
 
-    if mode == 1 then
+    if mode == 1 then -- Poke salvaje
         if enCombate()==false then 
-            if orden == 1 then
+            if orden >= 1 and orden < 4 then
                 joyset.up = true
-                orden = 2
-            elseif orden == 2 then
+            elseif orden >= 4 and orden < 7 then
                 joyset.right = true
-                orden = 3
-            elseif orden == 3 then
+            elseif orden >= 7 and orden < 10 then
                 joyset.down = true
-                orden = 4
-            else -- 4
+            elseif orden >= 10 and orden < 12 then
                 joyset.left = true
-                orden = 1
             end
+            orden = orden + 1
+            if orden == 12 then orden = 0 end -- para que tenga tiempo para pensar
         else
             if esShiny(pid) then
                 mode = 0
@@ -195,11 +194,33 @@ function actuar(pid)
                 alt = alt + 1
                 if alt == 10 then alt = 0 end
             end
-            orden = 1
+            orden = 0
+            joyset.up = false
+            joyset.down = false
+            joyset.right = false
+            joyset.left = false
         end
-        joypad.set(joyset)
+    elseif mode == 2 then -- Poke estático
+        if enCombate()==false then 
+            if orden >= 0 and orden <= 2 then
+                joyset.up = true
+            elseif orden > 2 and orden <= 4 then
+                joyset.A = true
+            end
+            orden = orden + 1
+            if orden == 5 then orden = 0 end
+        else
+            if esShiny(pid) then
+                mode = 0
+            else
+                emu.reset()
+            end
+        end
+    elseif enCombate()==false then -- volver al modo anterior si hemos salido del combate y era shiny (mode==0)
+        mode = antmode
     end
-
+    
+    joypad.set(joyset)
 end
 
 antPID = -1
@@ -230,4 +251,4 @@ end
 pointer = memory.readdword(0x0211188C) -- ESP
 resetPointer(pointer)
 
-gui.register(main)
+emu.registerbefore(main)

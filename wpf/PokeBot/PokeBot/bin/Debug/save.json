@@ -1,0 +1,111 @@
+{"pokemon":[{
+  "movimientos": [
+    240,
+    16,
+    62,
+    54
+  ],
+  "nombre": "Suicune",
+  "pid": "938735e7",
+  "habilidad": 46,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 18,
+    "def": 25,
+    "speed": 4,
+    "spatt": 25,
+    "att": 0,
+    "hp": 8
+  },
+  "nivel": 40,
+  "id": 245,
+  "genero": 2
+},{
+  "movimientos": [
+    240,
+    16,
+    62,
+    54
+  ],
+  "nombre": "Suicune",
+  "pid": "74940b96",
+  "habilidad": 46,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 18,
+    "def": 12,
+    "speed": 14,
+    "spatt": 30,
+    "att": 6,
+    "hp": 28
+  },
+  "nivel": 40,
+  "id": 245,
+  "genero": 2
+},{
+  "movimientos": [
+    240,
+    16,
+    62,
+    54
+  ],
+  "nombre": "Suicune",
+  "pid": "f2f8fa3a",
+  "habilidad": 46,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 22,
+    "def": 3,
+    "speed": 22,
+    "spatt": 20,
+    "att": 6,
+    "hp": 4
+  },
+  "nivel": 40,
+  "id": 245,
+  "genero": 2
+},{
+  "movimientos": [
+    240,
+    16,
+    62,
+    54
+  ],
+  "nombre": "Suicune",
+  "pid": "8e402c20",
+  "habilidad": 46,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 19,
+    "def": 3,
+    "speed": 21,
+    "spatt": 12,
+    "att": 0,
+    "hp": 11
+  },
+  "nivel": 40,
+  "id": 245,
+  "genero": 2
+},{
+  "movimientos": [
+    240,
+    16,
+    62,
+    54
+  ],
+  "nombre": "Suicune",
+  "pid": "fecb4a9e",
+  "habilidad": 46,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 14,
+    "def": 27,
+    "speed": 9,
+    "spatt": 26,
+    "att": 30,
+    "hp": 30
+  },
+  "nivel": 40,
+  "id": 245,
+  "genero": 2
+}], "encuentros":1802, "mode":0}

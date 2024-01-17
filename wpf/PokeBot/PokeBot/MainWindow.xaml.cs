@@ -21,19 +21,28 @@ namespace PokeBot
 {
     public partial class MainWindow : Window
     {
-        private string archivo_json = "poke.json";
+        private const int MAX_POKE = 5;
+        private const string archivo_json = "poke.json";
+        private const string archivo_guardado = "save.json";
         private Thread thread;
+
         private string antPID = "";
         private List<Pokemon> pokemons = new List<Pokemon>();
+        private int encuentros = 0;
+        private int mode = 0; // 0: parado, 1: salvaje, 2: legendario
+
         public MainWindow()
         {
             InitializeComponent();
             thread = new Thread(ActualizarDesdeArchivo);
             thread.Start();
+            File.WriteAllText(archivo_json,string.Empty);
+            Cargar();
         }
 
         private void Cerrar(object sender, CancelEventArgs e)
         {
+            Guardar(sender, null);
             thread.Abort();
         }
 
@@ -46,9 +55,13 @@ namespace PokeBot
                     if (File.Exists(archivo_json))
                     {
                         string data = File.ReadAllText(archivo_json);
-                        Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(data);
+                        if(data != "")
+                        {
+                            Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(data);
 
-                        Dispatcher.Invoke(() => AgregarPokemon(pokemonData));
+                            Dispatcher.Invoke(() => AgregarPokemon(pokemonData));
+
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -56,7 +69,7 @@ namespace PokeBot
                     MessageBox.Show($"Error al leer el archivo: {ex.Message}");
                 }
 
-                Thread.Sleep(2000);
+                Thread.Sleep(1000);
             }
         }
 
@@ -66,7 +79,9 @@ namespace PokeBot
 
             antPID = pokemon.pid;
             pokemons.Insert(0, pokemon);
-            if (pokemons.Count > 5) pokemons.RemoveAt(pokemons.Count - 1);
+            if (pokemons.Count > MAX_POKE) pokemons.RemoveAt(pokemons.Count - 1);
+            encuentros++;
+            Encuentros.Content = encuentros;
 
             for(int i = 0; i < pokemons.Count; i++)
             {
@@ -88,42 +103,124 @@ namespace PokeBot
             ((Label)Lista.FindName("TOTAL" + i)).Content = pokemon.ivs.hp + pokemon.ivs.att + pokemon.ivs.def + pokemon.ivs.spatt + pokemon.ivs.spdef + pokemon.ivs.speed;
 
             // Sprite
-            string genero = "";
-            string shiny = "";
-            if (pokemon.genero == 1) genero = "female\\";
-            if (pokemon.shiny == 1) shiny = "shiny\\";
-            string ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + genero + $"{pokemon.id}.png";
+            if (pokemon.id != 0)
+            {
+                string genero = "";
+                string shiny = "";
+                if (pokemon.genero == 1) genero = "female\\";
+                if (pokemon.shiny == 1) shiny = "shiny\\";
+                string ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + genero + $"{pokemon.id}.png";
 
-            if (pokemon.genero == 1 && !File.Exists(ruta)) ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + $"{pokemon.id}.png";
-            BitmapImage nuevaImagen = new BitmapImage();
-            nuevaImagen.BeginInit();
-            nuevaImagen.UriSource = new Uri(ruta, UriKind.RelativeOrAbsolute);
-            nuevaImagen.EndInit();
-            ((Image)Lista.FindName("Sprite" + i)).Source = nuevaImagen;
+                if (pokemon.genero == 1 && !File.Exists(ruta)) ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + $"{pokemon.id}.png";
+                BitmapImage nuevaImagen = new BitmapImage();
+                nuevaImagen.BeginInit();
+                nuevaImagen.UriSource = new Uri(ruta, UriKind.RelativeOrAbsolute);
+                nuevaImagen.EndInit();
+                ((Image)Lista.FindName("Sprite" + i)).Source = nuevaImagen;
+            }
         }
 
         public class Pokemon
         {
             public int[] movimientos { get; set; }
-            public string nombre { get; set; }
-            public string pid { get; set; }
-            public int habilidad { get; set; }
-            public int shiny { get; set; }
-            public IVs ivs { get; set; }
-            public int nivel { get; set; }
-            public int id { get; set; }
-            public int genero { get; set; }
+            public string nombre { get; set; } = "";
+            public string pid { get; set; } = "";
+            public int habilidad { get; set; } = 0;
+            public int shiny { get; set; } = 0;
+            public IVs ivs { get; set; } = new IVs();
+            public int nivel { get; set; } = 0;
+            public int id { get; set; } = 0;
+            public int genero { get; set; } = 0;
+
+            public string toJSON()
+            {
+                return JsonConvert.SerializeObject(this, Formatting.Indented);
+            }
         }
 
         public class IVs
         {
-            public int spdef { get; set; }
-            public int def { get; set; }
-            public int speed { get; set; }
-            public int spatt { get; set; }
-            public int att { get; set; }
-            public int hp { get; set; }
+            public int spdef { get; set; } = 0;
+            public int def { get; set; } = 0;
+            public int speed { get; set; } = 0;
+            public int spatt { get; set; } = 0;
+            public int att { get; set; } = 0;
+            public int hp { get; set; } = 0;
         }
 
+        public class Guardado
+        {
+            public Pokemon[] pokemon{ get; set; }
+            public int encuentros { get; set; } = 0;
+            public int mode { get; set; } = 0;
+        }
+
+        private void Cargar()
+        {
+            if(File.Exists(archivo_guardado))
+            {
+                string data = File.ReadAllText(archivo_guardado);
+                Guardado guardado = JsonConvert.DeserializeObject<Guardado>(data);
+                if(guardado != null)
+                {
+                    mode = guardado.mode;
+                    for (int i = 0; i < guardado.pokemon.Count(); i++)
+                    {
+                        //Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(guardado.pokemon[i]);
+                        AgregarPokemon(guardado.pokemon[i]);
+                    }
+                    encuentros = guardado.encuentros;
+                    Encuentros.Content = encuentros;
+                }
+            }
+        }
+
+        // Guarda el estado actual: el historial de pokes, los encuentros, el modo, el target...
+        private void Guardar(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Guardando....");
+            string pokemonsJSON = "{\"pokemon\":[";
+            for (int i = 0; i < pokemons.Count; i++)
+            {
+                pokemonsJSON += pokemons[i].toJSON();
+                if(i < pokemons.Count-1) pokemonsJSON += ",";
+            }
+            pokemonsJSON += "], \"encuentros\":"+encuentros+", \"mode\":"+mode+"}";
+            File.WriteAllText(archivo_guardado, pokemonsJSON);
+            Console.WriteLine("Guardado!");
+        }
+
+        private void GuardarYSalir(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Guardando....");
+            string pokemonsJSON = "{\"pokemon\":[";
+            for (int i = 0; i < pokemons.Count; i++)
+            {
+                pokemonsJSON += pokemons[i].toJSON();
+                if (i < pokemons.Count - 1) pokemonsJSON += ",";
+            }
+            pokemonsJSON += "], \"encuentros\":" + encuentros + ", \"mode\":" + mode + "}";
+            File.WriteAllText(archivo_guardado, pokemonsJSON);
+            Console.WriteLine("Guardado!");
+            return;
+        }
+
+        // Limpia el programa para empezar de 0
+        private void Reset(object sender, RoutedEventArgs e)
+        {
+            pokemons.Clear();
+            for (int i = 0; i < MAX_POKE; i++)
+            {
+                ActualizarUI(new Pokemon(), i);
+            }
+            File.WriteAllText(archivo_json, string.Empty);
+        }
+
+        private void Salir(object sender, RoutedEventArgs e)
+        {
+            Cerrar(sender, null);
+            Close();
+
+        }
     }
 }
