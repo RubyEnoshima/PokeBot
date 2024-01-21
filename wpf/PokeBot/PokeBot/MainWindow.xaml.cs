@@ -16,6 +16,9 @@ using System.Windows.Shapes;
 using System.IO;
 using System.Threading;
 using Newtonsoft.Json;
+using static PokeBot.MainWindow;
+using System.Xml.Linq;
+using System.Security.RightsManagement;
 
 namespace PokeBot
 {
@@ -24,52 +27,78 @@ namespace PokeBot
         private const int MAX_POKE = 5;
         private const string archivo_json = "poke.json";
         private const string archivo_guardado = "save.json";
+        private const string archivo_config = "config.json";
+        private const string archivo_bot = "bot.json";
         private Thread thread;
 
         private string antPID = "";
         private List<Pokemon> pokemons = new List<Pokemon>();
-        private int encuentros = 0;
-        private int mode = 0; // 0: parado, 1: salvaje, 2: legendario
+
+        private Guardado actual = new Guardado();
+
+        private Config config = new Config();
+
+        private Dictionary<string,BitmapImage> imgs = new Dictionary<string, BitmapImage>();
 
         public MainWindow()
         {
             InitializeComponent();
+            CargarImagenes();
+            CargarConfig();
+            Cargar();
             thread = new Thread(ActualizarDesdeArchivo);
             thread.Start();
             File.WriteAllText(archivo_json,string.Empty);
-            Cargar();
         }
 
-        private void Cerrar(object sender, CancelEventArgs e)
+        private void CargarImagenes()
         {
-            Guardar(sender, null);
-            thread.Abort();
+            string[] imagenes = { "play", "stop", "stop_big", "play_big" };
+            foreach (string imagen in imagenes)
+            {
+                BitmapImage nuevaImagen = new BitmapImage();
+                nuevaImagen.BeginInit();
+                nuevaImagen.UriSource = new Uri("Imgs/"+imagen+".png", UriKind.RelativeOrAbsolute);
+                nuevaImagen.EndInit();
+                imgs.Add(imagen, nuevaImagen);
+            }
+
         }
 
         private void ActualizarDesdeArchivo()
         {
-            while (true)
+            using (Mutex mutex = new Mutex(false, "MutexParaArchivo"))
             {
-                try
+                while (true)
                 {
-                    if (File.Exists(archivo_json))
+                    try
                     {
-                        string data = File.ReadAllText(archivo_json);
-                        if(data != "")
+                        mutex.WaitOne();
+                        if (File.Exists(archivo_json))
                         {
-                            Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(data);
+                            string data = File.ReadAllText(archivo_json);
+                            if(data != "")
+                            {
+                                Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(data);
 
-                            Dispatcher.Invoke(() => AgregarPokemon(pokemonData));
+                                Dispatcher.Invoke(() => AgregarPokemon(pokemonData));
 
+                            }
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error al leer el archivo: {ex.Message}");
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Error al leer el archivo: {ex.Message}");
+                    }
+                    finally
+                    {
+                        // Liberar el bloqueo después de la lectura
+                        mutex.ReleaseMutex();
+                    }
+
+                    Thread.Sleep(500);
                 }
 
-                Thread.Sleep(1000);
             }
         }
 
@@ -80,13 +109,23 @@ namespace PokeBot
             antPID = pokemon.pid;
             pokemons.Insert(0, pokemon);
             if (pokemons.Count > MAX_POKE) pokemons.RemoveAt(pokemons.Count - 1);
-            encuentros++;
-            Encuentros.Content = encuentros;
+            actual.encuentros++;
+            Encuentros.Content = actual.encuentros;
+            if (pokemon.sv < actual.sv_minimo || actual.sv_minimo == -1)
+            {
+                actual.sv_minimo = pokemon.sv;
+                SV_MIN.Content = actual.sv_minimo;
+            }
 
             for(int i = 0; i < pokemons.Count; i++)
             {
                 ActualizarUI(pokemons[i],i);
             }
+        }
+
+        private void CambiarColorIV(int ivs, Label label)
+        {
+            if (ivs == 31) label.Foreground = Brushes.Gold;
         }
 
         private void ActualizarUI(Pokemon pokemon, int i)
@@ -102,6 +141,8 @@ namespace PokeBot
             ((Label)Lista.FindName("SPEED" + i)).Content = pokemon.ivs.speed;
             ((Label)Lista.FindName("TOTAL" + i)).Content = pokemon.ivs.hp + pokemon.ivs.att + pokemon.ivs.def + pokemon.ivs.spatt + pokemon.ivs.spdef + pokemon.ivs.speed;
 
+            ((Label)Lista.FindName("SV" + i)).Content = pokemon.sv;
+
             // Sprite
             if (pokemon.id != 0)
             {
@@ -112,12 +153,168 @@ namespace PokeBot
                 string ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + genero + $"{pokemon.id}.png";
 
                 if (pokemon.genero == 1 && !File.Exists(ruta)) ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + $"{pokemon.id}.png";
-                BitmapImage nuevaImagen = new BitmapImage();
-                nuevaImagen.BeginInit();
-                nuevaImagen.UriSource = new Uri(ruta, UriKind.RelativeOrAbsolute);
-                nuevaImagen.EndInit();
+                BitmapImage nuevaImagen;
+                if (imgs.ContainsKey(ruta))
+                {
+                    nuevaImagen = imgs[ruta];
+                }
+                else
+                {
+                    nuevaImagen = new BitmapImage();
+                    nuevaImagen.BeginInit();
+                    nuevaImagen.UriSource = new Uri(ruta, UriKind.RelativeOrAbsolute);
+                    nuevaImagen.EndInit();
+                    imgs.Add(ruta,nuevaImagen);
+
+                }
                 ((Image)Lista.FindName("Sprite" + i)).Source = nuevaImagen;
             }
+        }
+
+        private void CambiarModo(object sender, SelectionChangedEventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            actual.mode = comboBox.SelectedIndex + 1;
+        }
+
+        private void Play(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Play");
+        }
+
+        private void Stop(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Stop");
+            //StopImagen.Source = "stop_big.png";
+        }
+
+        private void ImagenGrande(object sender, MouseButtonEventArgs e)
+        {
+            Button b = sender as Button;
+            string nombre = (b.Tag as string) + "_big";
+            ((Image)b.FindName((b.Tag as string) + "Imagen")).Source = imgs[nombre];
+        }
+
+        private void ImagenPeque(object sender, MouseButtonEventArgs e)
+        {
+            Button b = sender as Button;
+            string nombre = (b.Tag as string);
+            ((Image)b.FindName(nombre + "Imagen")).Source = imgs[nombre];
+        }
+
+        private void ActualizarUISave()
+        {
+            Encuentros.Content = actual.encuentros;
+            SV_MIN.Content = actual.sv_minimo;
+            // falta mode
+        }
+
+        private void Cargar()
+        {
+            if(File.Exists(archivo_guardado))
+            {
+                string data = File.ReadAllText(archivo_guardado);
+                Guardado guardado = JsonConvert.DeserializeObject<Guardado>(data);
+                if(guardado != null)
+                {
+                    for (int i = 0; i < guardado.pokemon.Count(); i++)
+                    {
+                        //Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(guardado.pokemon[i]);
+                        AgregarPokemon(guardado.pokemon[i]);
+                    }
+                    actual = guardado;
+
+                    ActualizarUISave();
+                }
+            }
+        }
+
+        // Guarda el estado actual: el historial de pokes, los encuentros, el modo, el target...
+        private void Guardar(object sender, RoutedEventArgs e)
+        {
+            if(config.guardar_al_salir)
+            {
+                Console.WriteLine("Guardando....");
+                string pokemonsJSON = "{\"pokemon\":[";
+                for (int i = 0; i < pokemons.Count; i++)
+                {
+                    pokemonsJSON += pokemons[i].toJSON();
+                    if(i < pokemons.Count-1) pokemonsJSON += ",";
+                }
+                pokemonsJSON += "], "+actual.toString()+"}";
+                File.WriteAllText(archivo_guardado, pokemonsJSON);
+                Console.WriteLine("Guardado!");
+
+            }
+        }
+
+        // Limpia el programa para empezar de 0
+        private void Reset(object sender, RoutedEventArgs e)
+        {
+            pokemons.Clear();
+            for (int i = 0; i < MAX_POKE; i++)
+            {
+                ActualizarUI(new Pokemon(), i);
+            }
+            actual.encuentros = 0;
+            Encuentros.Content = actual.encuentros;
+            File.WriteAllText(archivo_json, string.Empty);
+        }
+
+        private void Cerrar(object sender, CancelEventArgs e)
+        {
+            Guardar(sender, null);
+            thread.Abort();
+        }
+
+        private void Salir(object sender, RoutedEventArgs e)
+        {
+            Cerrar(sender, null);
+            Close();
+
+        }
+
+        private void SalirSinGuardar(object sender, RoutedEventArgs e)
+        {
+            config.guardar_al_salir = false;
+            Close();
+        }
+
+        private void ActualizarUIConfig()
+        {
+            Guardar_salir.IsChecked = config.guardar_al_salir;
+        }
+
+        private void CargarConfig()
+        {
+            if (File.Exists(archivo_config))
+            {
+                string data = File.ReadAllText(archivo_config);
+                Config config_nuevo = JsonConvert.DeserializeObject<Config>(data);
+                if (config_nuevo != null)
+                {
+                    config = config_nuevo;
+                    ActualizarUIConfig();
+                }
+            }
+        }
+
+        private void GuardarConfig()
+        {
+            File.WriteAllText(archivo_config,JsonConvert.SerializeObject(config, Formatting.Indented));
+            ActualizarUIConfig();
+        }
+
+        private void GuardarSalirC(object sender, RoutedEventArgs e)
+        {
+            config.guardar_al_salir = true;
+            GuardarConfig();
+        }
+
+        private void GuardarSalirU(object sender, RoutedEventArgs e)
+        {
+            config.guardar_al_salir = false;
+            GuardarConfig();
         }
 
         public class Pokemon
@@ -131,6 +328,7 @@ namespace PokeBot
             public int nivel { get; set; } = 0;
             public int id { get; set; } = 0;
             public int genero { get; set; } = 0;
+            public int sv { get; set; } = 0;
 
             public string toJSON()
             {
@@ -150,77 +348,21 @@ namespace PokeBot
 
         public class Guardado
         {
-            public Pokemon[] pokemon{ get; set; }
+            public Pokemon[] pokemon { get; set; }
             public int encuentros { get; set; } = 0;
             public int mode { get; set; } = 0;
-        }
+            public int sv_minimo { get; set; } = -1;
 
-        private void Cargar()
-        {
-            if(File.Exists(archivo_guardado))
+            public string toString()
             {
-                string data = File.ReadAllText(archivo_guardado);
-                Guardado guardado = JsonConvert.DeserializeObject<Guardado>(data);
-                if(guardado != null)
-                {
-                    mode = guardado.mode;
-                    for (int i = 0; i < guardado.pokemon.Count(); i++)
-                    {
-                        //Pokemon pokemonData = JsonConvert.DeserializeObject<Pokemon>(guardado.pokemon[i]);
-                        AgregarPokemon(guardado.pokemon[i]);
-                    }
-                    encuentros = guardado.encuentros;
-                    Encuentros.Content = encuentros;
-                }
+                return "\"encuentros\":" + encuentros + ", \"mode\":" + mode + ", \"sv_minimo\":" + sv_minimo;
             }
         }
 
-        // Guarda el estado actual: el historial de pokes, los encuentros, el modo, el target...
-        private void Guardar(object sender, RoutedEventArgs e)
+        public class Config
         {
-            Console.WriteLine("Guardando....");
-            string pokemonsJSON = "{\"pokemon\":[";
-            for (int i = 0; i < pokemons.Count; i++)
-            {
-                pokemonsJSON += pokemons[i].toJSON();
-                if(i < pokemons.Count-1) pokemonsJSON += ",";
-            }
-            pokemonsJSON += "], \"encuentros\":"+encuentros+", \"mode\":"+mode+"}";
-            File.WriteAllText(archivo_guardado, pokemonsJSON);
-            Console.WriteLine("Guardado!");
+            public bool guardar_al_salir { get; set; } = true;
         }
 
-        private void GuardarYSalir(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("Guardando....");
-            string pokemonsJSON = "{\"pokemon\":[";
-            for (int i = 0; i < pokemons.Count; i++)
-            {
-                pokemonsJSON += pokemons[i].toJSON();
-                if (i < pokemons.Count - 1) pokemonsJSON += ",";
-            }
-            pokemonsJSON += "], \"encuentros\":" + encuentros + ", \"mode\":" + mode + "}";
-            File.WriteAllText(archivo_guardado, pokemonsJSON);
-            Console.WriteLine("Guardado!");
-            return;
-        }
-
-        // Limpia el programa para empezar de 0
-        private void Reset(object sender, RoutedEventArgs e)
-        {
-            pokemons.Clear();
-            for (int i = 0; i < MAX_POKE; i++)
-            {
-                ActualizarUI(new Pokemon(), i);
-            }
-            File.WriteAllText(archivo_json, string.Empty);
-        }
-
-        private void Salir(object sender, RoutedEventArgs e)
-        {
-            Cerrar(sender, null);
-            Close();
-
-        }
     }
 }

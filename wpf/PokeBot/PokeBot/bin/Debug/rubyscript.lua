@@ -86,8 +86,10 @@ end
 
 print("Version: "..game..warning)
 print("Idioma: "..language)
-print("TID: "..tid)
-print("SID: "..sid)
+if tid ~= 0 and sid ~= 0 then
+    print("TID: "..tid)
+    print("SID: "..sid)
+end
 
 offsetPokeSalvaje = 0x56EB4
 function resetPointer(newpointer)
@@ -117,8 +119,12 @@ function xor(a,b)
     return result
 end
 
+function sv(pid) -- Devuelve el shiny value (sv)
+    return xor(xor(tid,sid),xor(math.floor(pid / 65536),pid % 65536))
+end
+
 function esShiny(pid)
-    return xor(xor(tid,sid),xor(math.floor(pid / 65536),pid % 65536)) < 8
+    return sv(pid) < 8 -- es shiny si sv < 8
 end
 
 function crearIVs(num)
@@ -152,6 +158,7 @@ function crearPoke(pid)
     pokemon["habilidad"] = mbyte(pokepointer+0x27)
     pokemon["ivs"] = crearIVs(memory.readdword(pokepointer+0x14));
     pokemon["genero"] = mbyte(pokepointer+0x7E);
+    pokemon["sv"] = sv(pid)
     return pokemon
 end
 
@@ -225,6 +232,15 @@ end
 
 antPID = -1
 function main()
+    if tid == 0 and sid == 0 then
+        ids = mdword(mdword(idsPointer) + 0x84)
+        sid = math.floor(ids / 0x10000)
+        tid = ids % 0x10000
+        if tid ~= 0 and sid ~= 0 then
+            print("TID: "..tid)
+            print("SID: "..sid)
+        end
+    end
     newpointer = memory.readdword(0x0211188C) -- por si acaso reseteamos el emulador
     if newpointer ~= pointer then
         resetPointer(newpointer)
@@ -244,7 +260,6 @@ function main()
     end 
 
     actuar(pid)
-    
 end
 
 -- pointer = memory.readdword(0x0211186C) -- USA

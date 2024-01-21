@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Dream_Master_Ball_Sprite.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
@@ -107,10 +110,19 @@
     <Resource Include="substitute.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="493.png" />
+    <Resource Include="Dream_Master_Ball_Sprite.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="492.png" />
+    <Resource Include="Imgs\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\stop_big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Imgs\play_big.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

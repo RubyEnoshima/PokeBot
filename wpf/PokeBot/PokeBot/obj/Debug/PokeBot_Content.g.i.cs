@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("492.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("play_big.png")]
 
 
