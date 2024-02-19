@@ -1,116 +1,116 @@
 {"pokemon":[{
   "movimientos": [
-    240,
-    16,
-    62,
-    54
+    64,
+    253,
+    115,
+    93
   ],
-  "nombre": "Suicune",
-  "pid": "adc6fb5e",
-  "habilidad": 46,
+  "nombre": "Noctowl",
+  "pid": "a315bd63",
+  "habilidad": 51,
   "shiny": 0,
   "ivs": {
-    "spdef": 26,
-    "def": 2,
-    "speed": 3,
-    "spatt": 30,
-    "att": 17,
-    "hp": 24
-  },
-  "nivel": 40,
-  "id": 245,
-  "genero": 2,
-  "sv": 16693
-},{
-  "movimientos": [
-    240,
-    16,
-    62,
-    54
-  ],
-  "nombre": "Suicune",
-  "pid": "549abc0b",
-  "habilidad": 46,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 27,
-    "def": 15,
-    "speed": 18,
+    "spdef": 8,
+    "def": 11,
+    "speed": 10,
     "spatt": 17,
+    "att": 23,
+    "hp": 17
+  },
+  "nivel": 25,
+  "id": 164,
+  "genero": 1,
+  "sv": 2523
+},{
+  "movimientos": [
+    24,
+    40,
+    31,
+    30
+  ],
+  "nombre": "Nidorino",
+  "pid": "f6c2de44",
+  "habilidad": 38,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 24,
+    "def": 27,
+    "speed": 8,
+    "spatt": 30,
+    "att": 13,
+    "hp": 28
+  },
+  "nivel": 23,
+  "id": 33,
+  "genero": 0,
+  "sv": 16171
+},{
+  "movimientos": [
+    24,
+    40,
+    154,
+    44
+  ],
+  "nombre": "Nidorina",
+  "pid": "6a2a5e2",
+  "habilidad": 38,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 29,
+    "def": 10,
+    "speed": 6,
+    "spatt": 22,
+    "att": 0,
+    "hp": 13
+  },
+  "nivel": 23,
+  "id": 30,
+  "genero": 1,
+  "sv": 46317
+},{
+  "movimientos": [
+    24,
+    40,
+    31,
+    30
+  ],
+  "nombre": "Nidorino",
+  "pid": "5c370b20",
+  "habilidad": 38,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 10,
+    "def": 17,
+    "speed": 22,
+    "spatt": 23,
     "att": 15,
-    "hp": 24
+    "hp": 22
   },
-  "nivel": 40,
-  "id": 245,
-  "genero": 2,
-  "sv": 65340
+  "nivel": 23,
+  "id": 33,
+  "genero": 0,
+  "sv": 16570
 },{
   "movimientos": [
-    240,
-    16,
-    62,
-    54
+    24,
+    40,
+    31,
+    30
   ],
-  "nombre": "Suicune",
-  "pid": "48561fce",
-  "habilidad": 46,
+  "nombre": "Nidorino",
+  "pid": "599592c4",
+  "habilidad": 38,
   "shiny": 0,
   "ivs": {
-    "spdef": 27,
-    "def": 15,
-    "speed": 0,
-    "spatt": 18,
-    "att": 7,
-    "hp": 4
-  },
-  "nivel": 40,
-  "id": 245,
-  "genero": 2,
-  "sv": 16437
-},{
-  "movimientos": [
-    240,
-    16,
-    62,
-    54
-  ],
-  "nombre": "Suicune",
-  "pid": "85fc67b2",
-  "habilidad": 46,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 15,
-    "def": 22,
-    "speed": 7,
-    "spatt": 26,
-    "att": 7,
-    "hp": 12
-  },
-  "nivel": 40,
-  "id": 245,
-  "genero": 2,
-  "sv": 62947
-},{
-  "movimientos": [
-    240,
-    16,
-    62,
-    54
-  ],
-  "nombre": "Suicune",
-  "pid": "ea8a01c8",
-  "habilidad": 46,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 20,
-    "def": 15,
+    "spdef": 23,
+    "def": 26,
     "speed": 23,
-    "spatt": 3,
-    "att": 19,
-    "hp": 12
+    "spatt": 25,
+    "att": 1,
+    "hp": 16
   },
-  "nivel": 40,
-  "id": 245,
-  "genero": 2,
-  "sv": 64751
-}], "encuentros":27243, "mode":0, "sv_minimo":37}
+  "nivel": 23,
+  "id": 33,
+  "genero": 0,
+  "sv": 56572
+}], "encuentros":199, "mode":1, "sv_minimo":90}

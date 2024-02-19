@@ -117,7 +117,11 @@ namespace PokeBot
                 SV_MIN.Content = actual.sv_minimo;
             }
 
-            for(int i = 0; i < pokemons.Count; i++)
+            //File.AppendAllText("sv.txt",pokemon.sv.ToString()+"\n");
+            //File.AppendAllText("sv_coma.txt",pokemon.sv.ToString()+",");
+            //File.AppendAllText("pid.txt",pokemon.pid+" - "+ pokemon.sv.ToString() + "\n");
+
+            for (int i = 0; i < pokemons.Count; i++)
             {
                 ActualizarUI(pokemons[i],i);
             }
@@ -258,6 +262,8 @@ namespace PokeBot
             }
             actual.encuentros = 0;
             Encuentros.Content = actual.encuentros;
+            actual.sv_minimo = -1;
+            SV_MIN.Content = "-";
             File.WriteAllText(archivo_json, string.Empty);
         }
 
