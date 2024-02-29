@@ -1,10 +1,10 @@
   -- RubyBot --
 -- RubyEnoshima --
+json = require "json"
 require "lua/utilidades"
 require "lua/pokemondata"
 require "lua/controles"
 require "lua/pokefunciones"
-json = require "json"
 
 
 
@@ -80,36 +80,20 @@ if tid ~= 0 and sid ~= 0 then
     print("SID: "..sid)
 end
 
-
-
-
 function main()
     
 end
 
--- pointer = memory.readdword(0x0211186C) -- USA
-pointer = memory.readdword(0x0211188C) -- ESP
+pointer = memory.readdword(pointerESP)
 resetPointer(pointer)
 
 emu.registerbefore(main)
 
 while true do
-    if tid == 0 and sid == 0 then
-        ids = mdword(mdword(idsPointer) + 0x84)
-        sid = math.floor(ids / 0x10000)
-        tid = ids % 0x10000
-        if tid ~= 0 and sid ~= 0 then
-            print("TID: "..tid)
-            print("SID: "..sid)
-        end
-    end
-
-    newpointer = memory.readdword(0x0211188C) -- por si acaso reseteamos el emulador
-    if newpointer ~= pointer then
-        resetPointer(newpointer)
-    end
+    actualizarBot()
     
     actuar()
     
     emu.frameadvance()
 end
+

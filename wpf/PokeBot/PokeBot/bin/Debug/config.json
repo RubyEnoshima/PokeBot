@@ -1,3 +1,4 @@
 {
-  "guardar_al_salir": true
+  "guardar_al_salir": true,
+  "reset_shiny": true
 }

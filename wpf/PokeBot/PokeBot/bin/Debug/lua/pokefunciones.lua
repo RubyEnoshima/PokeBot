@@ -1,5 +1,9 @@
-mode = 1 -- 0: nada; 1: spin; 2: static (Suicune, Lugia...)
+pointerESP = 0x0211188C
+pointerUSA = 0x0211186C
 offsetPokeSalvaje = 0x56EB4
+
+pausado = false
+mode = 1 -- 0: nada; 1: spin; 2: static (Suicune, Lugia...)
 
 function resetPointer(newpointer) -- Resetea el puntero y encuentra la dirección que tenemos que mirar para obtener el PID
     pointer = newpointer
@@ -65,6 +69,7 @@ function escribirArchivo(poke) -- Escribe en poke.json la información
 
         if not success then
             print("Error writing to file: " .. write_error)
+            antPID = -1
         end
 
         file:close()
@@ -79,7 +84,7 @@ dir = 0
 function buscarCombate() -- Se mueve en circulos hasta que encuentra un combate
     dir = dir + 1
     esperar(2)
-    while enCombate()==false do
+    while enCombate()==false and pausado==false do
         if dir == 0 then pulsarBoton("up",3)
         elseif dir == 1 then pulsarBoton("left",3)
         elseif dir == 2 then pulsarBoton("down",3)
@@ -90,30 +95,67 @@ function buscarCombate() -- Se mueve en circulos hasta que encuentra un combate
     end
 end
 
+function huir()
+    if enCombate() then
+        tocarPantalla(125,170)
+    end
+end
+
 antmode = mode
 antPID = -1
-function actuar()
-    if mode == 1 then -- Poke salvaje
-        if enCombate()==false then buscarCombate() end
+function pokeSalvaje()
+    if enCombate()==false then buscarCombate() end -- Buscamos combate si no estamos en uno
 
-        pid = memory.readdword(PIDaddr)
-        if pid ~= antPID then
-            poke = crearPoke(pid)
-            escribirArchivo(poke)
-            antPID = pid
-        end
+    pid = memory.readdword(PIDaddr) -- Leemos el PID del poke enemigo
+    if pid ~= antPID then
+        poke = crearPoke(pid)
+        escribirArchivo(poke) -- Escribimos en un archivo la info
+        antPID = pid
+    end
+
     
-        
-        if esShiny(pid) then
-            print("Es shiny!")
-            mode = 0
-        else
-            -- gui.text(157,-170,"No es shiny","black","white")
-            tocarPantalla(125,170)
-        end
+    if esShiny(pid) then
+        print("Es shiny!")
+        mode = 0 -- Pausar, temporal
+    else
+        -- gui.text(157,-170,"No es shiny","black","white")
+        huir()
+    end
+end
+
+function pokeLegend()
+    -- emu.reset()
+end
+
+function actuar() -- Decide el procedimiento que hay que seguir segun un modo u otro
+    if pausado then 
+        huir()
+    elseif mode == 1 then -- Poke salvaje
+        pokeSalvaje()
     elseif mode == 2 then -- Poke estático
-        -- emu.reset()
-    elseif mode == 0 && enCombate == false then -- TODO: PODER DECIDIR QUÉ HACER CUANDO SE SALE DEL COMBATE: PARAR / SEGUIR BUSCANDO
+        pokeLegend()
+    elseif enCombate() == false then -- TODO: PODER DECIDIR QUÉ HACER CUANDO SE SALE DEL COMBATE: PARAR / SEGUIR BUSCANDO
         mode = antmode 
     end
+end
+
+function actualizarBot()
+    if tid == 0 and sid == 0 then
+        ids = mdword(mdword(idsPointer) + 0x84)
+        sid = math.floor(ids / 0x10000)
+        tid = ids % 0x10000
+        if tid ~= 0 and sid ~= 0 then
+            print("TID: "..tid)
+            print("SID: "..sid)
+        end
+    end
+
+    newpointer = memory.readdword(0x0211188C) -- por si acaso reseteamos el emulador
+    if newpointer ~= pointer then
+        resetPointer(newpointer)
+    end
+
+    -- hacerlo en otro thread
+    nuevaConfig = leerArchivo("bot.json")
+    pausado = nuevaConfig["pausado"]
 end
