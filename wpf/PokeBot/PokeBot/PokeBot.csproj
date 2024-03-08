@@ -73,6 +73,11 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="CanvasDuplicator.cs" />
+    <Compile Include="Clases\Imagenes.cs" />
+    <Compile Include="Clases\Pokedex.cs" />
+    <Compile Include="Clases\Probabilidades.cs" />
+    <Compile Include="Clases\Region.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -123,6 +128,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Imgs\play_big.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="json\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="378.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,9 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 
         mc:Ignorable="d"
-        Title="PokeBot" Height="450" Width="700"
+        Title="PokeBot" Height="800" Width="1593"
         Closing="Cerrar"
+        Background="#1F2020" MinWidth="1600" MinHeight="800" MaxWidth="1600" MaxHeight="800"
         >
+    <Window.Resources>
+        <!-- Style for the Label -->
+        <Style x:Key="OutlineLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="Black"/>
+            <!-- Set the foreground color -->
+            <Setter Property="FontSize" Value="16"/>
+            <!-- Set the font size -->
+            <Setter Property="Padding" Value="5"/>
+            <!-- Set padding -->
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <!-- Apply a DropShadowEffect with white color -->
+                    <DropShadowEffect ShadowDepth="0" Color="Black" BlurRadius="2"/>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+    </Window.Resources>
+
 
     <Grid Name="Lista">
         <Grid.ColumnDefinitions>
@@ -23,131 +43,141 @@
                     <MenuItem Header="Salir" Click="Salir"/>
                 </MenuItem>
                 <MenuItem Header="Opciones">
-                    <MenuItem Header="Guardar al salir" Name="Guardar_salir" IsCheckable="True" IsChecked="False" Checked="GuardarSalirC" Unchecked="GuardarSalirU" />
+                    <MenuItem Header="Guardar al salir" Name="Guardar_salir" IsCheckable="True" IsChecked="True" Checked="GuardarSalirC" Unchecked="GuardarSalirU" />
+                    <MenuItem Header="Reset después de shiny" Name="Reset_shiny" IsCheckable="True" IsChecked="True" Checked="ResetShinyC" Unchecked="ResetShinyU" />
                 </MenuItem>
             </Menu>
         </DockPanel>
 
-        <Label x:Name="HP_Copiar" Content="HP" HorizontalAlignment="Left" Margin="275,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Panel.ZIndex="2" Width="40"/>
-        <Label x:Name="ATTK_Copiar" Content="ATTK" HorizontalAlignment="Left" Margin="315,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
-        <Label x:Name="DEF_Copiar" Content="DEF" HorizontalAlignment="Left" Margin="355,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
-        <Label x:Name="SP_ATTK_Copiar" Content="SP_ATTK" HorizontalAlignment="Left" Margin="395,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
-        <Label x:Name="SP_DEF_Copiar" Content="SP_DEF" HorizontalAlignment="Left" Margin="435,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
-        <Label x:Name="SPEED_Copiar" Content="SPEED" HorizontalAlignment="Left" Margin="474,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
-        <Label x:Name="TOTAL_Copiar" Content="TOTAL" HorizontalAlignment="Left" Margin="514,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
-        <Label x:Name="SV_Copiar" Content="SV" HorizontalAlignment="Left" Margin="571,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
+        <Label x:Name="HP_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="HP" HorizontalAlignment="Left" Margin="274,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Panel.ZIndex="2" Width="40"/>
+        <Label x:Name="ATTK_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="ATTK" HorizontalAlignment="Left" Margin="314,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
+        <Label x:Name="DEF_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="DEF" HorizontalAlignment="Left" Margin="354,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
+        <Label x:Name="SP_ATTK_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="SP_ATTK" HorizontalAlignment="Left" Margin="389,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="48" Panel.ZIndex="2"/>
+        <Label x:Name="SP_DEF_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="SP_DEF" HorizontalAlignment="Left" Margin="434,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="42" Panel.ZIndex="2"/>
+        <Label x:Name="SPEED_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="SPEED" HorizontalAlignment="Left" Margin="472,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="44" Panel.ZIndex="2"/>
+        <Label x:Name="TOTAL_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="TOTAL" HorizontalAlignment="Left" Margin="514,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
+        <Label x:Name="SV_Copiar" Foreground="White" Style="{StaticResource OutlineLabel}" Content="SV" HorizontalAlignment="Left" Margin="571,29,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="40" Panel.ZIndex="2"/>
 
 
-        <Canvas  Margin="2,36,-2,314" MinHeight="81" Panel.ZIndex="0" >
+        <Canvas  Margin="2,36,974,314" MinHeight="81" Panel.ZIndex="0" >
             <Image x:Name="Sprite0" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="64" Width="64" Margin="22,10,0,0" MinHeight="62" Height="62"/>
-            <Label x:Name="Nombre0" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
+            <Label x:Name="Nombre0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
 
-            <Label x:Name="Nivel_Label" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
-            <Label x:Name="Nivel0" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel_Label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
 
-            <Label x:Name="HP0" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="ATTK0" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="DEF0" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_ATTK0" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_DEF0" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SPEED0" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <!-- <Label x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
-            <Label x:Name="TOTAL0" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
-            <Label x:Name="SV0" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
+            <Label x:Name="HP0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="ATTK0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="DEF0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_ATTK0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_DEF0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SPEED0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <!-- <Label x:Name="Equal" Content="=" Foreground="White" Style="{StaticResource OutlineLabel}" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
+            <Label x:Name="TOTAL0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
+            <Label x:Name="SV0" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
         </Canvas>
 
 
-        <Canvas Margin="2,77,-2,272" MinHeight="81" Panel.ZIndex="0">
+        <Canvas Margin="2,77,974,272" MinHeight="81" Panel.ZIndex="0">
             <Image x:Name="Sprite1" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="64" Width="64" Margin="22,10,0,0" MinHeight="62" Height="62"/>
-            <Label x:Name="Nombre1" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
+            <Label x:Name="Nombre1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
 
-            <Label x:Name="Nivel_Label1" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
-            <Label x:Name="Nivel1" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel_Label1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
 
-            <Label x:Name="HP1" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="ATTK1" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="DEF1" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_ATTK1" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_DEF1" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SPEED1" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <!-- <Label x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
-            <Label x:Name="TOTAL1" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
-            <Label x:Name="SV1" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
+            <Label x:Name="HP1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="ATTK1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="DEF1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_ATTK1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_DEF1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SPEED1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <!-- <Label x:Name="Equal" Content="=" Foreground="White" Style="{StaticResource OutlineLabel}" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
+            <Label x:Name="TOTAL1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
+            <Label x:Name="SV1" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
 
         </Canvas>
-        <Canvas Margin="2,120,-2,229" MinHeight="81" Panel.ZIndex="0">
+        <Canvas Margin="2,120,974,229" MinHeight="81" Panel.ZIndex="0">
             <Image x:Name="Sprite2" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="64" Width="64" Margin="22,10,0,0" MinHeight="62" Height="62"/>
-            <Label x:Name="Nombre2" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
+            <Label x:Name="Nombre2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
 
-            <Label x:Name="Nivel_Label2" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
-            <Label x:Name="Nivel2" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel_Label2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
 
-            <Label x:Name="HP2" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="ATTK2" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="DEF2" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_ATTK2" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_DEF2" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SPEED2" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <!-- <Label x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
-            <Label x:Name="TOTAL2" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
-            <Label x:Name="SV2" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
+            <Label x:Name="HP2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="ATTK2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="DEF2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_ATTK2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_DEF2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SPEED2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <!-- <Label x:Name="Equal" Content="=" Foreground="White" Style="{StaticResource OutlineLabel}" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
+            <Label x:Name="TOTAL2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
+            <Label x:Name="SV2" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
 
         </Canvas>
-        <Canvas Margin="2,162,-2,187" MinHeight="81" Panel.ZIndex="0">
+        <Canvas Margin="2,162,979,187" MinHeight="81" Panel.ZIndex="0">
             <Image x:Name="Sprite3" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="64" Width="64" Margin="22,10,0,0" MinHeight="62" Height="62"/>
-            <Label x:Name="Nombre3" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
+            <Label x:Name="Nombre3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
 
-            <Label x:Name="Nivel_Label3" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
-            <Label x:Name="Nivel3" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel_Label3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
 
-            <Label x:Name="HP3" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="ATTK3" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="DEF3" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_ATTK3" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_DEF3" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SPEED3" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <!-- <Label x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
-            <Label x:Name="TOTAL3" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
-            <Label x:Name="SV3" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
+            <Label x:Name="HP3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="ATTK3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="DEF3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_ATTK3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_DEF3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SPEED3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <!-- <Label x:Name="Equal" Content="=" Foreground="White" Style="{StaticResource OutlineLabel}" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
+            <Label x:Name="TOTAL3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
+            <Label x:Name="SV3" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
 
         </Canvas>
-        <Canvas Margin="2,205,-2,144" MinHeight="81" Panel.ZIndex="0">
+        <Canvas Margin="2,205,974,144" MinHeight="81" Panel.ZIndex="0">
             <Image x:Name="Sprite4" HorizontalAlignment="Left" VerticalAlignment="Top" MinWidth="64" Width="64" Margin="22,10,0,0" MinHeight="62" Height="62"/>
-            <Label x:Name="Nombre4" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
+            <Label x:Name="Nombre4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}"/>
 
-            <Label x:Name="Nivel_Label4" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
-            <Label x:Name="Nivel4" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel_Label4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Nv." HorizontalAlignment="Left" Margin="200,26,0,0" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
+            <Label x:Name="Nivel4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="223,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22"/>
 
-            <Label x:Name="HP4" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="ATTK4" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="DEF4" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_ATTK4" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SP_DEF4" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <Label x:Name="SPEED4" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
-            <!-- <Label x:Name="Equal" Content="=" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
-            <Label x:Name="TOTAL4" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
-            <Label x:Name="SV4" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
+            <Label x:Name="HP4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="279,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="ATTK4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="319,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="DEF4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="359,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_ATTK4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="399,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SP_DEF4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="439,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <Label x:Name="SPEED4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="479,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/>
+            <!-- <Label x:Name="Equal" Content="=" Foreground="White" Style="{StaticResource OutlineLabel}" HorizontalAlignment="Left" Margin="500,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5"/> -->
+            <Label x:Name="TOTAL4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="515,26,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75"/>
+            <Label x:Name="SV4" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="34.75" Canvas.Left="555" Canvas.Top="26" Width="69"/>
 
         </Canvas>
 
-        <Label x:Name="EncuentrosLabel" Content="Encuentros: " HorizontalAlignment="Left" Margin="182,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5" Width="98"/>
-        <Label x:Name="Encuentros" Content="0" HorizontalAlignment="Left" Margin="285,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5" Width="79"/>
-        <Button HorizontalAlignment="Left" Margin="188,329,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Play" Tag="play" PreviewMouseDown="ImagenPeque" PreviewMouseUp="ImagenGrande">
+        <Label x:Name="EncuentrosLabel" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Encuentros: " HorizontalAlignment="Left" Margin="47,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5" Width="98"/>
+        <Label x:Name="Encuentros" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="150,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5" Width="79"/>
+        <Button HorizontalAlignment="Left" Margin="53,329,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Play" Tag="play" PreviewMouseDown="ImagenPeque" PreviewMouseUp="ImagenGrande">
             <Image Name="playImagen"  Source="Imgs/play_big.png" Height="19" Width="17"></Image>
         </Button>
-        <Button HorizontalAlignment="Left" Margin="218,329,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Stop" Tag="stop" PreviewMouseDown="ImagenPeque" PreviewMouseUp="ImagenGrande">
+        <Button HorizontalAlignment="Left" Margin="85,329,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Stop" Tag="stop" PreviewMouseDown="ImagenPeque" PreviewMouseUp="ImagenGrande">
             <Image Name="stopImagen" Source="Imgs/stop_big.png" Height="18" Width="17" ></Image>
         </Button>
-        <StackPanel Margin="252,329,169,0" Background="Transparent">
-            <ComboBox FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" SelectionChanged="CambiarModo">
-                <ComboBoxItem IsSelected="True" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font">Pokémon salvaje</ComboBoxItem>
-                <ComboBoxItem FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font">Encuentro estático</ComboBoxItem>
+        <StackPanel Margin="121,329,1286,0" Background="Transparent">
+            <ComboBox FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" SelectionChanged="CambiarModo" Width="193" Height="21" MinWidth="193" MaxWidth="193" MinHeight="21" MaxHeight="21">
+                <ComboBoxItem IsSelected="True" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Content="Pokémon salvaje"/>
+                <ComboBoxItem FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Content="Encuentro estático"/>
             </ComboBox>
         </StackPanel>
 
-        <Label x:Name="SV_MIN_Label" Content="Mínimo" HorizontalAlignment="Left" Margin="566,276,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="50" Panel.ZIndex="2" FontSize="18"/>
-        <Label x:Name="SV_MIN" Content="-" HorizontalAlignment="Left" Margin="561,298,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="60" Panel.ZIndex="2" FontSize="18"/>
+        <Label x:Name="SV_MIN_Label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Mínimo" HorizontalAlignment="Left" Margin="566,276,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="50" Panel.ZIndex="2" FontSize="18"/>
+        <Label x:Name="SV_MIN" Foreground="White" Style="{StaticResource OutlineLabel}" Content="-" HorizontalAlignment="Left" Margin="561,298,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="60" Panel.ZIndex="2" FontSize="18"/>
 
+        <Grid x:Name="Probs" Margin="626,0,0,0" Panel.ZIndex="50">
+            <Canvas x:Name="Canvas1" Margin="0,46,0,675" MinHeight="62" Height="62">
+                <Image x:Name="SpriteProb" MinWidth="64" Width="64" MinHeight="62" Height="62" Source="/378.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <Label x:Name="NombreProb" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Regice" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Top="9"/>
+                <Label x:Name="Probabilidad" Foreground="White" Style="{StaticResource OutlineLabel}" Content="35%" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Bottom="9" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+
+            </Canvas>
+            
+        </Grid>
 
     </Grid>
 </Window>

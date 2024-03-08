@@ -1,26 +1,72 @@
 {"pokemon":[{
   "movimientos": [
-    24,
-    40,
-    31,
-    30
+    341,
+    21,
+    426,
+    133
   ],
-  "nombre": "Nidorino",
-  "pid": "93154816",
-  "habilidad": 38,
+  "nombre": "Quagsire",
+  "pid": "5faa5597",
+  "habilidad": 11,
   "shiny": 0,
   "ivs": {
     "spdef": 1,
-    "def": 8,
-    "speed": 19,
-    "spatt": 9,
-    "att": 30,
-    "hp": 23
+    "def": 25,
+    "speed": 15,
+    "spatt": 12,
+    "att": 24,
+    "hp": 16
   },
-  "nivel": 23,
-  "id": 33,
+  "nivel": 24,
+  "id": 195,
   "genero": 0,
-  "sv": 52398
+  "sv": 7568
+},{
+  "movimientos": [
+    64,
+    253,
+    115,
+    93
+  ],
+  "nombre": "Noctowl",
+  "pid": "2551123d",
+  "habilidad": 51,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 31,
+    "def": 18,
+    "speed": 4,
+    "spatt": 12,
+    "att": 18,
+    "hp": 22
+  },
+  "nivel": 25,
+  "id": 164,
+  "genero": 1,
+  "sv": 8385
+},{
+  "movimientos": [
+    341,
+    21,
+    426,
+    133
+  ],
+  "nombre": "Quagsire",
+  "pid": "2b6a324f",
+  "habilidad": 11,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 16,
+    "def": 14,
+    "speed": 10,
+    "spatt": 29,
+    "att": 8,
+    "hp": 4
+  },
+  "nivel": 24,
+  "id": 195,
+  "genero": 1,
+  "sv": 3720
 },{
   "movimientos": [
     24,
@@ -29,88 +75,42 @@
     44
   ],
   "nombre": "Nidorina",
-  "pid": "99eeba7e",
+  "pid": "3142132c",
   "habilidad": 38,
   "shiny": 0,
   "ivs": {
-    "spdef": 8,
-    "def": 4,
-    "speed": 27,
-    "spatt": 25,
-    "att": 14,
-    "hp": 30
+    "spdef": 0,
+    "def": 18,
+    "speed": 24,
+    "spatt": 2,
+    "att": 11,
+    "hp": 5
   },
   "nivel": 23,
   "id": 30,
   "genero": 1,
-  "sv": 13373
+  "sv": 13763
 },{
   "movimientos": [
-    24,
-    40,
-    31,
-    30
+    64,
+    253,
+    115,
+    93
   ],
-  "nombre": "Nidorino",
-  "pid": "620dd015",
-  "habilidad": 79,
+  "nombre": "Noctowl",
+  "pid": "ddde261a",
+  "habilidad": 15,
   "shiny": 0,
   "ivs": {
-    "spdef": 21,
-    "def": 17,
-    "speed": 15,
-    "spatt": 16,
-    "att": 16,
-    "hp": 14
-  },
-  "nivel": 23,
-  "id": 33,
-  "genero": 0,
-  "sv": 42421
-},{
-  "movimientos": [
-    78,
-    79,
-    331,
-    73
-  ],
-  "nombre": "Hoppip",
-  "pid": "12c1cf5f",
-  "habilidad": 102,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 6,
-    "def": 13,
-    "speed": 15,
-    "spatt": 20,
-    "att": 8,
-    "hp": 18
-  },
-  "nivel": 24,
-  "id": 187,
-  "genero": 1,
-  "sv": 51763
-},{
-  "movimientos": [
-    24,
-    40,
-    154,
-    44
-  ],
-  "nombre": "Nidorina",
-  "pid": "f36f7f",
-  "habilidad": 79,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 5,
+    "spdef": 10,
     "def": 25,
-    "speed": 31,
-    "spatt": 22,
+    "speed": 13,
+    "spatt": 1,
     "att": 11,
     "hp": 3
   },
-  "nivel": 23,
-  "id": 30,
+  "nivel": 25,
+  "id": 164,
   "genero": 1,
-  "sv": 30753
-}], "encuentros":18721, "mode":1, "sv_minimo":20}
+  "sv": 60521
+}], "encuentros":2466, "mode":2, "sv_minimo":11}

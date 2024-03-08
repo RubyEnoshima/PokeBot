@@ -1,0 +1,135 @@
+{
+    "nombre": "Ruta 24",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "69", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "63", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "70", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "191", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "43", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "49", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "118", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+                
+                
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "69", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "191", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "63", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "70", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "43", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "49", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "118", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "48", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "43", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "63", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "70", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "69", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "49", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "191", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "118", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}
