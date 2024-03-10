@@ -1,72 +1,26 @@
 {"pokemon":[{
   "movimientos": [
-    341,
-    21,
-    426,
-    133
+    16,
+    98,
+    18,
+    239
   ],
-  "nombre": "Quagsire",
-  "pid": "5faa5597",
-  "habilidad": 11,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 1,
-    "def": 25,
-    "speed": 15,
-    "spatt": 12,
-    "att": 24,
-    "hp": 16
-  },
-  "nivel": 24,
-  "id": 195,
-  "genero": 0,
-  "sv": 7568
-},{
-  "movimientos": [
-    64,
-    253,
-    115,
-    93
-  ],
-  "nombre": "Noctowl",
-  "pid": "2551123d",
+  "nombre": "Pidgeotto",
+  "pid": "c251d5fa",
   "habilidad": 51,
-  "shiny": 0,
+  "shiny": 1,
   "ivs": {
-    "spdef": 31,
-    "def": 18,
-    "speed": 4,
-    "spatt": 12,
-    "att": 18,
-    "hp": 22
+    "spdef": 26,
+    "def": 17,
+    "speed": 23,
+    "spatt": 14,
+    "att": 21,
+    "hp": 5
   },
   "nivel": 25,
-  "id": 164,
-  "genero": 1,
-  "sv": 8385
-},{
-  "movimientos": [
-    341,
-    21,
-    426,
-    133
-  ],
-  "nombre": "Quagsire",
-  "pid": "2b6a324f",
-  "habilidad": 11,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 16,
-    "def": 14,
-    "speed": 10,
-    "spatt": 29,
-    "att": 8,
-    "hp": 4
-  },
-  "nivel": 24,
-  "id": 195,
-  "genero": 1,
-  "sv": 3720
+  "id": 17,
+  "genero": 0,
+  "sv": 6
 },{
   "movimientos": [
     24,
@@ -75,42 +29,88 @@
     44
   ],
   "nombre": "Nidorina",
-  "pid": "3142132c",
-  "habilidad": 38,
+  "pid": "6c93be6b",
+  "habilidad": 79,
   "shiny": 0,
   "ivs": {
-    "spdef": 0,
-    "def": 18,
-    "speed": 24,
-    "spatt": 2,
+    "spdef": 26,
+    "def": 6,
+    "speed": 26,
+    "spatt": 22,
     "att": 11,
-    "hp": 5
+    "hp": 19
   },
   "nivel": 23,
   "id": 30,
   "genero": 1,
-  "sv": 13763
+  "sv": 50517
 },{
   "movimientos": [
-    64,
-    253,
-    115,
-    93
+    24,
+    40,
+    31,
+    30
   ],
-  "nombre": "Noctowl",
-  "pid": "ddde261a",
-  "habilidad": 15,
+  "nombre": "Nidorino",
+  "pid": "1f2d4f02",
+  "habilidad": 38,
   "shiny": 0,
   "ivs": {
-    "spdef": 10,
-    "def": 25,
-    "speed": 13,
-    "spatt": 1,
-    "att": 11,
-    "hp": 3
+    "spdef": 31,
+    "def": 14,
+    "speed": 19,
+    "spatt": 12,
+    "att": 1,
+    "hp": 16
+  },
+  "nivel": 23,
+  "id": 33,
+  "genero": 0,
+  "sv": 18306
+},{
+  "movimientos": [
+    16,
+    98,
+    18,
+    239
+  ],
+  "nombre": "Pidgeotto",
+  "pid": "562d46d8",
+  "habilidad": 51,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 5,
+    "def": 19,
+    "speed": 26,
+    "spatt": 16,
+    "att": 30,
+    "hp": 8
   },
   "nivel": 25,
-  "id": 164,
+  "id": 17,
+  "genero": 0,
+  "sv": 1880
+},{
+  "movimientos": [
+    16,
+    98,
+    18,
+    239
+  ],
+  "nombre": "Pidgeotto",
+  "pid": "b828fd1a",
+  "habilidad": 51,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 22,
+    "def": 28,
+    "speed": 12,
+    "spatt": 9,
+    "att": 21,
+    "hp": 16
+  },
+  "nivel": 25,
+  "id": 17,
   "genero": 1,
-  "sv": 60521
-}], "encuentros":2466, "mode":2, "sv_minimo":11}
+  "sv": 21151
+}], "encuentros":18174, "mode":1, "sv_minimo":6}

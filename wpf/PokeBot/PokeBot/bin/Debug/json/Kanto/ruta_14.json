@@ -1,0 +1,111 @@
+{
+    "nombre": "Ruta 14",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "30", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "33", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "17", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "187", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "188", "porcentaje": "9%", "aparicion": ""},
+                        {"id": "113", "porcentaje": "1%", "aparicion": ""},
+                        {"id": "164", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 40%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "167", "porcentaje": "25%", "aparicion": "Oro"},
+                        {"id": "165", "porcentaje": "25%", "aparicion": "Plata"},
+                        {"id": "265", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "114", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "30", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "33", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "17", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "187", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "188", "porcentaje": "9%", "aparicion": ""},
+                        {"id": "113", "porcentaje": "1%", "aparicion": ""},
+                        {"id": "164", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 40%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "167", "porcentaje": "25%", "aparicion": "Oro"},
+                        {"id": "165", "porcentaje": "25%", "aparicion": "Plata"},
+                        {"id": "265", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "114", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "30", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "33", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "164", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "19%", "aparicion": ""},
+                        {"id": "113", "porcentaje": "1%", "aparicion": ""},
+                        {"id": "17", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "187", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "188", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 40%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "167", "porcentaje": "25%", "aparicion": "Oro"},
+                        {"id": "165", "porcentaje": "25%", "aparicion": "Plata"},
+                        {"id": "265", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "114", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

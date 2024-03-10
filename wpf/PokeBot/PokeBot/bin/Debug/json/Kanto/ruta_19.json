@@ -1,0 +1,114 @@
+{
+    "nombre": "Ruta 19",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Golpe roca",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "366", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "67%", "aparicion": ""},
+                        {"id": "222", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "120", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "366", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Golpe roca",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "366", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "67%", "aparicion": ""},
+                        {"id": "222", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "120", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "366", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Golpe roca",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "366", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "67%", "aparicion": ""},
+                        {"id": "120", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "222", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "366", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

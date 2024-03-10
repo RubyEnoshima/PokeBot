@@ -1,559 +1,555 @@
 {
-    "Monte Plateado":
-    {
-        "Mañana":[
-            {
-                "Cueva Cascada":[
-                    {
-                        "Mutuos":[
-                            {"95": "30%"},
-                            {"75": "20%"},
-                            {"42": "5%"},
-                            {"246": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "30%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "30%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Cueva Moltres":[
-                    {
-                        "Mutuos":[
-                            {"146": "Único"},
-                            {"195": "40%"},
-                            {"208": "20%"},
-                            {"55": "10%"},
-                            {"200": "0%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Pequeña":[
-                    {
-                        "Mutuos":[                                
-                            {"200": "0%"},
-                            {"195": "35%"},
-                            {"55": "10%"},
-                            {"246": "5%"},
-                            {"247": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Ladera Verde":[
-                    {
-                        "Mutuos":[
-                            {"42": "40%"},
-                            {"208": "30%"},
-                            {"55": "5%"},
-                            {"246": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "10%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "10%"},
-                            {"216": "10%"}
-                        ],
-                        "Arboles":[
-                            {"190": "40%"},
-                            {"214": "40%"},
-                            {"177": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Espiral":[
-                    {
-                        "Mutuos":[
-                            {"195": "30%"},
-                            {"215": "20%"},
-                            {"55": "10%"},
-                            {"200": "0%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Ladera Nevada":[
-                    {
-                        "Mutuos":[
-                            {"55": "30%"},
-                            {"215": "20%"},
-                            {"200": "0%"},
-                            {"246": "10%"},
-                            {"195": "15%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Final":[
-                    {
-                        "Mutuos":[
-                            {"55": "30%"},
-                            {"215": "20%"},
-                            {"200": "0%"},
-                            {"195": "20%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Zonas de Agua":[
-                    {"119": "90%"},
-                    {"118": "10%"}
-                ],
-                "Super Caña":[
-                    {"118": "90%"},
-                    {"129": "7%"},
-                    {"118": "3%"}
-                ]
-            }
-        ],
+    "nombre": "Monte Plateado",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Cueva Cascada",
+                    "pokemon":
+                    [
+                        {"id": "232", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "30%", "aparicion": "Plata"},
+                        {"id": "95", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
 
-        "Tarde":[
-            {
-                "Cueva Cascada":[
-                    {
-                        "Mutuos":[
-                            {"95": "30%"},
-                            {"75": "20%"},
-                            {"42": "5%"},
-                            {"246": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "30%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "30%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Cueva Moltres":[
-                    {
-                        "Mutuos":[
-                            {"146": "Único"},
-                            {"195": "40%"},
-                            {"208": "20%"},
-                            {"55": "10%"},
-                            {"200": "0%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Pequeña":[
-                    {
-                        "Mutuos":[
-                            {"200": "0%"},
-                            {"195": "35%"},
-                            {"55": "10%"},
-                            {"246": "5%"},
-                            {"247": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Ladera Verde":[
-                    {
-                        "Mutuos":[
-                            {"42": "40%"},
-                            {"208": "30%"},
-                            {"55": "5%"},
-                            {"246": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "10%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "10%"},
-                            {"216": "10%"}
-                        ],
-                        "Arboles":[
-                            {"190": "40%"},
-                            {"214": "40%"},
-                            {"177": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Espiral":[
-                    {
-                        "Mutuos":[
-                            {"195": "30%"},
-                            {"215": "20%"},
-                            {"55": "10%"},
-                            {"200": "0%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Ladera Nevada":[
-                    {
-                        "Mutuos":[
-                            {"55": "30%"},
-                            {"215": "20%"},
-                            {"200": "0%"},
-                            {"246": "10%"},
-                            {"195": "15%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Final":[
-                    {
-                        "Mutuos":[
-                            {"55": "30%"},
-                            {"215": "20%"},                                
-                            {"200": "0%"},
-                            {"195": "20%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Zonas de Agua":[
-                    {"119": "90%"},
-                    {"118": "10%"}
-                ],
-                "Super Caña":[
-                    {"118": "90%"},
-                    {"129": "7%"},
-                    {"118": "3%"}
-                ]
-            }
-        ],
+                {
+                    "nombre": "Cueva Moltres",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
 
-        "Noche":[
-            {
-                "Cueva Cascada":[
-                    {
-                        "Mutuos":[
-                            {"95": "30%"},
-                            {"75": "20%"},
-                            {"42": "5%"},
-                            {"246": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "30%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "30%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Cueva Moltres":[
-                    {
-                        "Mutuos":[
-                            {"146": "Único"},
-                            {"195": "30%"},
-                            {"208": "20%"},
-                            {"55": "10%"},
-                            {"200": "10%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Pequeña":[
-                    {
-                        "Mutuos":[
-                            {"200": "30%"},
-                            {"55": "10%"},                                
-                            {"195": "5%"},                                
-                            {"246": "5%"},
-                            {"247": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Ladera Verde":[
-                    {
-                        "Mutuos":[
-                            {"42": "40%"},
-                            {"208": "30%"},
-                            {"55": "5%"},
-                            {"246": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "10%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "10%"},
-                            {"216": "10%"}
-                        ],
-                        "Arboles":[
-                            {"190": "40%"},
-                            {"214": "40%"},
-                            {"177": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Espiral":[
-                    {
-                        "Mutuos":[
-                            {"195": "20%"},
-                            {"215": "20%"},
-                            {"55": "10%"},
-                            {"200": "10%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"},
-                            {"231": "10%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"},
-                            {"216": "10%"}
-                        ]
-                    }
-                ],
-                "Ladera Nevada":[
-                    {
-                        "Mutuos":[
-                            {"55": "20%"},
-                            {"215": "20%"},                                
-                            {"200": "15%"},
-                            {"246": "10%"},
-                            {"195": "10%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Cueva Final":[
-                    {
-                        "Mutuos":[
-                            {"55": "30%"},
-                            {"215": "20%"},                                
-                            {"200": "10%"},
-                            {"195": "10%"},
-                            {"246": "5%"},
-                            {"42": "5%"},
-                            {"296": "Hoenn 20%"},
-                            {"359": "Hoenn 20%"},
-                            {"433": "Sinnoh 20%"},
-                            {"436": "Sinnoh 20%"}
-                        ],
-                        "Oro":[
-                            {"232": "20%"}
-                        ],
-                        "Plata":
-                        [
-                            {"217": "20%"}
-                        ]
-                    }
-                ],
-                "Zonas de Agua":[
-                    {"119": "90%"},
-                    {"118": "10%"}
-                ],
-                "Super Caña":[
-                    {"118": "90%"},
-                    {"129": "7%"},
-                    {"118": "3%"}
-                ]
-            }
-        ]
-    }
+                {
+                    "nombre": "Legendario - Cueva Moltres",
+                    "pokemon":
+                    [
+                        {"id": "146", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Pequeña",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"}
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "247", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Ladera Verde",
+                    "pokemon":
+                    [
+                        {"id": "42", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "232", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "217", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles - Ladera Verde",
+                    "pokemon":
+                    [
+                        {"id": "190", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "177", "porcentaje": "20%", "aparicion": ""}
+                    ]
+                },
+
+
+                {
+                    "nombre": "Cueva Espiral",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Ladera Nevada",
+                    "pokemon":
+                    [
+                        {"id": "55", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "195", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Final",
+                    "pokemon":
+                    [
+                        {"id": "55", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+
+
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Cueva Cascada",
+                    "pokemon":
+                    [
+                        {"id": "232", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "30%", "aparicion": "Plata"},
+                        {"id": "95", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Moltres",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Cueva Moltres",
+                    "pokemon":
+                    [
+                        {"id": "146", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Pequeña",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"}
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "247", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Ladera Verde",
+                    "pokemon":
+                    [
+                        {"id": "42", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "232", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "217", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles - Ladera Verde",
+                    "pokemon":
+                    [
+                        {"id": "190", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "177", "porcentaje": "20%", "aparicion": ""}
+                    ]
+                },
+
+
+                {
+                    "nombre": "Cueva Espiral",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Ladera Nevada",
+                    "pokemon":
+                    [
+                        {"id": "55", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "195", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Final",
+                    "pokemon":
+                    [
+                        {"id": "55", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+
+
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Cueva Cascada",
+                    "pokemon":
+                    [
+                        {"id": "232", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "30%", "aparicion": "Plata"},
+                        {"id": "95", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Moltres",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "200", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Cueva Moltres",
+                    "pokemon":
+                    [
+                        {"id": "146", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Pequeña",
+                    "pokemon":
+                    [
+                        {"id": "200", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "247", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Ladera Verde",
+                    "pokemon":
+                    [
+                        {"id": "42", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "232", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "217", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "55", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles - Ladera Verde",
+                    "pokemon":
+                    [
+                        {"id": "190", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "177", "porcentaje": "20%", "aparicion": ""}
+                    ]
+                },
+
+
+                {
+                    "nombre": "Cueva Espiral",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
+                        {"id": "200", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Ladera Nevada",
+                    "pokemon":
+                    [
+                        {"id": "55", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "200", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Final",
+                    "pokemon":
+                    [
+                        {"id": "55", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "215", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "200", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "246", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+
+
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
 }

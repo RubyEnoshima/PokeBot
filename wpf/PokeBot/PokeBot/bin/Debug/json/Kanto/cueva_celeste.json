@@ -1,0 +1,312 @@
+{
+    "nombre": "Cueva Celeste",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        
+                        {"id": "67", "porcentaje": "24%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "57", "porcentaje": "14%", "aparicion": "Oro"},
+                        {"id": "53", "porcentaje": "14%", "aparicion": "Plata"},
+                        {"id": "82", "porcentaje": "11%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "11%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso P1",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "64", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "82", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "64", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "82", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "150", "porcentaje": "Unico", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "54", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "60", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "61", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        
+                        {"id": "67", "porcentaje": "24%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "57", "porcentaje": "14%", "aparicion": "Oro"},
+                        {"id": "53", "porcentaje": "14%", "aparicion": "Plata"},
+                        {"id": "82", "porcentaje": "11%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "11%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso P1",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "64", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "82", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "64", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "82", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "150", "porcentaje": "Unico", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "54", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "60", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "61", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        
+                        {"id": "67", "porcentaje": "6%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "57", "porcentaje": "4%", "aparicion": "Oro"},
+                        {"id": "53", "porcentaje": "4%", "aparicion": "Plata"},
+                        {"id": "82", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso P1",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "64", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "82", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "67", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "47", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "64", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "82", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "132", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "101", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "150", "porcentaje": "Unico", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "54", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "55", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Super Caña",
+                    "pokemon": 
+                    [
+                        {"id": "60", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "61", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "Plaga 60%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

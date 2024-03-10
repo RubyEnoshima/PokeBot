@@ -43,8 +43,8 @@
                     <MenuItem Header="Salir" Click="Salir"/>
                 </MenuItem>
                 <MenuItem Header="Opciones">
-                    <MenuItem Header="Guardar al salir" Name="Guardar_salir" IsCheckable="True" IsChecked="True" Checked="GuardarSalirC" Unchecked="GuardarSalirU" />
-                    <MenuItem Header="Reset después de shiny" Name="Reset_shiny" IsCheckable="True" IsChecked="True" Checked="ResetShinyC" Unchecked="ResetShinyU" />
+                    <MenuItem Header="Guardar al salir" x:Name="Guardar_salir" IsCheckable="True" IsChecked="True" Checked="GuardarSalirC" Unchecked="GuardarSalirU" />
+                    <MenuItem Header="Reset después de shiny" x:Name="Reset_shiny" IsCheckable="True" IsChecked="True" Checked="ResetShinyC" Unchecked="ResetShinyU" />
                 </MenuItem>
             </Menu>
         </DockPanel>
@@ -169,14 +169,27 @@
         <Label x:Name="SV_MIN_Label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Mínimo" HorizontalAlignment="Left" Margin="566,276,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="50" Panel.ZIndex="2" FontSize="18"/>
         <Label x:Name="SV_MIN" Foreground="White" Style="{StaticResource OutlineLabel}" Content="-" HorizontalAlignment="Left" Margin="561,298,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="60" Panel.ZIndex="2" FontSize="18"/>
 
-        <Grid x:Name="Probs" Margin="626,0,0,0" Panel.ZIndex="50">
-            <Canvas x:Name="Canvas1" Margin="0,46,0,675" MinHeight="62" Height="62">
-                <Image x:Name="SpriteProb" MinWidth="64" Width="64" MinHeight="62" Height="62" Source="/378.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-                <Label x:Name="NombreProb" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Regice" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Top="9"/>
-                <Label x:Name="Probabilidad" Foreground="White" Style="{StaticResource OutlineLabel}" Content="35%" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Bottom="9" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Grid x:Name="Probs_MAIN" Margin="0,0,0,0" Panel.ZIndex="50">
+            <Grid Margin="626,0,0,0">
+            <Label x:Name="Encuentros_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Encuentros" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,19,0,0"/>
+            <Label x:Name="Fase_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Fase" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="17" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="171,40,0,0"/>
+            <Label x:Name="Totales_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Totales" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="17" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,40,0,0"/>
+            </Grid>
 
-            </Canvas>
-            
+            <Grid x:Name="Probs" Margin="626,0,0,0" Panel.ZIndex="50">
+
+                <Canvas x:Name="Canvas1" Tag=""  Margin="0,50,0,675" MinHeight="62" Height="62">
+                    <Image x:Name="SpriteProb" MinWidth="64" Width="64" MinHeight="62" Height="62" Source="/378.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="NombreProb" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Regice" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Top="9"/>
+                    <Label x:Name="Probabilidad" Foreground="White" Style="{StaticResource OutlineLabel}" Content="35%" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Bottom="9" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                    <Label x:Name="PhaseEncounters" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="64" MinWidth="50" Background="{x:Null}" Canvas.Left="185" Canvas.Top="17" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    <Label x:Name="TotalEncounters" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="64" MinWidth="50" Background="{x:Null}" Canvas.Left="249" Canvas.Top="17" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                </Canvas>
+
+
+                
+            </Grid>
         </Grid>
 
     </Grid>

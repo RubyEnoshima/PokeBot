@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.IO;
 using static PokeBot.MainWindow;
 using System.Diagnostics;
+using System.Windows;
 
 namespace PokeBot
 {
@@ -15,7 +16,7 @@ namespace PokeBot
         public string juego = "Oro";
 
         public string region = "Kanto/";
-        public string ruta = "ruta_24.json";
+        public string ruta = "ruta_15.json";
 
         string directorio = "json/";
 
@@ -44,7 +45,12 @@ namespace PokeBot
                         {
                             if (z.nombre == zona)
                             {
-                                return z.pokemon;
+                                List<ProbPokemon> res = new List<ProbPokemon>();
+                                foreach(ProbPokemon p in z.pokemon)
+                                {
+                                    if(p.aparicion == "" || p.aparicion == juego) res.Add(p);
+                                }
+                                return res.ToArray();
                             }
                         }
                     }

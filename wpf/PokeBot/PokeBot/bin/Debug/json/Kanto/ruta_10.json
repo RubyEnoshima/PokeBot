@@ -1,0 +1,156 @@
+{
+    "nombre": "Ruta 10",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "100", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "20", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "22", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "125", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}       
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Central Energía",
+                    "pokemon":
+                    [
+                        {"id": "145", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}
+
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "100", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "20", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "22", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "125", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}       
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Central Energía",
+                    "pokemon":
+                    [
+                        {"id": "145", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}
+
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "195", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "100", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "20", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "125", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "22", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "21", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}       
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario - Central Energía",
+                    "pokemon":
+                    [
+                        {"id": "145", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}
+
+                    ]
+                }
+            ]
+        }
+    ]
+}

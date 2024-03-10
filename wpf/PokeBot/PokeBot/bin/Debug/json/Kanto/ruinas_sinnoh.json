@@ -1,0 +1,51 @@
+{
+    "nombre": "Ruinas Sinnoh",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Legendarios",
+                    "pokemon":
+                    [
+                        {"id": "483", "porcentaje": "Único", "aparicion": ""},
+                        {"id": "484", "porcentaje": "Único", "aparicion": ""},
+                        {"id": "487", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Legendarios",
+                    "pokemon":
+                    [
+                        {"id": "483", "porcentaje": "Único", "aparicion": ""},
+                        {"id": "484", "porcentaje": "Único", "aparicion": ""},
+                        {"id": "487", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Legendarios",
+                    "pokemon":
+                    [
+                        {"id": "483", "porcentaje": "Único", "aparicion": ""},
+                        {"id": "484", "porcentaje": "Único", "aparicion": ""},
+                        {"id": "487", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "nombre": "Túnel Roca",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "104", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "66", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "67", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "104", "porcentaje": " 30%", "aparicion": ""},
+                        {"id": " 95", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "105", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "115", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca - Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "100%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "104", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "66", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "67", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "104", "porcentaje": " 30%", "aparicion": ""},
+                        {"id": " 95", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "105", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "115", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca - Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "100%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "104", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "66", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "67", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "104", "porcentaje": " 30%", "aparicion": ""},
+                        {"id": " 95", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "105", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "115", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca - Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "100%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

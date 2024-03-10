@@ -20,6 +20,7 @@ using static PokeBot.MainWindow;
 using System.Xml.Linq;
 using System.Security.RightsManagement;
 using System.Xml.Schema;
+using System.Windows.Threading;
 
 namespace PokeBot
 {
@@ -31,6 +32,8 @@ namespace PokeBot
         private const string archivo_guardado = "save.json";
         private const string archivo_config = "config.json";
         private const string archivo_bot = "bot.json";
+
+        private bool cargado = false;
 
         private int[] minimosIVS = new int[] { 31, 25, 11, 6, 1, 0 };
         private int[] minimosTotal = new int[] { 186, 145, 70, 29, 1, 0 };
@@ -51,21 +54,37 @@ namespace PokeBot
 
         private Region region = new Region();
 
-        private string horario = "Noche";
+        private string horario = "";
         private string zona = "Zonas Verdes";
 
-        private Probabilidades Probabilidades = new Probabilidades();
+        private Probabilidades Probabilidades;
+
+        private DispatcherTimer timer;
 
         public MainWindow()
         {
             InitializeComponent();
             CargarImagenes();
-            CargarConfig();
+
+            Loaded += WindowLoaded;
+        }
+        void WindowLoaded(object sender, RoutedEventArgs e)
+        {
+            cargado = true;
             Cargar();
-            CargarInfoProbPokemon();
+            CargarConfig();
+
+            MirarHora(null, EventArgs.Empty);
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(5);
+            timer.Tick += MirarHora;
+
+            // Start the timer
+            timer.Start();
+
             thread = new Thread(ActualizarDesdeArchivo);
             thread.Start();
-            File.WriteAllText(archivo_json,string.Empty);
+            File.WriteAllText(archivo_json, string.Empty);
         }
 
         private void CargarImagenes()
@@ -119,6 +138,21 @@ namespace PokeBot
             }
         }
 
+        private void MirarHora(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            string antHorario = horario;
+            if (currentTime.Hour >= 4 && currentTime.Hour <= 9) { horario = "Mañana"; }
+            else if (currentTime.Hour >= 10 && currentTime.Hour <= 19) { horario = "Tarde"; }
+            else { horario = "Noche"; }
+            if (horario != antHorario)
+            {
+                if(Probabilidades != null) Probabilidades.Guardar();
+                LimpiarProbUI();
+                CargarInfoProbPokemon();
+            }
+        }
+
         private void AgregarPokemon(Pokemon pokemon)
         {
             if (pokemon.id == 0 || antPID==pokemon.pid) return;
@@ -133,10 +167,7 @@ namespace PokeBot
                 actual.sv_minimo = pokemon.sv;
                 SV_MIN.Content = actual.sv_minimo;
             }
-
-            //File.AppendAllText("sv.txt",pokemon.sv.ToString()+"\n");
-            //File.AppendAllText("sv_coma.txt",pokemon.sv.ToString()+",");
-            //File.AppendAllText("pid.txt",pokemon.pid+" - "+ pokemon.sv.ToString() + "\n");
+            if(Probabilidades != null) Probabilidades.AgregarEncuentro(pokemon.id, pokemon);
 
             for (int i = 0; i < pokemons.Count; i++)
             {
@@ -224,6 +255,7 @@ namespace PokeBot
 
         private void CargarInfoProbPokemon()
         {
+            Probabilidades = new Probabilidades(Probs, region.ruta, zona);
             ProbPokemon[] probPokemons = region.ObtenerPokemon(horario, zona);
             if(probPokemons != null)
             {
@@ -232,15 +264,17 @@ namespace PokeBot
                 ((Label)Probs.FindName("NombreProb")).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[0].id)).name;
                 ((Label)Probs.FindName("Probabilidad")).Content = probPokemons[0].porcentaje;
 
-                //Probabilidades.AgregarPokemon(probPokemons[0].id);
-
                 Canvas originalCanvas = ((Canvas)Probs.FindName("Canvas1")); // Your original Canvas
+                originalCanvas.Tag = probPokemons[0].id;
+                Probabilidades.AgregarPokemon(Int32.Parse(probPokemons[0].id));
                 for (int i = 1; i < probPokemons.Length; i++)
                 {
                     
                     CanvasDuplicator duplicator = new CanvasDuplicator();
                     Canvas duplicatedCanvas = duplicator.DuplicateCanvas(originalCanvas, i.ToString(), 0, 45);
                     duplicatedCanvas.Name = "Canvas" + (i + 1);
+                    duplicatedCanvas.Tag = probPokemons[i].id;
+
                     Probs.Children.Add(duplicatedCanvas);
 
                     ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[i].id + ".png";
@@ -249,9 +283,18 @@ namespace PokeBot
                     ((Label)duplicatedCanvas.Children[1]).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[i].id)).name;
                     ((Label)duplicatedCanvas.Children[2]).Content = probPokemons[i].porcentaje;
 
+                    Probabilidades.AgregarPokemon(Int32.Parse(probPokemons[i].id));
+
                     originalCanvas = duplicatedCanvas;
                 }
+
+                Probabilidades.ActualizarUI();
             }
+        }
+
+        private void LimpiarProbUI()
+        {
+            if(Probs.Children.Count > 1) Probs.Children.RemoveRange(1, Probs.Children.Count - 1);
         }
 
         private void ImagenGrande(object sender, MouseButtonEventArgs e)
@@ -308,6 +351,7 @@ namespace PokeBot
                 }
                 pokemonsJSON += "], "+actual.toString()+"}";
                 File.WriteAllText(archivo_guardado, pokemonsJSON);
+                Probabilidades.Guardar();
                 Console.WriteLine("Guardado!");
 
             }
@@ -326,6 +370,8 @@ namespace PokeBot
             actual.sv_minimo = -1;
             SV_MIN.Content = "-";
             File.WriteAllText(archivo_json, string.Empty);
+            Probabilidades.SiguienteFase();
+
         }
 
         private void Cerrar(object sender, CancelEventArgs e)
@@ -350,7 +396,7 @@ namespace PokeBot
         private void ActualizarUIConfig()
         {
             Guardar_salir.IsChecked = config.guardar_al_salir;
-            //Reset_shiny.IsChecked = config.reset_shiny;
+            Reset_shiny.IsChecked = config.reset_shiny;
         }
 
         private void CargarConfig()
@@ -369,8 +415,7 @@ namespace PokeBot
 
         private void GuardarConfig()
         {
-            File.WriteAllText(archivo_config,JsonConvert.SerializeObject(config, Formatting.Indented));
-            ActualizarUIConfig();
+            if(cargado) File.WriteAllText(archivo_config,JsonConvert.SerializeObject(config, Formatting.Indented));
         }
 
         private void GuardarSalirC(object sender, RoutedEventArgs e)
@@ -407,35 +452,7 @@ namespace PokeBot
             return brush;
         }
 
-        public class Pokemon
-        {
-            public int[] movimientos { get; set; }
-            public string nombre { get; set; } = "";
-            public string pid { get; set; } = "";
-            public int habilidad { get; set; } = 0;
-            public int shiny { get; set; } = 0;
-            public IVs ivs { get; set; } = new IVs();
-            public int nivel { get; set; } = 0;
-            public int id { get; set; } = 0;
-            public int genero { get; set; } = 0;
-            public int sv { get; set; } = 0;
-
-            public string toJSON()
-            {
-                return JsonConvert.SerializeObject(this, Formatting.Indented);
-            }
-        }
-
-        public class IVs
-        {
-            public int spdef { get; set; } = 0;
-            public int def { get; set; } = 0;
-            public int speed { get; set; } = 0;
-            public int spatt { get; set; } = 0;
-            public int att { get; set; } = 0;
-            public int hp { get; set; } = 0;
-        }
-
+        
         public class Guardado
         {
             public Pokemon[] pokemon { get; set; }
@@ -456,5 +473,35 @@ namespace PokeBot
         }
 
     }
+
+    public class Pokemon
+    {
+        public int[] movimientos { get; set; }
+        public string nombre { get; set; } = "";
+        public string pid { get; set; } = "";
+        public int habilidad { get; set; } = 0;
+        public int shiny { get; set; } = 0;
+        public IVs ivs { get; set; } = new IVs();
+        public int nivel { get; set; } = 0;
+        public int id { get; set; } = 0;
+        public int genero { get; set; } = 0;
+        public int sv { get; set; } = 0;
+
+        public string toJSON()
+        {
+            return JsonConvert.SerializeObject(this, Formatting.Indented);
+        }
+    }
+
+    public class IVs
+    {
+        public int spdef { get; set; } = 0;
+        public int def { get; set; } = 0;
+        public int speed { get; set; } = 0;
+        public int spatt { get; set; } = 0;
+        public int att { get; set; } = 0;
+        public int hp { get; set; } = 0;
+    }
+
 
 }

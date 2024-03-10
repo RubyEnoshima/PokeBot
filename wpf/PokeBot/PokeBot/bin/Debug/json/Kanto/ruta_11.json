@@ -1,0 +1,117 @@
+{
+    "nombre": "Ruta 11",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "96", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "81", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "97", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 20%", "aparicion": ""}     
+                    ]
+                },
+
+                {
+                    "nombre": "Estático",
+                    "pokemon":
+                    [
+                        {"id": "143", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "25%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "96", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "81", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "97", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 20%", "aparicion": ""}     
+                    ]
+                },
+
+                {
+                    "nombre": "Estático",
+                    "pokemon":
+                    [
+                        {"id": "143", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "25%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "96", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "81", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "97", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 20%", "aparicion": ""}     
+                    ]
+                },
+
+                {
+                    "nombre": "Estático",
+                    "pokemon":
+                    [
+                        {"id": "143", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Arboles",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "25%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}
