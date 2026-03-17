@@ -1,0 +1,75 @@
+{
+    "nombre": "Paso Acantilado",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "194", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "194", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "194", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "60", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,183 @@
+{
+    "nombre": "Pozo Slowpoke",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "41", "porcentaje": "85%", "aparicion": ""},
+                        {"id": "79", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "41", "porcentaje": "80%", "aparicion": ""},
+                        {"id": "79", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua - PB",
+                    "pokemon":
+                    [
+                        {"id": "79", "porcentaje": "100%", "aparicion": ""}  
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua - S1",
+                    "pokemon":
+                    [
+                        {"id": "79", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "80", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}  
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "41", "porcentaje": "85%", "aparicion": ""},
+                        {"id": "79", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "41", "porcentaje": "80%", "aparicion": ""},
+                        {"id": "79", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua - PB",
+                    "pokemon":
+                    [
+                        {"id": "79", "porcentaje": "100%", "aparicion": ""}  
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua - S1",
+                    "pokemon":
+                    [
+                        {"id": "79", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "80", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}  
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "41", "porcentaje": "85%", "aparicion": ""},
+                        {"id": "79", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "41", "porcentaje": "80%", "aparicion": ""},
+                        {"id": "79", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua - PB",
+                    "pokemon":
+                    [
+                        {"id": "79", "porcentaje": "100%", "aparicion": ""}  
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua - S1",
+                    "pokemon":
+                    [
+                        {"id": "79", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "80", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}  
+                    ]
+                }
+            ]
+        }
+    ]
+}

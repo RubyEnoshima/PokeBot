@@ -1,0 +1,72 @@
+{
+    "nombre": "Ruta Helada",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "220", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "25%", "aparicion": "Oro"},
+                        {"id": "225", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "41", "porcentaje": "5%", "aparicion": "Plata"},
+                        {"id": "124", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "220", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "20%", "aparicion": "Oro"},
+                        {"id": "225", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "124", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "0%", "aparicion": "Plata"},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "220", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "25%", "aparicion": "Oro"},
+                        {"id": "225", "porcentaje": "20%", "aparicion": "Plata"},
+                        {"id": "41", "porcentaje": "5%", "aparicion": "Plata"},
+                        {"id": "124", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

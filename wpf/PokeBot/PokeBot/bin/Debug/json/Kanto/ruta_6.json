@@ -25,7 +25,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
@@ -76,7 +76,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
@@ -127,7 +127,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},

@@ -1,0 +1,93 @@
+{
+    "nombre": "Cueva Acantilado",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "42", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "66", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "95", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "98", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "194", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "4%", "aparicion": ""},
+                        {"id": "67", "porcentaje": "4%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "2%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "42", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "66", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "95", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "98", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "194", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "4%", "aparicion": ""},
+                        {"id": "67", "porcentaje": "4%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "2%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "42", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "66", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "95", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "98", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "194", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "4%", "aparicion": ""},
+                        {"id": "67", "porcentaje": "4%", "aparicion": ""},
+                        {"id": "208", "porcentaje": "2%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "200", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

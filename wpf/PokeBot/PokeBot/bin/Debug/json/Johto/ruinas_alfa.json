@@ -1,0 +1,162 @@
+{
+    "nombre": "Ruinas Alfa",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "177", "porcentaje": "90", "aparicion": ""},
+                        {"id": "235", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}  
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "100%", "aparicion": ""}       
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "194", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "40%", "aparicion": ""}         
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "93%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""}         
+                    ]
+                },
+
+                {
+                    "nombre": "Interior de las ruinas",
+                    "pokemon":
+                    [
+                        {"id": "201", "porcentaje": "Las 26 formas", "aparicion": ""}      
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "177", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "235", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}  
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "100%", "aparicion": ""}       
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "194", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "40%", "aparicion": ""}         
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "93%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""}         
+                    ]
+                },
+
+                {
+                    "nombre": "Interior de las ruinas",
+                    "pokemon":
+                    [
+                        {"id": "201", "porcentaje": "Las 26 formas", "aparicion": ""}      
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "177", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "235", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}  
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "100%", "aparicion": ""}       
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "194", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "195", "porcentaje": "40%", "aparicion": ""}         
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "93%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""}         
+                    ]
+                },
+
+                {
+                    "nombre": "Interior de las ruinas",
+                    "pokemon":
+                    [
+                        {"id": "201", "porcentaje": "Las 26 formas", "aparicion": ""}      
+                    ]
+                }
+            ]
+        }
+    ]
+}

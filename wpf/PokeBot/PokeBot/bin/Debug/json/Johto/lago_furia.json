@@ -1,0 +1,132 @@
+{
+    "nombre": "Lago de la Furia",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Árboles",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "45%", "aparicion": ""},
+                        {"id": "102", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "204", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "15%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Gyarados Rojo",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Árboles",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "45%", "aparicion": ""},
+                        {"id": "102", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "204", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "15%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Gyarados Rojo",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Árboles",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "45%", "aparicion": ""},
+                        {"id": "102", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "204", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "15%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Gyarados Rojo",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "130", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

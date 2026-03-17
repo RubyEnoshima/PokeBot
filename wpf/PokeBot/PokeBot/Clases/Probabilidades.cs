@@ -35,8 +35,7 @@ namespace PokeBot
             if (cargado) return;
             Encuentros enc = new Encuentros();
             enc.id = id;
-            //enc.canvas = canvas;
-            encuentros.Add(id, enc);
+            if(!encuentros.ContainsKey(id))encuentros.Add(id, enc);
         }
 
         public void AgregarEncuentro(int id, Pokemon pokemon)
@@ -54,14 +53,17 @@ namespace PokeBot
 
         void ActualizarUI(int id)
         {
-            Canvas canvas = EncontrarCanvas(id);
-            (canvas.Children[3] as Label).Content = encuentros[id].encuentros_fase;
-            (canvas.Children[4] as Label).Content = encuentros[id].encuentros_totales;
+            List<Canvas> canvas = EncontrarCanvas(id);
+            foreach (Canvas c in canvas)
+            {
+                (c.Children[3] as Label).Content = encuentros[id].encuentros_fase;
+                (c.Children[4] as Label).Content = encuentros[id].encuentros_totales;
+            }
         }
 
         public void ActualizarUI() 
         {
-            if (!cargado) return;
+            //if (!cargado) return;
             foreach(var e in encuentros)
             {
                 ActualizarUI(e.Value.id);
@@ -73,18 +75,23 @@ namespace PokeBot
             foreach(var e in encuentros)
             {
                 e.Value.encuentros_fase = 0;
-                (EncontrarCanvas(e.Value.id).Children[3] as Label).Content = 0;
+                foreach (var c in grid.Children)
+                {
+                    Canvas canvas = c as Canvas;
+                    (canvas.Children[3] as Label).Content = 0;
+                }
             }
         }
 
-        Canvas EncontrarCanvas(int id)
+        List<Canvas> EncontrarCanvas(int id)
         {
+            List<Canvas> res = new List<Canvas>();
             foreach(var c in grid.Children)
             {
                 Canvas canvas = c as Canvas;
-                if (canvas != null && canvas.Tag.ToString() == id.ToString()) return canvas;
+                if (canvas != null && canvas.Tag.ToString() == id.ToString()) res.Add(canvas);
             }
-            return null;
+            return res;
         }
 
         void Cargar()

@@ -2,7 +2,7 @@ joyset = {}
 
 function esperarRandom(n,m) -- espera entre n y m frames
     if n==nil then n = 5 end
-    if m==nil then m = 60 end
+    if m==nil then m = 250 end
     frames = math.random(n, m)
     esperar(frames)
 end

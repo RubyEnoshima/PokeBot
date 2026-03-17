@@ -1,0 +1,111 @@
+{
+    "nombre": "Torre Quemada",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "19", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "109", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "20", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}                
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "109", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "126", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "19", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "109", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "20", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}                
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "109", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "126", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Piso PB",
+                    "pokemon":
+                    [
+                        {"id": "19", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "109", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "20", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}                
+                    ]
+                },
+
+                {
+                    "nombre": "Piso S1",
+                    "pokemon":
+                    [
+                        {"id": "109", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "40%", "aparicion": ""},
+                        {"id": "126", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

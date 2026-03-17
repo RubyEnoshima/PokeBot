@@ -44,6 +44,7 @@ namespace PokeBot
 
         private string antPID = "";
         private List<Pokemon> pokemons = new List<Pokemon>();
+        private Pokemon antPoke;
 
         private Guardado actual = new Guardado();
 
@@ -52,7 +53,7 @@ namespace PokeBot
         private Imagenes Imagenes = new Imagenes();
         private Pokedex Pokedex = new Pokedex();
 
-        private Region region = new Region();
+        private Region region;
 
         private string horario = "";
         private string zona = "Zonas Verdes";
@@ -73,6 +74,8 @@ namespace PokeBot
             cargado = true;
             Cargar();
             CargarConfig();
+
+            region = new Region(ComboRutas, actual.ruta);
 
             MirarHora(null, EventArgs.Empty);
             timer = new DispatcherTimer();
@@ -157,7 +160,10 @@ namespace PokeBot
         {
             if (pokemon.id == 0 || antPID==pokemon.pid) return;
 
+            if (pokemons.Count>0 && pokemons[0].shiny == 1) Reset();
+
             antPID = pokemon.pid;
+            antPoke = pokemon;
             pokemons.Insert(0, pokemon);
             if (pokemons.Count > MAX_POKE) pokemons.RemoveAt(pokemons.Count - 1);
             actual.encuentros++;
@@ -243,6 +249,20 @@ namespace PokeBot
             actual.mode = comboBox.SelectedIndex + 1;
         }
 
+        private void CambiarRuta(object sender, SelectionChangedEventArgs e)
+        {
+            if (region != null)
+            {
+                Console.WriteLine(region.ruta);
+                ComboBox comboBox = sender as ComboBox;
+                actual.ruta = comboBox.SelectedValue.ToString();
+                region.CambiarRuta(actual.ruta);
+                Guardar();
+                CargarInfoProbPokemon();
+            
+            }
+        }
+
         private void Play(object sender, RoutedEventArgs e)
         {
             Console.WriteLine("Play");
@@ -259,14 +279,18 @@ namespace PokeBot
             ProbPokemon[] probPokemons = region.ObtenerPokemon(horario, zona);
             if(probPokemons != null)
             {
-                string ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[0].id + ".png";
-                ((Image)Probs.FindName("SpriteProb")).Source = Imagenes.Obtener(ruta);
+                string sprite = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[0].id + ".png";
+                ((Image)Probs.FindName("SpriteProb")).Source = Imagenes.Obtener(sprite);
                 ((Label)Probs.FindName("NombreProb")).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[0].id)).name;
                 ((Label)Probs.FindName("Probabilidad")).Content = probPokemons[0].porcentaje;
 
-                Canvas originalCanvas = ((Canvas)Probs.FindName("Canvas1")); // Your original Canvas
+                Canvas originalCanvas = (Canvas)Probs.FindName("Canvas1"); // Your original Canvas
                 originalCanvas.Tag = probPokemons[0].id;
                 Probabilidades.AgregarPokemon(Int32.Parse(probPokemons[0].id));
+
+                Probs.Children.Clear();
+                Probs.Children.Add(originalCanvas);
+
                 for (int i = 1; i < probPokemons.Length; i++)
                 {
                     
@@ -277,9 +301,9 @@ namespace PokeBot
 
                     Probs.Children.Add(duplicatedCanvas);
 
-                    ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[i].id + ".png";
+                    sprite = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[i].id + ".png";
                     Image img = ((Image)duplicatedCanvas.Children[0]);
-                    img.Source = Imagenes.Obtener(ruta);
+                    img.Source = Imagenes.Obtener(sprite);
                     ((Label)duplicatedCanvas.Children[1]).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[i].id)).name;
                     ((Label)duplicatedCanvas.Children[2]).Content = probPokemons[i].porcentaje;
 
@@ -337,28 +361,22 @@ namespace PokeBot
             }
         }
 
-        // Guarda el estado actual: el historial de pokes, los encuentros, el modo, el target...
-        private void Guardar(object sender, RoutedEventArgs e)
+        void Guardar()
         {
-            if(config.guardar_al_salir)
+            Console.WriteLine("Guardando....");
+            string pokemonsJSON = "{\"pokemon\":[";
+            for (int i = 0; i < pokemons.Count; i++)
             {
-                Console.WriteLine("Guardando....");
-                string pokemonsJSON = "{\"pokemon\":[";
-                for (int i = 0; i < pokemons.Count; i++)
-                {
-                    pokemonsJSON += pokemons[i].toJSON();
-                    if(i < pokemons.Count-1) pokemonsJSON += ",";
-                }
-                pokemonsJSON += "], "+actual.toString()+"}";
-                File.WriteAllText(archivo_guardado, pokemonsJSON);
-                Probabilidades.Guardar();
-                Console.WriteLine("Guardado!");
-
+                pokemonsJSON += pokemons[i].toJSON();
+                if (i < pokemons.Count - 1) pokemonsJSON += ",";
             }
+            pokemonsJSON += "], " + actual.toString() + "}";
+            File.WriteAllText(archivo_guardado, pokemonsJSON);
+            Probabilidades.Guardar();
+            Console.WriteLine("Guardado!");
         }
 
-        // Limpia el programa para empezar de 0
-        private void Reset(object sender, RoutedEventArgs e)
+        void Reset()
         {
             pokemons.Clear();
             for (int i = 0; i < MAX_POKE; i++)
@@ -369,9 +387,23 @@ namespace PokeBot
             Encuentros.Content = actual.encuentros;
             actual.sv_minimo = -1;
             SV_MIN.Content = "-";
-            File.WriteAllText(archivo_json, string.Empty);
+            //File.WriteAllText(archivo_json, string.Empty);
             Probabilidades.SiguienteFase();
+        }
 
+        // Guarda el estado actual: el historial de pokes, los encuentros, el modo, el target...
+        private void Guardar(object sender, RoutedEventArgs e)
+        {
+            if(config.guardar_al_salir)
+            {
+                Guardar();
+            }
+        }
+
+        // Limpia el programa para empezar de 0
+        private void Reset(object sender, RoutedEventArgs e)
+        {
+            Reset();
         }
 
         private void Cerrar(object sender, CancelEventArgs e)
@@ -458,11 +490,12 @@ namespace PokeBot
             public Pokemon[] pokemon { get; set; }
             public int encuentros { get; set; } = 0;
             public int mode { get; set; } = 0;
+            public string ruta { get; set; } = "";
             public int sv_minimo { get; set; } = -1;
 
             public string toString()
             {
-                return "\"encuentros\":" + encuentros + ", \"mode\":" + mode + ", \"sv_minimo\":" + sv_minimo;
+                return "\"encuentros\":" + encuentros + ", \"mode\":" + mode + ", \"sv_minimo\":" + sv_minimo + ", \"ruta\":\"" + ruta + "\"";
             }
         }
 

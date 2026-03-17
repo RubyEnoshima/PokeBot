@@ -35,7 +35,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "70%", "aparicion": ""},
@@ -54,7 +54,7 @@
                 },
 
                 {
-                    "nombre": "Super Caña",
+                    "nombre": "Supercaña",
                     "pokemon": 
                     [
                         {"id": "118", "porcentaje": "90%", "aparicion": ""},
@@ -97,7 +97,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "70%", "aparicion": ""},
@@ -116,7 +116,7 @@
                 },
 
                 {
-                    "nombre": "Super Caña",
+                    "nombre": "Supercaña",
                     "pokemon": 
                     [
                         {"id": "118", "porcentaje": "90%", "aparicion": ""},
@@ -159,7 +159,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "70%", "aparicion": ""},
@@ -178,7 +178,7 @@
                 },
 
                 {
-                    "nombre": "Super Caña",
+                    "nombre": "Supercaña",
                     "pokemon": 
                     [
                         {"id": "118", "porcentaje": "90%", "aparicion": ""},

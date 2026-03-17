@@ -1,0 +1,87 @@
+{
+    "nombre": "Ruta 41",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "73", "porcentaje": "40%", "aparicion": "Plata"},
+                        {"id": "226", "porcentaje": "10%", "aparicion": "Oro"}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "170", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "90", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "171", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "73", "porcentaje": "40%", "aparicion": "Plata"},
+                        {"id": "226", "porcentaje": "10%", "aparicion": "Oro"}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "170", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "90", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "171", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "73", "porcentaje": "40%", "aparicion": "Plata"},
+                        {"id": "226", "porcentaje": "10%", "aparicion": "Oro"}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "170", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "90", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "271", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

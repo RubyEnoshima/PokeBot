@@ -1,0 +1,315 @@
+{
+    "nombre": "Parque Nacional",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Fuera de Concurso",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "50%", "aparicion": "Oro"},
+                        {"id": "13", "porcentaje": "50%", "aparicion": "Plata"},
+                        {"id": "11", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "14", "porcentaje": "30%", "aparicion": "Plata"},
+                        {"id": "16", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "191", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "163", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Árboles - Fuera de Concurso",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "45%", "aparicion": ""},
+                        {"id": "102", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "204", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "165", "porcentaje": "5%", "aparicion": "Oro"},
+                        {"id": "167", "porcentaje": "5%", "aparicion": "Plata"},
+                        {"id": "420", "porcentaje": "Raro", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Sin P.N.",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "11", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "13", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "14", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "46", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "12", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "15", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Martes P.N.",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "11", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "13", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "14", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "46", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "12", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "15", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Jueves P.N.",
+                    "pokemon":
+                    [
+                        {"id": "265", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "290", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "266", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "313", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "401", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "402", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "269", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Sábados P.N.",
+                    "pokemon":
+                    [
+                        {"id": "265", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "290", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "268", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "314", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "401", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "402", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "267", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Fuera de Concurso",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "11", "porcentaje": "30%", "aparicion": "Oro"},
+                        {"id": "13", "porcentaje": "30%", "aparicion": "Plata"},
+                        {"id": "14", "porcentaje": "30%", "aparicion": "Plata"},
+                        {"id": "191", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "16", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "163", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Árboles - Fuera de Concurso",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "45%", "aparicion": ""},
+                        {"id": "102", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "204", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "165", "porcentaje": "5%", "aparicion": "Oro"},
+                        {"id": "167", "porcentaje": "5%", "aparicion": "Plata"},
+                        {"id": "420", "porcentaje": "Raro", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Sin P.N.",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "11", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "13", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "14", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "46", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "12", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "15", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Martes P.N.",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "11", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "13", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "14", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "46", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "12", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "15", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Jueves P.N.",
+                    "pokemon":
+                    [
+                        {"id": "265", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "290", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "266", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "313", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "401", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "402", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "269", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Sábados P.N.",
+                    "pokemon":
+                    [
+                        {"id": "265", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "290", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "268", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "314", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "401", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "402", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "267", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Fuera de Concurso",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "100%", "aparicion": ""},
+                        {"id": "10", "porcentaje": "0%", "aparicion": "Oro"},
+                        {"id": "11", "porcentaje": "0%", "aparicion": "Oro"},
+                        {"id": "13", "porcentaje": "0%", "aparicion": "Plata"},
+                        {"id": "14", "porcentaje": "0%", "aparicion": "Plata"},
+                        {"id": "191", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "16", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "403", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Árboles - Fuera de Concurso",
+                    "pokemon":
+                    [
+                        {"id": "163", "porcentaje": "45%", "aparicion": ""},
+                        {"id": "102", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "204", "porcentaje": "25%", "aparicion": ""},
+                        {"id": "165", "porcentaje": "5%", "aparicion": "Oro"},
+                        {"id": "167", "porcentaje": "5%", "aparicion": "Plata"},
+                        {"id": "420", "porcentaje": "Raro", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Sin P.N.",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "11", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "13", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "14", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "46", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "12", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "15", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Martes P.N.",
+                    "pokemon":
+                    [
+                        {"id": "10", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "11", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "48", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "13", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "14", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "46", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "12", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "15", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Jueves P.N.",
+                    "pokemon":
+                    [
+                        {"id": "265", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "290", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "266", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "313", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "401", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "402", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "269", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "C. de Bichos - Sábados P.N.",
+                    "pokemon":
+                    [
+                        {"id": "265", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "290", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "268", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "314", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "401", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "402", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "267", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "415", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "123", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "127", "porcentaje": "5%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

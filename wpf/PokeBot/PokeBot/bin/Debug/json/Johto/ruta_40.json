@@ -1,0 +1,81 @@
+{
+    "nombre": "Ruta 40",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "67%", "aparicion": ""},
+                        {"id": "222", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "120", "porcentaje": "0%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "67%", "aparicion": ""},
+                        {"id": "222", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "120", "porcentaje": "0%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "67%", "aparicion": ""},
+                        {"id": "120", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "222", "porcentaje": "0%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

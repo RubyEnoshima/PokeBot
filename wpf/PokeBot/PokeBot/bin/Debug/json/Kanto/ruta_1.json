@@ -23,11 +23,11 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
-                        {"id": "165", "porcentaje": "25%", "aparicion": "oro"},
+                        {"id": "165", "porcentaje": "25%", "aparicion": "Oro"},
                         {"id": "167", "porcentaje": "25%", "aparicion": "Plata"},
                         {"id": "204", "porcentaje": "15%", "aparicion": ""},
                         {"id": "265", "porcentaje": "10%", "aparicion": ""}
@@ -56,11 +56,11 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
-                        {"id": "165", "porcentaje": "25%", "aparicion": "oro"},
+                        {"id": "165", "porcentaje": "25%", "aparicion": "Oro"},
                         {"id": "167", "porcentaje": "25%", "aparicion": "Plata"},
                         {"id": "204", "porcentaje": "15%", "aparicion": ""},
                         {"id": "265", "porcentaje": "10%", "aparicion": ""}
@@ -89,11 +89,11 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
-                        {"id": "165", "porcentaje": "25%", "aparicion": "oro"},
+                        {"id": "165", "porcentaje": "25%", "aparicion": "Oro"},
                         {"id": "167", "porcentaje": "25%", "aparicion": "Plata"},
                         {"id": "204", "porcentaje": "15%", "aparicion": ""},
                         {"id": "265", "porcentaje": "10%", "aparicion": ""}

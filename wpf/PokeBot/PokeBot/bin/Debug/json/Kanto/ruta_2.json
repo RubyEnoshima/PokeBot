@@ -34,7 +34,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
@@ -69,7 +69,7 @@
                         {"id": "163", "porcentaje": "0%", "aparicion": "Oro"},
                         {"id": "15", "porcentaje": "0%", "aparicion": "Plata"},    
                         {"id": "163", "porcentaje": "0%", "aparicion": "Plata"},
-                        {"id": "164", "porcentaje": "0%", "aparicion": ""}                  
+                        {"id": "164", "porcentaje": "0%", "aparicion": ""},              
                         {"id": "166", "porcentaje": "0%", "aparicion": "Plata"},
                         {"id": "311", "porcentaje": "Hoenn 20%", "aparicion": ""},
                         {"id": "312", "porcentaje": "Hoenn 20%", "aparicion": ""},
@@ -78,7 +78,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},
@@ -122,7 +122,7 @@
                 },
 
                 {
-                    "nombre": "Arboles",
+                    "nombre": "Árboles",
                     "pokemon":
                     [
                         {"id": "163", "porcentaje": "50%", "aparicion": ""},

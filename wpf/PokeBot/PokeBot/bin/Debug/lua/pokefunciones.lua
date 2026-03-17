@@ -103,16 +103,21 @@ end
 
 antmode = mode
 antPID = -1
-function pokeSalvaje()
-    if enCombate()==false then buscarCombate() end -- Buscamos combate si no estamos en uno
 
+function comprobarPoke()
     pid = memory.readdword(PIDaddr) -- Leemos el PID del poke enemigo
     if pid ~= antPID then
         poke = crearPoke(pid)
         escribirArchivo(poke) -- Escribimos en un archivo la info
         antPID = pid
     end
+    return pid
+end
 
+function pokeSalvaje()
+    if enCombate()==false then buscarCombate() end -- Buscamos combate si no estamos en uno
+
+    pid = comprobarPoke()
     
     if esShiny(pid) then
         print("Es shiny!")
@@ -123,8 +128,32 @@ function pokeSalvaje()
     end
 end
 
+pids = {}
 function pokeLegend()
-    -- emu.reset()
+    if enCombate()==false then 
+        esperarRandom(1,300)
+        pulsarBoton("A",2)
+    else
+        pid = comprobarPoke()
+
+        if pids[pid] then
+            print(pid .. " repetido")
+        else
+            -- Añadir el PID a la tabla
+            pids[pid] = true
+        end
+        
+
+        if esShiny(pid) then
+            print("Es shiny!")
+            mode = 0 -- Pausar, temporal
+        else
+            -- gui.text(157,-170,"No es shiny","black","white")
+            emu.reset()
+            esperarRandom(1,2000)
+        end
+
+    end
 end
 
 function actuar() -- Decide el procedimiento que hay que seguir segun un modo u otro

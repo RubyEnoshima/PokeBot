@@ -1,0 +1,78 @@
+{
+    "nombre": "Guarida Dragón",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "147", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "65%", "aparicion": ""},
+                        {"id": "147", "porcentaje": "32%", "aparicion": ""},
+                        {"id": "148", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "147", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "65%", "aparicion": ""},
+                        {"id": "147", "porcentaje": "32%", "aparicion": ""},
+                        {"id": "148", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "147", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "65%", "aparicion": ""},
+                        {"id": "147", "porcentaje": "32%", "aparicion": ""},
+                        {"id": "148", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

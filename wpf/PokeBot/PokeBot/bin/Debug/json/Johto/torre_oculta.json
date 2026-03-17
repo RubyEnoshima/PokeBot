@@ -1,0 +1,51 @@
+{
+    "nombre": "Torre Oculta",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Legendarios de Hoenn",
+                    "pokemon":
+                    [
+                        {"id": "382", "porcentaje": "Único", "aparicion": "Oro"},
+                        {"id": "383", "porcentaje": "Único", "aparicion": "Plata"},
+                        {"id": "384", "porcentaje": "Único", "aparicion": ""}             
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Legendarios de Hoenn",
+                    "pokemon":
+                    [
+                        {"id": "382", "porcentaje": "Único", "aparicion": "Oro"},
+                        {"id": "383", "porcentaje": "Único", "aparicion": "Plata"},
+                        {"id": "384", "porcentaje": "Único", "aparicion": ""}             
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Legendarios de Hoenn",
+                    "pokemon":
+                    [
+                        {"id": "382", "porcentaje": "Único", "aparicion": "Oro"},
+                        {"id": "383", "porcentaje": "Único", "aparicion": "Plata"},
+                        {"id": "384", "porcentaje": "Único", "aparicion": ""}             
+                    ]
+                }
+            ]
+        }
+    ]
+}

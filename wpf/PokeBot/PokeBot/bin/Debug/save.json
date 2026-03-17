@@ -1,116 +1,116 @@
 {"pokemon":[{
   "movimientos": [
-    16,
-    98,
-    18,
-    239
+    310,
+    228,
+    114,
+    17
   ],
-  "nombre": "Pidgeotto",
-  "pid": "c251d5fa",
-  "habilidad": 51,
-  "shiny": 1,
-  "ivs": {
-    "spdef": 26,
-    "def": 17,
-    "speed": 23,
-    "spatt": 14,
-    "att": 21,
-    "hp": 5
-  },
-  "nivel": 25,
-  "id": 17,
-  "genero": 0,
-  "sv": 6
-},{
-  "movimientos": [
-    24,
-    40,
-    154,
-    44
-  ],
-  "nombre": "Nidorina",
-  "pid": "6c93be6b",
-  "habilidad": 79,
+  "nombre": "Murkrow",
+  "pid": "38fc5d22",
+  "habilidad": 15,
   "shiny": 0,
   "ivs": {
-    "spdef": 26,
-    "def": 6,
-    "speed": 26,
-    "spatt": 22,
-    "att": 11,
-    "hp": 19
-  },
-  "nivel": 23,
-  "id": 30,
-  "genero": 1,
-  "sv": 50517
-},{
-  "movimientos": [
-    24,
-    40,
-    31,
-    30
-  ],
-  "nombre": "Nidorino",
-  "pid": "1f2d4f02",
-  "habilidad": 38,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 31,
-    "def": 14,
-    "speed": 19,
+    "spdef": 4,
+    "def": 3,
+    "speed": 13,
     "spatt": 12,
-    "att": 1,
-    "hp": 16
+    "att": 22,
+    "hp": 11
   },
-  "nivel": 23,
-  "id": 33,
-  "genero": 0,
-  "sv": 18306
-},{
-  "movimientos": [
-    16,
-    98,
-    18,
-    239
-  ],
-  "nombre": "Pidgeotto",
-  "pid": "562d46d8",
-  "habilidad": 51,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 5,
-    "def": 19,
-    "speed": 26,
-    "spatt": 16,
-    "att": 30,
-    "hp": 8
-  },
-  "nivel": 25,
-  "id": 17,
-  "genero": 0,
-  "sv": 1880
-},{
-  "movimientos": [
-    16,
-    98,
-    18,
-    239
-  ],
-  "nombre": "Pidgeotto",
-  "pid": "b828fd1a",
-  "habilidad": 51,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 22,
-    "def": 28,
-    "speed": 12,
-    "spatt": 9,
-    "att": 21,
-    "hp": 16
-  },
-  "nivel": 25,
-  "id": 17,
+  "nivel": 17,
+  "id": 198,
   "genero": 1,
-  "sv": 21151
-}], "encuentros":18174, "mode":1, "sv_minimo":6}
+  "sv": 29299
+},{
+  "movimientos": [
+    44,
+    228,
+    158,
+    389
+  ],
+  "nombre": "Raticate",
+  "pid": "257136b1",
+  "habilidad": 62,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 6,
+    "def": 17,
+    "speed": 5,
+    "spatt": 30,
+    "att": 29,
+    "hp": 26
+  },
+  "nivel": 19,
+  "id": 20,
+  "genero": 0,
+  "sv": 1133
+},{
+  "movimientos": [
+    52,
+    43,
+    316,
+    270
+  ],
+  "nombre": "Growlithe",
+  "pid": "b69ad37",
+  "habilidad": 18,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 23,
+    "def": 10,
+    "speed": 30,
+    "spatt": 28,
+    "att": 31,
+    "hp": 25
+  },
+  "nivel": 18,
+  "id": 58,
+  "genero": 1,
+  "sv": 45555
+},{
+  "movimientos": [
+    44,
+    228,
+    158,
+    389
+  ],
+  "nombre": "Raticate",
+  "pid": "e4d1ac22",
+  "habilidad": 50,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 18,
+    "def": 16,
+    "speed": 3,
+    "spatt": 15,
+    "att": 6,
+    "hp": 26
+  },
+  "nivel": 19,
+  "id": 20,
+  "genero": 1,
+  "sv": 24414
+},{
+  "movimientos": [
+    116,
+    44,
+    228,
+    158
+  ],
+  "nombre": "Rattata",
+  "pid": "4c1a7e67",
+  "habilidad": 62,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 19,
+    "def": 15,
+    "speed": 2,
+    "spatt": 20,
+    "att": 28,
+    "hp": 26
+  },
+  "nivel": 17,
+  "id": 19,
+  "genero": 1,
+  "sv": 9680
+}], "encuentros":8, "mode":1, "sv_minimo":1133, "ruta":"Ruta 7"}

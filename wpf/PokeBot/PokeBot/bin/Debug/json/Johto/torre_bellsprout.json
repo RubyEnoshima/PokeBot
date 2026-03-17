@@ -1,0 +1,60 @@
+{
+    "nombre": "Torre Bellsprout",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Pisos del 2F y 3F",
+                    "pokemon":
+                    [
+                        {"id": "19", "porcentaje": "100%", "aparicion": ""},
+                        {"id": "92", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}                
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Pisos del 2F y 3F",
+                    "pokemon":
+                    [
+                        {"id": "19", "porcentaje": "100%", "aparicion": ""},
+                        {"id": "92", "porcentaje": "0%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}                
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Pisos del 2F y 3F",
+                    "pokemon":
+                    [
+                        {"id": "92", "porcentaje": "85%", "aparicion": ""},
+                        {"id": "19", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "263", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "327", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "307", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "441", "porcentaje": "Sinnoh 20%", "aparicion": ""}                
+                    ]
+                }
+            ]
+        }
+    ]
+}

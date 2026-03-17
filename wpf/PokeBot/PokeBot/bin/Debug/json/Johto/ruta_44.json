@@ -1,0 +1,159 @@
+{
+    "nombre": "Ruta 44",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "70", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "114", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "69", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "108", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Árboles",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "190", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "61", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "Plaga 90%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "Plaga 90%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "70", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "114", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "69", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "108", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Árboles",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "190", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "61", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "Plaga 90%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "Plaga 90%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "70", "porcentaje": "35%", "aparicion": ""},
+                        {"id": "114", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "69", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "108", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "293", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "264", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "399", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Árboles",
+                    "pokemon":
+                    [
+                        {"id": "21", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "190", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "214", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "61", "porcentaje": "10%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "Plaga 90%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "60", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "3%", "aparicion": ""},
+                        {"id": "223", "porcentaje": "Plaga 90%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

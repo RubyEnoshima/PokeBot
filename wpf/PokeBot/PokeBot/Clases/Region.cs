@@ -8,6 +8,8 @@ using System.IO;
 using static PokeBot.MainWindow;
 using System.Diagnostics;
 using System.Windows;
+using System.Drawing.Drawing2D;
+using System.Windows.Controls;
 
 namespace PokeBot
 {
@@ -16,28 +18,25 @@ namespace PokeBot
         public string juego = "Oro";
 
         public string region = "Kanto/";
-        public string ruta = "ruta_15.json";
+        public string ruta;
 
         string directorio = "json/";
 
-        RegionData regionData;
+        Dictionary<string,RegionData> rutas;
 
-
-        public Region() {
-            directorio += region + ruta;
-
-            if (File.Exists(directorio))
-            {
-                string data = File.ReadAllText(directorio);
-                regionData = JsonConvert.DeserializeObject<RegionData>(data);
-            }
+        public Region(ComboBox comboBox, string _ruta) {
+            ruta = FormatearRuta(_ruta);
+            directorio += region;
+            CargarRutas(comboBox);
         }
 
         public ProbPokemon[] ObtenerPokemon(string horario, string zona)
         {
-            if (regionData != null)
+            ruta = FormatearRuta(ruta);
+
+            if (rutas[ruta] != null)
             {
-                foreach(Horario h in regionData.horarios)
+                foreach(Horario h in rutas[ruta].horarios)
                 {
                     if(h.nombre == horario)
                     {
@@ -58,12 +57,46 @@ namespace PokeBot
             }
             return null;
         }
+
+        public void CambiarRuta(string _ruta)
+        {
+            ruta = FormatearRuta(_ruta);
+        }
+
+        string FormatearRuta(string _ruta)
+        {
+            _ruta = _ruta.ToLower();
+            _ruta = _ruta.Replace(" ", "_");
+            return _ruta;
+        }
+
+        void CargarRutas(ComboBox comboBox)
+        {
+            string[] archivos = Directory.GetFiles(directorio);
+            Array.Sort(archivos, new AlphanumericComparer());
+
+            rutas = new Dictionary<string, RegionData>();
+            int i = 0;
+            foreach(string archivo in archivos)
+            {
+                string data = File.ReadAllText(archivo);
+                RegionData regionData = JsonConvert.DeserializeObject<RegionData>(data);
+                regionData.orden = i;
+                rutas.Add(FormatearRuta(regionData.nombre), regionData);
+
+                comboBox.Items.Add(regionData.nombre);
+                i++;
+            }
+
+            comboBox.SelectedIndex = rutas[ruta].orden;
+        }
     }
 
     public class RegionData
     {
         public string nombre;
         public Horario[] horarios;
+        public int orden;
     }
 
     public class Horario
@@ -83,5 +116,38 @@ namespace PokeBot
         public string id;
         public string porcentaje;
         public string aparicion;
+    }
+
+    public class AlphanumericComparer : IComparer<string>
+    {
+        public int Compare(string x, string y)
+        {
+            string[] xParts = SplitString(x);
+            string[] yParts = SplitString(y);
+
+            for (int i = 0; i < Math.Min(xParts.Length, yParts.Length); i++)
+            {
+                int result;
+                if (int.TryParse(xParts[i], out int xNum) && int.TryParse(yParts[i], out int yNum))
+                {
+                    result = xNum.CompareTo(yNum);
+                    if (result != 0)
+                        return result;
+                }
+                else
+                {
+                    result = string.Compare(xParts[i], yParts[i], StringComparison.Ordinal);
+                    if (result != 0)
+                        return result;
+                }
+            }
+
+            return xParts.Length.CompareTo(yParts.Length);
+        }
+
+        private string[] SplitString(string input)
+        {
+            return System.Text.RegularExpressions.Regex.Split(input, "([0-9]+)");
+        }
     }
 }

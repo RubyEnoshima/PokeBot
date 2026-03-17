@@ -33,6 +33,13 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <StackPanel Margin="121,329,1286,0" Background="Transparent" Panel.ZIndex="100">
+            <ComboBox FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" SelectionChanged="CambiarModo" Width="193" Height="21" MinWidth="193" MaxWidth="193" MinHeight="21" MaxHeight="21" Panel.ZIndex="37">
+                <ComboBoxItem IsSelected="True" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Content="Pokémon salvaje"/>
+                <ComboBoxItem FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Content="Encuentro estático"/>
+            </ComboBox>
+        </StackPanel>
+
         <DockPanel Background="Transparent" LastChildFill="False">
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="Archivo">
@@ -154,30 +161,27 @@
         <Label x:Name="EncuentrosLabel" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Encuentros: " HorizontalAlignment="Left" Margin="47,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5" Width="98"/>
         <Label x:Name="Encuentros" Foreground="White" Style="{StaticResource OutlineLabel}" Content="0" HorizontalAlignment="Left" Margin="150,295,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="22" MinWidth="26.5" Width="79"/>
         <Button HorizontalAlignment="Left" Margin="53,329,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Play" Tag="play" PreviewMouseDown="ImagenPeque" PreviewMouseUp="ImagenGrande">
-            <Image Name="playImagen"  Source="Imgs/play_big.png" Height="19" Width="17"></Image>
+            <Image x:Name="playImagen"  Source="Imgs/play_big.png" Height="19" Width="17"/>
         </Button>
         <Button HorizontalAlignment="Left" Margin="85,329,0,0" VerticalAlignment="Top" Height="22" Width="22" Click="Stop" Tag="stop" PreviewMouseDown="ImagenPeque" PreviewMouseUp="ImagenGrande">
-            <Image Name="stopImagen" Source="Imgs/stop_big.png" Height="18" Width="17" ></Image>
+            <Image x:Name="stopImagen" Source="Imgs/stop_big.png" Height="18" Width="17" />
         </Button>
-        <StackPanel Margin="121,329,1286,0" Background="Transparent">
-            <ComboBox FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" SelectionChanged="CambiarModo" Width="193" Height="21" MinWidth="193" MaxWidth="193" MinHeight="21" MaxHeight="21">
-                <ComboBoxItem IsSelected="True" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Content="Pokémon salvaje"/>
-                <ComboBoxItem FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Content="Encuentro estático"/>
-            </ComboBox>
-        </StackPanel>
 
         <Label x:Name="SV_MIN_Label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Mínimo" HorizontalAlignment="Left" Margin="566,276,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="50" Panel.ZIndex="2" FontSize="18"/>
         <Label x:Name="SV_MIN" Foreground="White" Style="{StaticResource OutlineLabel}" Content="-" HorizontalAlignment="Left" Margin="561,298,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" Width="60" Panel.ZIndex="2" FontSize="18"/>
 
         <Grid x:Name="Probs_MAIN" Margin="0,0,0,0" Panel.ZIndex="50">
             <Grid Margin="626,0,0,0">
-            <Label x:Name="Encuentros_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Encuentros" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,19,0,0"/>
-            <Label x:Name="Fase_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Fase" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="17" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="171,40,0,0"/>
-            <Label x:Name="Totales_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Totales" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="17" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,40,0,0"/>
+                <Label x:Name="Encuentros_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Encuentros" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="205,19,0,0"/>
+                <Label x:Name="Fase_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Fase" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="17" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="171,40,0,0"/>
+                <Label x:Name="Totales_label" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Totales" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="17" HorizontalContentAlignment="Center" Width="92" MinWidth="50" Background="{x:Null}" Canvas.Left="217" Canvas.Top="-20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,40,0,0"/>
             </Grid>
+            <Canvas>
+                <ComboBox x:Name="ComboRutas" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="18" SelectionChanged="CambiarRuta" Width="160" Height="21" MinWidth="150" MaxWidth="193" MinHeight="21" MaxHeight="21" Panel.ZIndex="37" Canvas.Left="630" Canvas.Top="29" HorizontalAlignment="Left" VerticalAlignment="Center">
+                </ComboBox>
+            </Canvas>
 
             <Grid x:Name="Probs" Margin="626,0,0,0" Panel.ZIndex="50">
-
                 <Canvas x:Name="Canvas1" Tag=""  Margin="0,50,0,675" MinHeight="62" Height="62">
                     <Image x:Name="SpriteProb" MinWidth="64" Width="64" MinHeight="62" Height="62" Source="/378.png" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                     <Label x:Name="NombreProb" Foreground="White" Style="{StaticResource OutlineLabel}" Content="Regice" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font" FontSize="20" HorizontalContentAlignment="Center" Width="122" MinWidth="122" Background="{x:Null}" Canvas.Left="63" Canvas.Top="9"/>
@@ -188,7 +192,7 @@
                 </Canvas>
 
 
-                
+
             </Grid>
         </Grid>
 

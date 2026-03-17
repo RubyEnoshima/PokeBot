@@ -60,7 +60,7 @@
                         {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
                         {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
                         {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
-                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"}
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
                         {"id": "55", "porcentaje": "10%", "aparicion": ""},
                         {"id": "246", "porcentaje": "5%", "aparicion": ""},
                         {"id": "247", "porcentaje": "5%", "aparicion": ""},
@@ -93,7 +93,7 @@
                 },
 
                 {
-                    "nombre": "Arboles - Ladera Verde",
+                    "nombre": "Árboles - Ladera Verde",
                     "pokemon":
                     [
                         {"id": "190", "porcentaje": "40%", "aparicion": ""},
@@ -175,7 +175,7 @@
                 },
 
                 {
-                    "nombre": "Super Caña",
+                    "nombre": "Supercaña",
                     "pokemon": 
                     [
                         {"id": "118", "porcentaje": "90%", "aparicion": ""},
@@ -243,7 +243,7 @@
                         {"id": "232", "porcentaje": "20%", "aparicion": "Oro"},
                         {"id": "217", "porcentaje": "20%", "aparicion": "Plata"},
                         {"id": "231", "porcentaje": "10%", "aparicion": "Oro"},
-                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"}
+                        {"id": "216", "porcentaje": "10%", "aparicion": "Plata"},
                         {"id": "55", "porcentaje": "10%", "aparicion": ""},
                         {"id": "246", "porcentaje": "5%", "aparicion": ""},
                         {"id": "247", "porcentaje": "5%", "aparicion": ""},
@@ -276,7 +276,7 @@
                 },
 
                 {
-                    "nombre": "Arboles - Ladera Verde",
+                    "nombre": "Árboles - Ladera Verde",
                     "pokemon":
                     [
                         {"id": "190", "porcentaje": "40%", "aparicion": ""},
@@ -358,7 +358,7 @@
                 },
 
                 {
-                    "nombre": "Super Caña",
+                    "nombre": "Supercaña",
                     "pokemon": 
                     [
                         {"id": "118", "porcentaje": "90%", "aparicion": ""},
@@ -459,7 +459,7 @@
                 },
 
                 {
-                    "nombre": "Arboles - Ladera Verde",
+                    "nombre": "Árboles - Ladera Verde",
                     "pokemon":
                     [
                         {"id": "190", "porcentaje": "40%", "aparicion": ""},
@@ -541,7 +541,7 @@
                 },
 
                 {
-                    "nombre": "Super Caña",
+                    "nombre": "Supercaña",
                     "pokemon": 
                     [
                         {"id": "118", "porcentaje": "90%", "aparicion": ""},

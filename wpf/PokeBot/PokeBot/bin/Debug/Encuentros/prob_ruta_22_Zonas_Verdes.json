@@ -1,0 +1,78 @@
+{
+  "ruta": "ruta_22",
+  "zona": "Zonas_Verdes",
+  "encuentros": {
+    "19": {
+      "id": 19,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "77": {
+      "id": 77,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "21": {
+      "id": 21,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "84": {
+      "id": 84,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "22": {
+      "id": 22,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "264": {
+      "id": 264,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "293": {
+      "id": 293,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "399": {
+      "id": 399,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    },
+    "418": {
+      "id": 418,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "encuentros_totales": 0,
+      "iv_record": null,
+      "sv_record": null
+    }
+  }
+}

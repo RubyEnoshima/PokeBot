@@ -4,41 +4,41 @@
   "encuentros": {
     "30": {
       "id": 30,
-      "encuentros_fase": 1457,
-      "shinies": 0,
-      "encuentros_totales": 3838,
+      "encuentros_fase": 483,
+      "shinies": 1,
+      "encuentros_totales": 30668,
       "iv_record": null,
       "sv_record": null
     },
     "33": {
       "id": 33,
-      "encuentros_fase": 1410,
-      "shinies": 0,
-      "encuentros_totales": 3859,
+      "encuentros_fase": 442,
+      "shinies": 1,
+      "encuentros_totales": 30972,
       "iv_record": null,
       "sv_record": null
     },
     "17": {
       "id": 17,
-      "encuentros_fase": 960,
-      "shinies": 1,
-      "encuentros_totales": 1797,
+      "encuentros_fase": 298,
+      "shinies": 2,
+      "encuentros_totales": 14434,
       "iv_record": null,
       "sv_record": null
     },
     "187": {
       "id": 187,
-      "encuentros_fase": 920,
+      "encuentros_fase": 274,
       "shinies": 0,
-      "encuentros_totales": 1703,
+      "encuentros_totales": 13713,
       "iv_record": null,
       "sv_record": null
     },
     "113": {
       "id": 113,
-      "encuentros_fase": 51,
+      "encuentros_fase": 26,
       "shinies": 0,
-      "encuentros_totales": 130,
+      "encuentros_totales": 979,
       "iv_record": null,
       "sv_record": null
     },
@@ -46,15 +46,15 @@
       "id": 164,
       "encuentros_fase": 0,
       "shinies": 0,
-      "encuentros_totales": 769,
+      "encuentros_totales": 6120,
       "iv_record": null,
       "sv_record": null
     },
     "195": {
       "id": 195,
       "encuentros_fase": 0,
-      "shinies": 0,
-      "encuentros_totales": 798,
+      "shinies": 1,
+      "encuentros_totales": 5824,
       "iv_record": null,
       "sv_record": null
     },

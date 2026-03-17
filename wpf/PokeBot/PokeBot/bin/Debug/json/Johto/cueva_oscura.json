@@ -1,0 +1,195 @@
+{
+    "nombre": "Cueva Oscura",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Cueva Sur",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "39%", "aparicion": ""},
+                        {"id": "206", "porcentaje": "1%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Plaga 40%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca - Cueva Sur",
+                    "pokemon":
+                    [
+                        {"id": "206", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Norte",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "100%", "aparicion": ""}         
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}  
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Cueva Sur",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "39%", "aparicion": ""},
+                        {"id": "206", "porcentaje": "1%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Plaga 40%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca - Cueva Sur",
+                    "pokemon":
+                    [
+                        {"id": "206", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Norte",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "100%", "aparicion": ""}         
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}  
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Cueva Sur",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "39%", "aparicion": ""},
+                        {"id": "206", "porcentaje": "1%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "418", "porcentaje": "Plaga 40%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Golpe Roca - Cueva Sur",
+                    "pokemon":
+                    [
+                        {"id": "206", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "74", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Cueva Norte",
+                    "pokemon":
+                    [
+                        {"id": "74", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "75", "porcentaje": "20%", "aparicion": ""},
+                        {"id": "202", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "129", "porcentaje": "100%", "aparicion": ""}         
+                    ]
+                },
+                
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "118", "porcentaje": "90%", "aparicion": ""},
+                        {"id": "129", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "119", "porcentaje": "3%", "aparicion": ""}  
+                    ]
+                }
+            ]
+        }
+    ]
+}

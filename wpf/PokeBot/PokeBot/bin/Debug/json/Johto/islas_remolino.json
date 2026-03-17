@@ -1,0 +1,153 @@
+{
+    "nombre": "Islas Remolino",
+    "horarios":
+    [
+        {
+            "nombre": "Mañana",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "86", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario",
+                    "pokemon":
+                    [
+                        {"id": "249", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "116", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "116", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "117", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Tarde",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "86", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario",
+                    "pokemon":
+                    [
+                        {"id": "249", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "116", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "116", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "117", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        },
+        {
+            "nombre": "Noche",
+            "zonas":
+            [
+                {
+                    "nombre": "Zonas Verdes",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "50%", "aparicion": ""},
+                        {"id": "41", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "86", "porcentaje": "15%", "aparicion": ""},
+                        {"id": "42", "porcentaje": "5%", "aparicion": ""},
+                        {"id": "359", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "296", "porcentaje": "Hoenn 20%", "aparicion": ""},
+                        {"id": "433", "porcentaje": "Sinnoh 20%", "aparicion": ""},
+                        {"id": "436", "porcentaje": "Sinnoh 20%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Legendario",
+                    "pokemon":
+                    [
+                        {"id": "249", "porcentaje": "Único", "aparicion": ""}
+                    ]
+                },
+                
+                {
+                    "nombre": "Zonas de Agua",
+                    "pokemon":
+                    [
+                        {"id": "72", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "116", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "73", "porcentaje": "10%", "aparicion": ""}
+                    ]
+                },
+
+                {
+                    "nombre": "Supercaña",
+                    "pokemon":
+                    [
+                        {"id": "98", "porcentaje": "60%", "aparicion": ""},
+                        {"id": "116", "porcentaje": "30%", "aparicion": ""},
+                        {"id": "99", "porcentaje": "7%", "aparicion": ""},
+                        {"id": "117", "porcentaje": "3%", "aparicion": ""}
+                    ]
+                }
+            ]
+        }
+    ]
+}

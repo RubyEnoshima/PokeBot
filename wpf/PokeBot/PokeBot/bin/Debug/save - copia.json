@@ -1,0 +1,116 @@
+{"pokemon":[{
+  "movimientos": [
+    78,
+    79,
+    331,
+    73
+  ],
+  "nombre": "Hoppip",
+  "pid": "cc5871c4",
+  "habilidad": 34,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 11,
+    "def": 23,
+    "speed": 28,
+    "spatt": 15,
+    "att": 28,
+    "hp": 13
+  },
+  "nivel": 24,
+  "id": 187,
+  "genero": 0,
+  "sv": 43569
+},{
+  "movimientos": [
+    78,
+    79,
+    331,
+    73
+  ],
+  "nombre": "Hoppip",
+  "pid": "e4353288",
+  "habilidad": 34,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 10,
+    "def": 4,
+    "speed": 19,
+    "spatt": 19,
+    "att": 20,
+    "hp": 14
+  },
+  "nivel": 22,
+  "id": 187,
+  "genero": 0,
+  "sv": 49424
+},{
+  "movimientos": [
+    78,
+    79,
+    331,
+    73
+  ],
+  "nombre": "Hoppip",
+  "pid": "1b19e07",
+  "habilidad": 102,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 9,
+    "def": 8,
+    "speed": 26,
+    "spatt": 26,
+    "att": 19,
+    "hp": 21
+  },
+  "nivel": 22,
+  "id": 187,
+  "genero": 1,
+  "sv": 34843
+},{
+  "movimientos": [
+    16,
+    98,
+    18,
+    239
+  ],
+  "nombre": "Pidgeotto",
+  "pid": "6db9ae34",
+  "habilidad": 51,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 22,
+    "def": 7,
+    "speed": 10,
+    "spatt": 9,
+    "att": 24,
+    "hp": 21
+  },
+  "nivel": 25,
+  "id": 17,
+  "genero": 1,
+  "sv": 54304
+},{
+  "movimientos": [
+    24,
+    40,
+    154,
+    44
+  ],
+  "nombre": "Nidorina",
+  "pid": "7080eed0",
+  "habilidad": 38,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 19,
+    "def": 9,
+    "speed": 31,
+    "spatt": 23,
+    "att": 0,
+    "hp": 17
+  },
+  "nivel": 23,
+  "id": 30,
+  "genero": 1,
+  "sv": 35325
+}], "encuentros":42, "mode":1, "sv_minimo":9703}
