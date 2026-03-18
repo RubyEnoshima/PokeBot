@@ -277,39 +277,46 @@ namespace PokeBot
         {
             Probabilidades = new Probabilidades(Probs, region.ruta, zona);
             ProbPokemon[] probPokemons = region.ObtenerPokemon(horario, zona);
-            if(probPokemons != null)
-            {
-                string sprite = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[0].id + ".png";
-                ((Image)Probs.FindName("SpriteProb")).Source = Imagenes.Obtener(sprite);
-                ((Label)Probs.FindName("NombreProb")).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[0].id)).name;
-                ((Label)Probs.FindName("Probabilidad")).Content = probPokemons[0].porcentaje;
 
-                Canvas originalCanvas = (Canvas)Probs.FindName("Canvas1"); // Your original Canvas
-                originalCanvas.Tag = probPokemons[0].id;
-                Probabilidades.AgregarPokemon(Int32.Parse(probPokemons[0].id));
+            if (probPokemons != null && probPokemons.Length > 0)
+            {
+                Canvas canvasBase = (Canvas)Probs.FindName("Canvas1");
+                if (canvasBase == null) return;
 
                 Probs.Children.Clear();
-                Probs.Children.Add(originalCanvas);
+
+                canvasBase.Margin = new Thickness(0, 0, 0, 0);
+                canvasBase.Tag = probPokemons[0].id;
+
+                string sprite = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + probPokemons[0].id + ".png";
+                ((Image)canvasBase.Children[0]).Source = Imagenes.Obtener(sprite);
+                ((Label)canvasBase.Children[1]).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[0].id)).name;
+                ((Label)canvasBase.Children[2]).Content = probPokemons[0].porcentaje;
+
+                Probabilidades.AgregarPokemon(Int32.Parse(probPokemons[0].id));
+                Probs.Children.Add(canvasBase);
 
                 for (int i = 1; i < probPokemons.Length; i++)
                 {
-                    
                     CanvasDuplicator duplicator = new CanvasDuplicator();
-                    Canvas duplicatedCanvas = duplicator.DuplicateCanvas(originalCanvas, i.ToString(), 0, 45);
+
+                    // Duplicar sense offset intern
+                    Canvas duplicatedCanvas = duplicator.DuplicateCanvas(canvasBase, i.ToString(), 0, 0);
                     duplicatedCanvas.Name = "Canvas" + (i + 1);
                     duplicatedCanvas.Tag = probPokemons[i].id;
 
-                    Probs.Children.Add(duplicatedCanvas);
+                    // Posicionar la fila sencera
+                    duplicatedCanvas.HorizontalAlignment = HorizontalAlignment.Left;
+                    duplicatedCanvas.VerticalAlignment = VerticalAlignment.Top;
+                    duplicatedCanvas.Margin = new Thickness(0, i * 40, 0, 0);
 
-                    sprite = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\shiny\\" + probPokemons[i].id + ".png";
-                    Image img = ((Image)duplicatedCanvas.Children[0]);
-                    img.Source = Imagenes.Obtener(sprite);
+                    sprite = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + probPokemons[i].id + ".png";
+                    ((Image)duplicatedCanvas.Children[0]).Source = Imagenes.Obtener(sprite);
                     ((Label)duplicatedCanvas.Children[1]).Content = Pokedex.ObtenerPokemon(Int32.Parse(probPokemons[i].id)).name;
                     ((Label)duplicatedCanvas.Children[2]).Content = probPokemons[i].porcentaje;
 
                     Probabilidades.AgregarPokemon(Int32.Parse(probPokemons[i].id));
-
-                    originalCanvas = duplicatedCanvas;
+                    Probs.Children.Add(duplicatedCanvas);
                 }
 
                 Probabilidades.ActualizarUI();

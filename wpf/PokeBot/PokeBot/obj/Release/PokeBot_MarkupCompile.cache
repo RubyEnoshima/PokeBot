@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\marti\Downloads\PokeBot\wpf\PokeBot\PokeBot\obj\Debug\
+C:\Users\marti\Downloads\PokeBot\wpf\PokeBot\PokeBot\obj\Release\
 PokeBot
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\marti\Downloads\PokeBot\wpf\PokeBot\PokeBot\App.xaml
 1219584333
 
@@ -16,5 +16,5 @@ C:\Users\marti\Downloads\PokeBot\wpf\PokeBot\PokeBot\App.xaml
 181000437956
 MainWindow.xaml;
 
-False
+True
 
