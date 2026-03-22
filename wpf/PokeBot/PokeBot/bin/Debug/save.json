@@ -1,116 +1,116 @@
 {"pokemon":[{
   "movimientos": [
-    116,
-    44,
-    228,
-    158
-  ],
-  "nombre": "Rattata",
-  "pid": "3d6932db",
-  "habilidad": 62,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 24,
-    "def": 30,
-    "speed": 0,
-    "spatt": 17,
-    "att": 29,
-    "hp": 9
-  },
-  "nivel": 17,
-  "id": 19,
-  "genero": 0,
-  "sv": 6175
-},{
-  "movimientos": [
-    116,
-    44,
-    228,
-    158
-  ],
-  "nombre": "Rattata",
-  "pid": "4d2b495c",
-  "habilidad": 50,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 12,
-    "def": 0,
-    "speed": 27,
-    "spatt": 6,
-    "att": 31,
-    "hp": 8
-  },
-  "nivel": 17,
-  "id": 19,
-  "genero": 1,
-  "sv": 5082
-},{
-  "movimientos": [
+    52,
     43,
-    31,
-    228,
-    332
+    316,
+    270
   ],
-  "nombre": "Spearow",
-  "pid": "d7275d11",
-  "habilidad": 51,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 31,
-    "def": 7,
-    "speed": 3,
-    "spatt": 29,
-    "att": 3,
-    "hp": 17
-  },
-  "nivel": 17,
-  "id": 21,
-  "genero": 1,
-  "sv": 40347
-},{
-  "movimientos": [
-    116,
-    44,
-    228,
-    158
-  ],
-  "nombre": "Rattata",
-  "pid": "b9b36e1d",
-  "habilidad": 62,
-  "shiny": 0,
-  "ivs": {
-    "spdef": 8,
-    "def": 23,
-    "speed": 25,
-    "spatt": 6,
-    "att": 16,
-    "hp": 17
-  },
-  "nivel": 17,
-  "id": 19,
-  "genero": 1,
-  "sv": 49155
-},{
-  "movimientos": [
-    43,
-    31,
-    228,
-    332
-  ],
-  "nombre": "Spearow",
-  "pid": "412cec71",
-  "habilidad": 51,
+  "nombre": "Growlithe",
+  "pid": "d949a311",
+  "habilidad": 18,
   "shiny": 0,
   "ivs": {
     "spdef": 16,
-    "def": 23,
-    "speed": 16,
-    "spatt": 30,
+    "def": 21,
+    "speed": 12,
+    "spatt": 25,
+    "att": 12,
+    "hp": 7
+  },
+  "nivel": 18,
+  "id": 58,
+  "genero": 1,
+  "sv": 28149
+},{
+  "movimientos": [
+    52,
+    336,
+    123,
+    46
+  ],
+  "nombre": "Houndour",
+  "pid": "6d261a73",
+  "habilidad": 18,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 23,
+    "def": 29,
+    "speed": 2,
+    "spatt": 11,
     "att": 31,
-    "hp": 16
+    "hp": 0
+  },
+  "nivel": 15,
+  "id": 228,
+  "genero": 1,
+  "sv": 24824
+},{
+  "movimientos": [
+    116,
+    44,
+    228,
+    158
+  ],
+  "nombre": "Rattata",
+  "pid": "a6cb126",
+  "habilidad": 50,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 1,
+    "def": 19,
+    "speed": 13,
+    "spatt": 27,
+    "att": 0,
+    "hp": 1
   },
   "nivel": 17,
-  "id": 21,
+  "id": 19,
   "genero": 1,
-  "sv": 47856
-}], "encuentros":3251, "phase_encounters":0, "mode":2, "sv_minimo":-1, "phase_start":"2026-03-22T15:52:06.3245126+01:00", "ruta":"Ruta 7"}
+  "sv": 44263
+},{
+  "movimientos": [
+    310,
+    228,
+    114,
+    17
+  ],
+  "nombre": "Murkrow",
+  "pid": "1de19963",
+  "habilidad": 105,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 22,
+    "def": 11,
+    "speed": 25,
+    "spatt": 26,
+    "att": 12,
+    "hp": 1
+  },
+  "nivel": 17,
+  "id": 198,
+  "genero": 1,
+  "sv": 37679
+},{
+  "movimientos": [
+    116,
+    44,
+    228,
+    158
+  ],
+  "nombre": "Rattata",
+  "pid": "9cd5777d",
+  "habilidad": 62,
+  "shiny": 0,
+  "ivs": {
+    "spdef": 27,
+    "def": 7,
+    "speed": 12,
+    "spatt": 11,
+    "att": 13,
+    "hp": 5
+  },
+  "nivel": 17,
+  "id": 19,
+  "genero": 1,
+  "sv": 64517
+}], "encuentros":4793, "phase_encounters":690, "mode":2, "sv_minimo":223, "phase_start":"2026-03-22T20:00:00.2701056+01:00", "ruta":"Ruta 7"}

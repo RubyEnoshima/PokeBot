@@ -4,32 +4,32 @@
   "encuentros": {
     "198": {
       "id": 198,
-      "encuentros_fase": 0,
+      "encuentros_fase": 223,
       "shinies": 1,
       "huidos": 0,
-      "encuentros_totales": 1400,
+      "encuentros_totales": 1623,
       "iv_record": {
-        "max": -1,
-        "min": -1
+        "max": 157,
+        "min": 41
       },
       "sv_record": {
-        "max": -1,
-        "min": -1
+        "max": 65503,
+        "min": 223
       }
     },
     "19": {
       "id": 19,
-      "encuentros_fase": 0,
+      "encuentros_fase": 221,
       "shinies": 0,
       "huidos": 0,
-      "encuentros_totales": 2069,
+      "encuentros_totales": 2392,
       "iv_record": {
-        "max": -1,
-        "min": -1
+        "max": 165,
+        "min": 26
       },
       "sv_record": {
-        "max": -1,
-        "min": -1
+        "max": 65504,
+        "min": 232
       }
     },
     "52": {
@@ -64,17 +64,17 @@
     },
     "20": {
       "id": 20,
-      "encuentros_fase": 0,
+      "encuentros_fase": 53,
       "shinies": 0,
       "huidos": 0,
-      "encuentros_totales": 655,
+      "encuentros_totales": 737,
       "iv_record": {
-        "max": -1,
-        "min": -1
+        "max": 143,
+        "min": 50
       },
       "sv_record": {
-        "max": -1,
-        "min": -1
+        "max": 65282,
+        "min": 3764
       }
     },
     "53": {
@@ -94,17 +94,17 @@
     },
     "228": {
       "id": 228,
-      "encuentros_fase": 0,
+      "encuentros_fase": 34,
       "shinies": 0,
       "huidos": 0,
-      "encuentros_totales": 188,
+      "encuentros_totales": 222,
       "iv_record": {
-        "max": -1,
-        "min": -1
+        "max": 133,
+        "min": 53
       },
       "sv_record": {
-        "max": -1,
-        "min": -1
+        "max": 65407,
+        "min": 1025
       }
     },
     "21": {
@@ -112,7 +112,7 @@
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
-      "encuentros_totales": 766,
+      "encuentros_totales": 845,
       "iv_record": {
         "max": -1,
         "min": -1
@@ -169,17 +169,17 @@
     },
     "58": {
       "id": 58,
-      "encuentros_fase": 0,
+      "encuentros_fase": 159,
       "shinies": 0,
       "huidos": 0,
-      "encuentros_totales": 921,
+      "encuentros_totales": 1165,
       "iv_record": {
-        "max": -1,
-        "min": -1
+        "max": 157,
+        "min": 42
       },
       "sv_record": {
-        "max": -1,
-        "min": -1
+        "max": 65194,
+        "min": 309
       }
     }
   }
