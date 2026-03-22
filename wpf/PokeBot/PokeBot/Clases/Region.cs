@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,7 @@ using System.Diagnostics;
 using System.Windows;
 using System.Drawing.Drawing2D;
 using System.Windows.Controls;
+using System.Text.RegularExpressions;
 
 namespace PokeBot
 {
@@ -24,38 +26,135 @@ namespace PokeBot
 
         Dictionary<string,RegionData> rutas;
 
-        public Region(ComboBox comboBox, string _ruta) {
+        public Region(ComboBox comboBox, string _ruta)
+        {
             ruta = FormatearRuta(_ruta);
             directorio += region;
             CargarRutas(comboBox);
         }
 
-        public ProbPokemon[] ObtenerPokemon(string horario, string zona)
+        public ProbPokemon[] ObtenerPokemon(string horario, string zona, bool radioActiva = false, DateTime? fechaActual = null)
         {
             ruta = FormatearRuta(ruta);
+            DateTime fecha = fechaActual ?? DateTime.Now;
 
-            if (rutas[ruta] != null)
+            if (!rutas.ContainsKey(ruta) || rutas[ruta] == null)
+                return null;
+
+            foreach (Horario h in rutas[ruta].horarios)
             {
-                foreach(Horario h in rutas[ruta].horarios)
+                if (h.nombre != horario)
+                    continue;
+
+                foreach (Zona z in h.zonas)
                 {
-                    if(h.nombre == horario)
-                    {
-                        foreach(Zona z in h.zonas)
-                        {
-                            if (z.nombre == zona)
-                            {
-                                List<ProbPokemon> res = new List<ProbPokemon>();
-                                foreach(ProbPokemon p in z.pokemon)
-                                {
-                                    if(p.aparicion == "" || p.aparicion == juego) res.Add(p);
-                                }
-                                return res.ToArray();
-                            }
-                        }
-                    }
+                    if (z.nombre != zona)
+                        continue;
+
+                    return ConstruirListaPokemon(z, radioActiva, fecha);
                 }
             }
+
             return null;
+        }
+
+        private ProbPokemon[] ConstruirListaPokemon(Zona zona, bool radioActiva, DateTime fecha)
+        {
+            List<ProbPokemon> normales = new List<ProbPokemon>();
+            List<ProbPokemon> hoenn = new List<ProbPokemon>();
+            List<ProbPokemon> sinnoh = new List<ProbPokemon>();
+
+            foreach (ProbPokemon p in zona.pokemon)
+            {
+                if (!(p.aparicion == "" || p.aparicion == juego))
+                    continue;
+
+                string porcentaje = (p.porcentaje ?? "").Trim();
+                if (string.IsNullOrWhiteSpace(porcentaje))
+                    continue;
+
+                if (EmpiezaPorNumero(porcentaje))
+                {
+                    double valor = ExtraerPrimerNumero(porcentaje);
+                    if (valor > 0)
+                        normales.Add(ClonarPokemon(p));
+                }
+                else if (porcentaje.StartsWith("Hoenn", StringComparison.OrdinalIgnoreCase))
+                {
+                    hoenn.Add(ClonarPokemon(p));
+                }
+                else if (porcentaje.StartsWith("Sinnoh", StringComparison.OrdinalIgnoreCase))
+                {
+                    sinnoh.Add(ClonarPokemon(p));
+                }
+            }
+
+            bool activarHoenn = radioActiva && fecha.DayOfWeek == DayOfWeek.Wednesday && hoenn.Count > 0;
+            bool activarSinnoh = radioActiva && fecha.DayOfWeek == DayOfWeek.Thursday && sinnoh.Count > 0;
+
+            List<ProbPokemon> resultado = new List<ProbPokemon>();
+
+            if (activarHoenn || activarSinnoh)
+            {
+                foreach (ProbPokemon p in normales)
+                {
+                    double valor = ExtraerPrimerNumero(p.porcentaje);
+                    double nuevo = valor * 0.6;
+                    if (nuevo > 0)
+                    {
+                        p.porcentaje = FormatearPorcentaje(nuevo);
+                        resultado.Add(p);
+                    }
+                }
+
+                if (activarHoenn)
+                    resultado.AddRange(hoenn);
+
+                if (activarSinnoh)
+                    resultado.AddRange(sinnoh);
+            }
+            else
+            {
+                resultado.AddRange(normales);
+            }
+
+            return resultado.ToArray();
+        }
+
+        private bool EmpiezaPorNumero(string texto)
+        {
+            texto = (texto ?? "").Trim();
+            return texto.Length > 0 && char.IsDigit(texto[0]);
+        }
+
+        private double ExtraerPrimerNumero(string texto)
+        {
+            Match match = Regex.Match(texto ?? "", @"\d+(?:[\.,]\d+)?");
+            if (!match.Success)
+                return 0;
+
+            string valor = match.Value.Replace(',', '.');
+            return double.TryParse(valor, NumberStyles.Any, CultureInfo.InvariantCulture, out double resultado)
+                ? resultado
+                : 0;
+        }
+
+        private string FormatearPorcentaje(double valor)
+        {
+            if (Math.Abs(valor % 1) < 0.0001)
+                return ((int)Math.Round(valor)).ToString(CultureInfo.InvariantCulture) + "%";
+
+            return valor.ToString("0.##", CultureInfo.InvariantCulture) + "%";
+        }
+
+        private ProbPokemon ClonarPokemon(ProbPokemon p)
+        {
+            return new ProbPokemon
+            {
+                id = p.id,
+                porcentaje = p.porcentaje,
+                aparicion = p.aparicion
+            };
         }
 
         public void CambiarRuta(string _ruta)
@@ -147,7 +246,7 @@ namespace PokeBot
 
         private string[] SplitString(string input)
         {
-            return System.Text.RegularExpressions.Regex.Split(input, "([0-9]+)");
+            return Regex.Split(input, "([0-9]+)");
         }
     }
 }

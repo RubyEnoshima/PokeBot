@@ -1,9 +1,9 @@
 {
-  "ruta": "ruta_6",
+  "ruta": "cueva_diglett",
   "zona": "Zonas_Verdes",
   "encuentros": {
-    "43": {
-      "id": 43,
+    "50": {
+      "id": 50,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -17,8 +17,8 @@
         "min": -1
       }
     },
-    "69": {
-      "id": 69,
+    "51": {
+      "id": 51,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -32,8 +32,8 @@
         "min": -1
       }
     },
-    "81": {
-      "id": 81,
+    "296": {
+      "id": 296,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -47,8 +47,8 @@
         "min": -1
       }
     },
-    "63": {
-      "id": 63,
+    "359": {
+      "id": 359,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -62,8 +62,8 @@
         "min": -1
       }
     },
-    "16": {
-      "id": 16,
+    "433": {
+      "id": 433,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -77,53 +77,8 @@
         "min": -1
       }
     },
-    "264": {
-      "id": 264,
-      "encuentros_fase": 0,
-      "shinies": 0,
-      "huidos": 0,
-      "encuentros_totales": 0,
-      "iv_record": {
-        "max": -1,
-        "min": -1
-      },
-      "sv_record": {
-        "max": -1,
-        "min": -1
-      }
-    },
-    "293": {
-      "id": 293,
-      "encuentros_fase": 0,
-      "shinies": 0,
-      "huidos": 0,
-      "encuentros_totales": 0,
-      "iv_record": {
-        "max": -1,
-        "min": -1
-      },
-      "sv_record": {
-        "max": -1,
-        "min": -1
-      }
-    },
-    "399": {
-      "id": 399,
-      "encuentros_fase": 0,
-      "shinies": 0,
-      "huidos": 0,
-      "encuentros_totales": 0,
-      "iv_record": {
-        "max": -1,
-        "min": -1
-      },
-      "sv_record": {
-        "max": -1,
-        "min": -1
-      }
-    },
-    "418": {
-      "id": 418,
+    "436": {
+      "id": 436,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,

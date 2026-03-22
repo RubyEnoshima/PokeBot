@@ -38,7 +38,7 @@ namespace PokeBot
         private int[] minimosIVS = new int[] { 31, 25, 11, 6, 1, 0 };
         private int[] minimosTotal = new int[] { 186, 145, 70, 29, 1, 0 };
         private int[] minimosSV = new int[] { 65536, 45001, 35001, 10001, 8, 0 };
-        private Brush[] colores = new Brush[] { Colorette("#F5D236"), Brushes.YellowGreen, Colorette("#FFFFFF"), Colorette("#F75555"), Colorette("#8F1515"), Brushes.DarkOrchid};
+        private Brush[] colores = new Brush[] { Colorette("#F5D236"), Brushes.YellowGreen, Colorette("#FFFFFF"), Colorette("#F75555"), Colorette("#8F1515"), Brushes.DarkOrchid };
 
         private Thread thread;
 
@@ -57,10 +57,18 @@ namespace PokeBot
 
         private string horario = "";
         private string zona = "Zonas Verdes";
+        private bool radioActiva = false;
 
         private Probabilidades Probabilidades;
 
         private DispatcherTimer timer;
+        private bool cargandoSave = false;
+        private DateTime ultimaFechaEvaluada = DateTime.MinValue;
+        private Pokemon shinyPendiente = null;
+        private bool cambioFasePendientePorShiny = false;
+
+        private string horarioForzado = null; // null = automático
+        private DayOfWeek? diaForzado = null; // null = automático
 
         public MainWindow()
         {
@@ -77,13 +85,16 @@ namespace PokeBot
 
             region = new Region(ComboRutas, actual.ruta);
 
-            MirarHora(null, EventArgs.Empty);
+            MirarHora();
             timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(5);
-            timer.Tick += MirarHora;
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += TimerTick;
 
-            // Start the timer
             timer.Start();
+
+            RadioToggle.IsChecked = config.radio_activa;
+            radioActiva = config.radio_activa;
+            ActualizarUIRadio();
 
             thread = new Thread(ActualizarDesdeArchivo);
             thread.Start();
@@ -95,7 +106,7 @@ namespace PokeBot
             string[] imgs = { "play", "stop", "stop_big", "play_big" };
             foreach (string imagen in imgs)
             {
-                Imagenes.Obtener("Imgs/"+imagen+".png");
+                Imagenes.Obtener("Imgs/" + imagen + ".png");
             }
 
         }
@@ -111,7 +122,7 @@ namespace PokeBot
                     {
                         mutex.WaitOne();
                         using (FileStream fs = new FileStream(archivo_json, FileMode.Open, FileAccess.Read))
-                        { 
+                        {
                             string data = File.ReadAllText(archivo_json);
                             if (data != "")
                             {
@@ -120,7 +131,7 @@ namespace PokeBot
                                 Dispatcher.Invoke(() => AgregarPokemon(pokemonData));
 
                             }
-                            
+
                         }
                     }
                     catch (IOException ex)
@@ -141,49 +152,133 @@ namespace PokeBot
             }
         }
 
-        private void MirarHora(object sender, EventArgs e)
+        private void TimerTick(object sender, EventArgs e)
+        {
+            bool haCambiadoHorario = MirarHora();
+            bool haCambiadoDia = ultimaFechaEvaluada != DateTime.MinValue && ultimaFechaEvaluada.Date != DateTime.Now.Date;
+            ultimaFechaEvaluada = DateTime.Now.Date;
+            ActualizarUITiempoFase();
+
+            if (haCambiadoHorario || haCambiadoDia)
+            {
+                IniciarNuevaFase(true, true);
+            }
+        }
+
+        private bool MirarHora()
         {
             DateTime currentTime = DateTime.Now;
             string antHorario = horario;
-            if (currentTime.Hour >= 4 && currentTime.Hour <= 9) { horario = "Mañana"; }
-            else if (currentTime.Hour >= 10 && currentTime.Hour <= 19) { horario = "Tarde"; }
-            else { horario = "Noche"; }
-            if (horario != antHorario)
+
+            if (!string.IsNullOrEmpty(horarioForzado))
             {
-                if(Probabilidades != null) Probabilidades.Guardar();
-                LimpiarProbUI();
-                CargarInfoProbPokemon();
+                horario = horarioForzado;
             }
+            else
+            {
+                if (currentTime.Hour >= 4 && currentTime.Hour <= 9) { horario = "Mañana"; }
+                else if (currentTime.Hour >= 10 && currentTime.Hour <= 19) { horario = "Tarde"; }
+                else { horario = "Noche"; }
+            }
+
+            ActualizarUIHorario();
+            if (ultimaFechaEvaluada == DateTime.MinValue) ultimaFechaEvaluada = currentTime.Date;
+            return horario != antHorario;
+        }
+
+        private DateTime ObtenerFechaActualEfectiva()
+        {
+            DateTime ahora = DateTime.Now;
+
+            if (!diaForzado.HasValue)
+                return ahora;
+
+            int diferencia = ((int)diaForzado.Value - (int)ahora.DayOfWeek + 7) % 7;
+            return ahora.Date.AddDays(diferencia).Add(ahora.TimeOfDay);
+        }
+
+        private void ActualizarTabla()
+        {
+            LimpiarProbUI();
+            CargarInfoProbPokemon();
         }
 
         private void AgregarPokemon(Pokemon pokemon)
         {
-            if (pokemon.id == 0 || antPID==pokemon.pid) return;
+            if (pokemon.id == 0 || antPID == pokemon.pid) return;
 
-            if (pokemons.Count>0 && pokemons[0].shiny == 1) Reset();
+            ResolverShinyPendienteSiCorresponde(pokemon);
 
             antPID = pokemon.pid;
             antPoke = pokemon;
             pokemons.Insert(0, pokemon);
             if (pokemons.Count > MAX_POKE) pokemons.RemoveAt(pokemons.Count - 1);
             actual.encuentros++;
-            Encuentros.Content = actual.encuentros;
+            actual.phase_encounters++;
+            Encuentros.Content = actual.phase_encounters;
+
             if (pokemon.sv < actual.sv_minimo || actual.sv_minimo == -1)
             {
                 actual.sv_minimo = pokemon.sv;
                 SV_MIN.Content = actual.sv_minimo;
             }
-            if(Probabilidades != null) Probabilidades.AgregarEncuentro(pokemon.id, pokemon);
+
+            if (Probabilidades != null) Probabilidades.AgregarEncuentro(pokemon.id, pokemon);
 
             for (int i = 0; i < pokemons.Count; i++)
             {
-                ActualizarUI(pokemons[i],i);
+                ActualizarUI(pokemons[i], i);
             }
+
+            if (!cargandoSave && pokemon.shiny == 1)
+            {
+                shinyPendiente = pokemon;
+                cambioFasePendientePorShiny = true;
+            }
+        }
+
+        private void ResolverShinyPendienteSiCorresponde(Pokemon nuevoPokemon)
+        {
+            if (cargandoSave || !cambioFasePendientePorShiny || shinyPendiente == null) return;
+            if (nuevoPokemon == null) return;
+            if (nuevoPokemon.pid == shinyPendiente.pid) return;
+
+            bool capturado = PreguntarResultadoShiny(shinyPendiente);
+
+            if (Probabilidades != null)
+            {
+                if (capturado) Probabilidades.MarcarShinyObtenido(shinyPendiente.id);
+                else Probabilidades.MarcarShinyEscapado(shinyPendiente.id);
+            }
+
+            shinyPendiente = null;
+            cambioFasePendientePorShiny = false;
+
+            if (config.reset_shiny)
+            {
+                IniciarNuevaFase(false, true);
+            }
+            else
+            {
+                Guardar();
+            }
+        }
+
+        private bool PreguntarResultadoShiny(Pokemon pokemon)
+        {
+            string nombre = pokemon != null ? pokemon.nombre : "el shiny";
+            MessageBoxResult resultado = MessageBox.Show(
+                "El combate shiny ha terminado.\n\n¿Se ha capturado " + nombre + "?",
+                "Resultado del shiny",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Question);
+
+            return resultado == MessageBoxResult.Yes;
         }
 
         private void CambiarColor(int[] minimos, int val, Label label, bool reves = false)
         {
-            if(reves) Array.Reverse(colores);
+            if (reves) Array.Reverse(colores);
 
             if (val == minimos[0]) label.Foreground = colores[0];
             else
@@ -198,7 +293,7 @@ namespace PokeBot
 
         }
 
-        private void CambiarColorIV(int ivs, Label label){ CambiarColor(minimosIVS,ivs,label); }
+        private void CambiarColorIV(int ivs, Label label) { CambiarColor(minimosIVS, ivs, label); }
 
         private void ActualizarUI(Pokemon pokemon, int i)
         {
@@ -224,7 +319,7 @@ namespace PokeBot
 
             Label l_SV = (Label)Lista.FindName("SV" + i);
             l_SV.Content = pokemon.sv;
-            CambiarColor(minimosSV,pokemon.sv,l_SV,true);
+            CambiarColor(minimosSV, pokemon.sv, l_SV, true);
 
             // Sprite
             if (pokemon.id != 0)
@@ -236,7 +331,7 @@ namespace PokeBot
                 string ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + genero + $"{pokemon.id}.png";
 
                 if (pokemon.genero == 1 && !File.Exists(ruta)) ruta = Environment.CurrentDirectory + "\\Resources\\Pokemon\\hgss\\" + shiny + $"{pokemon.id}.png";
-                
+
                 ((Image)Lista.FindName("Sprite" + i)).Source = Imagenes.Obtener(ruta);
                 ((Image)Lista.FindName("Sprite" + i)).Visibility = Visibility.Visible;
             }
@@ -257,9 +352,8 @@ namespace PokeBot
                 ComboBox comboBox = sender as ComboBox;
                 actual.ruta = comboBox.SelectedValue.ToString();
                 region.CambiarRuta(actual.ruta);
-                Guardar();
-                CargarInfoProbPokemon();
-            
+                IniciarNuevaFase(true, true);
+
             }
         }
 
@@ -276,14 +370,16 @@ namespace PokeBot
         private void CargarInfoProbPokemon()
         {
             Probabilidades = new Probabilidades(Probs, region.ruta, zona);
-            ProbPokemon[] probPokemons = region.ObtenerPokemon(horario, zona);
+
+            DateTime fechaActual = ObtenerFechaActualEfectiva();
+            ProbPokemon[] probPokemons = region.ObtenerPokemon(horario, zona, radioActiva, fechaActual);
+
+            Probs.Children.Clear();
 
             if (probPokemons != null && probPokemons.Length > 0)
             {
                 Canvas canvasBase = (Canvas)Probs.FindName("Canvas1");
                 if (canvasBase == null) return;
-
-                Probs.Children.Clear();
 
                 canvasBase.Margin = new Thickness(0, 0, 0, 0);
                 canvasBase.Tag = probPokemons[0].id;
@@ -300,12 +396,10 @@ namespace PokeBot
                 {
                     CanvasDuplicator duplicator = new CanvasDuplicator();
 
-                    // Duplicar sense offset intern
                     Canvas duplicatedCanvas = duplicator.DuplicateCanvas(canvasBase, i.ToString(), 0, 0);
                     duplicatedCanvas.Name = "Canvas" + (i + 1);
                     duplicatedCanvas.Tag = probPokemons[i].id;
 
-                    // Posicionar la fila sencera
                     duplicatedCanvas.HorizontalAlignment = HorizontalAlignment.Left;
                     duplicatedCanvas.VerticalAlignment = VerticalAlignment.Top;
                     duplicatedCanvas.Margin = new Thickness(0, i * 40, 0, 0);
@@ -325,7 +419,7 @@ namespace PokeBot
 
         private void LimpiarProbUI()
         {
-            if(Probs.Children.Count > 1) Probs.Children.RemoveRange(1, Probs.Children.Count - 1);
+            if (Probs.Children.Count > 1) Probs.Children.RemoveRange(1, Probs.Children.Count - 1);
         }
 
         private void ImagenGrande(object sender, MouseButtonEventArgs e)
@@ -344,25 +438,31 @@ namespace PokeBot
 
         private void ActualizarUISave()
         {
-            Encuentros.Content = actual.encuentros;
+            Encuentros.Content = actual.phase_encounters;
             SV_MIN.Content = actual.sv_minimo;
+            ActualizarUITiempoFase();
             // falta mode
         }
 
         private void Cargar()
         {
-            if(File.Exists(archivo_guardado))
+            if (File.Exists(archivo_guardado))
             {
                 string data = File.ReadAllText(archivo_guardado);
                 Guardado guardado = JsonConvert.DeserializeObject<Guardado>(data);
-                if(guardado != null)
+                if (guardado != null)
                 {
-                    for (int i = guardado.pokemon.Count()-1; i >= 0; i--)
+                    actual = guardado;
+                    if (actual.phase_start == DateTime.MinValue) actual.phase_start = DateTime.Now;
+
+                    cargandoSave = true;
+                    for (int i = guardado.pokemon.Count() - 1; i >= 0; i--)
                     {
                         AgregarPokemon(guardado.pokemon[i]);
                     }
-                    actual = guardado;
+                    cargandoSave = false;
 
+                    actual = guardado;
                     ActualizarUISave();
                 }
             }
@@ -379,7 +479,7 @@ namespace PokeBot
             }
             pokemonsJSON += "], " + actual.toString() + "}";
             File.WriteAllText(archivo_guardado, pokemonsJSON);
-            Probabilidades.Guardar();
+            if (Probabilidades != null) Probabilidades.Guardar();
             Console.WriteLine("Guardado!");
         }
 
@@ -391,17 +491,20 @@ namespace PokeBot
                 ActualizarUI(new Pokemon(), i);
             }
             actual.encuentros = 0;
-            Encuentros.Content = actual.encuentros;
+            actual.phase_encounters = 0;
+            Encuentros.Content = actual.phase_encounters;
             actual.sv_minimo = -1;
+            actual.phase_start = DateTime.Now;
             SV_MIN.Content = "-";
+            ActualizarUITiempoFase();
             //File.WriteAllText(archivo_json, string.Empty);
-            Probabilidades.SiguienteFase();
+            if (Probabilidades != null) Probabilidades.SiguienteFase();
         }
 
         // Guarda el estado actual: el historial de pokes, los encuentros, el modo, el target...
         private void Guardar(object sender, RoutedEventArgs e)
         {
-            if(config.guardar_al_salir)
+            if (config.guardar_al_salir)
             {
                 Guardar();
             }
@@ -436,6 +539,7 @@ namespace PokeBot
         {
             Guardar_salir.IsChecked = config.guardar_al_salir;
             Reset_shiny.IsChecked = config.reset_shiny;
+            RadioToggle.IsChecked = config.radio_activa;
         }
 
         private void CargarConfig()
@@ -454,7 +558,7 @@ namespace PokeBot
 
         private void GuardarConfig()
         {
-            if(cargado) File.WriteAllText(archivo_config,JsonConvert.SerializeObject(config, Formatting.Indented));
+            if (cargado) File.WriteAllText(archivo_config, JsonConvert.SerializeObject(config, Formatting.Indented));
         }
 
         private void GuardarSalirC(object sender, RoutedEventArgs e)
@@ -480,6 +584,127 @@ namespace PokeBot
             GuardarConfig();
         }
 
+        private void RadioToggle_Click(object sender, RoutedEventArgs e)
+        {
+            radioActiva = RadioToggle.IsChecked == true;
+            config.radio_activa = radioActiva;
+            GuardarConfig();
+            ActualizarUIRadio();
+            ActualizarTabla();
+        }
+
+private void IniciarNuevaFase(bool recargarProbabilidades, bool guardarProbabilidadesAnteriores)
+{
+    if (guardarProbabilidadesAnteriores && Probabilidades != null)
+    {
+        Probabilidades.Guardar();
+    }
+
+    actual.phase_encounters = 0;
+    actual.sv_minimo = -1;
+    actual.phase_start = DateTime.Now;
+
+    Encuentros.Content = actual.phase_encounters;
+    SV_MIN.Content = "-";
+    ActualizarUITiempoFase();
+
+    if (Probabilidades != null)
+    {
+        if (Probabilidades != null) Probabilidades.SiguienteFase();
+    }
+
+    Guardar();
+
+    if (recargarProbabilidades)
+    {
+        ActualizarTabla();
+    }
+}
+
+        private void ActualizarUITiempoFase()
+        {
+            DateTime inicio = actual.phase_start == DateTime.MinValue ? DateTime.Now : actual.phase_start;
+            TimeSpan tiempo = DateTime.Now - inicio;
+            if (tiempo < TimeSpan.Zero) tiempo = TimeSpan.Zero;
+
+            PhaseTimer.Content = string.Format("{0} h {1:00} min", (int)tiempo.TotalHours, tiempo.Minutes);
+        }
+
+        private void ActualizarUIHorario()
+        {
+            string tooltip = "Horari: " + horario;
+            TimeIcon.Source = Imagenes.Obtener("Imgs/play.png");
+            TimeIcon.ToolTip = tooltip;
+            TimeLabel.Content = horario;
+        }
+
+        private void ActualizarUIRadio()
+        {
+            RadioStatus.Content = radioActiva ? "ON" : "OFF";
+        }
+
+        private void BtnForzarFase_Click(object sender, RoutedEventArgs e)
+        {
+            IniciarNuevaFase(true, true);
+        }
+
+        private void CbHorario_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!cargado) return;
+
+            ComboBoxItem item = CbHorario.SelectedItem as ComboBoxItem;
+            if (item == null) return;
+
+            string nuevo = item.Tag != null ? item.Tag.ToString() : null;
+
+            if (string.IsNullOrWhiteSpace(nuevo) || nuevo.ToLower() == "auto")
+                horarioForzado = null;
+            else
+                horarioForzado = nuevo;
+
+            string horarioAnterior = horario;
+
+            MirarHora();
+
+            if (horario != horarioAnterior)
+            {
+                IniciarNuevaFase(true, true);
+            }
+            else
+            {
+                ActualizarTabla();
+            }
+        }
+
+        private void CbDia_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!cargado) return;
+
+            ComboBoxItem item = CbDia.SelectedItem as ComboBoxItem;
+            if (item == null) return;
+
+            string tag = item.Tag != null ? item.Tag.ToString() : null;
+
+            if (string.IsNullOrWhiteSpace(tag) || tag.ToLower() == "auto")
+            {
+                diaForzado = null;
+            }
+            else if (tag == "Wednesday")
+            {
+                diaForzado = DayOfWeek.Wednesday;
+            }
+            else if (tag == "Thursday")
+            {
+                diaForzado = DayOfWeek.Thursday;
+            }
+            else
+            {
+                diaForzado = null;
+            }
+
+            ActualizarTabla();
+        }
+
         public static SolidColorBrush Colorette(string hex)
         {
             // Convertir el código hexadecimal a un objeto Color
@@ -491,18 +716,20 @@ namespace PokeBot
             return brush;
         }
 
-        
+
         public class Guardado
         {
             public Pokemon[] pokemon { get; set; }
             public int encuentros { get; set; } = 0;
+            public int phase_encounters { get; set; } = 0;
             public int mode { get; set; } = 0;
             public string ruta { get; set; } = "";
             public int sv_minimo { get; set; } = -1;
+            public DateTime phase_start { get; set; } = DateTime.Now;
 
             public string toString()
             {
-                return "\"encuentros\":" + encuentros + ", \"mode\":" + mode + ", \"sv_minimo\":" + sv_minimo + ", \"ruta\":\"" + ruta + "\"";
+                return "\"encuentros\":" + encuentros + ", \"phase_encounters\":" + phase_encounters + ", \"mode\":" + mode + ", \"sv_minimo\":" + sv_minimo + ", \"phase_start\":\"" + phase_start.ToString("o") + "\", \"ruta\":\"" + ruta + "\"";
             }
         }
 
@@ -510,6 +737,7 @@ namespace PokeBot
         {
             public bool guardar_al_salir { get; set; } = true;
             public bool reset_shiny { get; set; } = true;
+            public bool radio_activa { get; set; } = false;
         }
 
     }

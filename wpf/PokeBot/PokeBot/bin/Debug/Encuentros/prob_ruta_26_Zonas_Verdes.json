@@ -6,73 +6,151 @@
       "id": 20,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "28": {
       "id": 28,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "77": {
       "id": 77,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "84": {
       "id": 84,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "85": {
       "id": 85,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "264": {
       "id": 264,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "293": {
       "id": 293,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "399": {
       "id": 399,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "418": {
       "id": 418,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
+    },
+    "195": {
+      "id": 195,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "huidos": 0,
+      "encuentros_totales": 0,
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     }
   }
 }

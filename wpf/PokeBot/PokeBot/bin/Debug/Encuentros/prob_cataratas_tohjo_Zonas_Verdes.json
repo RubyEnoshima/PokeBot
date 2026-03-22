@@ -1,9 +1,9 @@
 {
-  "ruta": "ruta_6",
+  "ruta": "cataratas_tohjo",
   "zona": "Zonas_Verdes",
   "encuentros": {
-    "43": {
-      "id": 43,
+    "20": {
+      "id": 20,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -17,8 +17,8 @@
         "min": -1
       }
     },
-    "69": {
-      "id": 69,
+    "41": {
+      "id": 41,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -32,8 +32,8 @@
         "min": -1
       }
     },
-    "81": {
-      "id": 81,
+    "79": {
+      "id": 79,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -47,8 +47,8 @@
         "min": -1
       }
     },
-    "63": {
-      "id": 63,
+    "19": {
+      "id": 19,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -62,8 +62,8 @@
         "min": -1
       }
     },
-    "16": {
-      "id": 16,
+    "42": {
+      "id": 42,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -77,8 +77,8 @@
         "min": -1
       }
     },
-    "264": {
-      "id": 264,
+    "296": {
+      "id": 296,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -92,8 +92,8 @@
         "min": -1
       }
     },
-    "293": {
-      "id": 293,
+    "359": {
+      "id": 359,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -107,8 +107,8 @@
         "min": -1
       }
     },
-    "399": {
-      "id": 399,
+    "433": {
+      "id": 433,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -122,8 +122,8 @@
         "min": -1
       }
     },
-    "418": {
-      "id": 418,
+    "436": {
+      "id": 436,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,

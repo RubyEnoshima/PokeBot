@@ -6,57 +6,106 @@
       "id": 96,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "19": {
       "id": 19,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "81": {
       "id": 81,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "97": {
       "id": 97,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "311": {
       "id": 311,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "312": {
       "id": 312,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     },
     "403": {
       "id": 403,
       "encuentros_fase": 0,
       "shinies": 0,
+      "huidos": 0,
       "encuentros_totales": 0,
-      "iv_record": null,
-      "sv_record": null
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
     }
   }
 }

@@ -1,39 +1,9 @@
 {
-  "ruta": "ruta_6",
+  "ruta": "ruta_8",
   "zona": "Zonas_Verdes",
   "encuentros": {
-    "43": {
-      "id": 43,
-      "encuentros_fase": 0,
-      "shinies": 0,
-      "huidos": 0,
-      "encuentros_totales": 0,
-      "iv_record": {
-        "max": -1,
-        "min": -1
-      },
-      "sv_record": {
-        "max": -1,
-        "min": -1
-      }
-    },
-    "69": {
-      "id": 69,
-      "encuentros_fase": 0,
-      "shinies": 0,
-      "huidos": 0,
-      "encuentros_totales": 0,
-      "iv_record": {
-        "max": -1,
-        "min": -1
-      },
-      "sv_record": {
-        "max": -1,
-        "min": -1
-      }
-    },
-    "81": {
-      "id": 81,
+    "17": {
+      "id": 17,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -62,8 +32,8 @@
         "min": -1
       }
     },
-    "16": {
-      "id": 16,
+    "58": {
+      "id": 58,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -77,8 +47,8 @@
         "min": -1
       }
     },
-    "264": {
-      "id": 264,
+    "64": {
+      "id": 64,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -92,8 +62,8 @@
         "min": -1
       }
     },
-    "293": {
-      "id": 293,
+    "93": {
+      "id": 93,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -107,8 +77,8 @@
         "min": -1
       }
     },
-    "399": {
-      "id": 399,
+    "164": {
+      "id": 164,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,
@@ -122,8 +92,38 @@
         "min": -1
       }
     },
-    "418": {
-      "id": 418,
+    "311": {
+      "id": 311,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "huidos": 0,
+      "encuentros_totales": 0,
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
+    },
+    "312": {
+      "id": 312,
+      "encuentros_fase": 0,
+      "shinies": 0,
+      "huidos": 0,
+      "encuentros_totales": 0,
+      "iv_record": {
+        "max": -1,
+        "min": -1
+      },
+      "sv_record": {
+        "max": -1,
+        "min": -1
+      }
+    },
+    "403": {
+      "id": 403,
       "encuentros_fase": 0,
       "shinies": 0,
       "huidos": 0,

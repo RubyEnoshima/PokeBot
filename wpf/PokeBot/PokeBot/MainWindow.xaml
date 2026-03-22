@@ -55,19 +55,19 @@
 	<Grid Name="Lista">
 
 		<!-- Menú superior -->
-<Menu VerticalAlignment="Top" Panel.ZIndex="500">
-    <MenuItem Header="Archivo">
-        <MenuItem Header="Reset" Click="Reset"/>
-        <MenuItem Header="Guardar" Click="Guardar"/>
-        <Separator />
-        <MenuItem Header="Salir sin guardar" Click="SalirSinGuardar"/>
-        <MenuItem Header="Salir" Click="Salir"/>
-    </MenuItem>
-    <MenuItem Header="Opciones">
-        <MenuItem Header="Guardar al salir" x:Name="Guardar_salir" IsCheckable="True" IsChecked="True" Checked="GuardarSalirC" Unchecked="GuardarSalirU" />
-        <MenuItem Header="Reset después de shiny" x:Name="Reset_shiny" IsCheckable="True" IsChecked="True" Checked="ResetShinyC" Unchecked="ResetShinyU" />
-    </MenuItem>
-</Menu>
+		<Menu VerticalAlignment="Top" Panel.ZIndex="500">
+			<MenuItem Header="Archivo">
+				<MenuItem Header="Reset" Click="Reset"/>
+				<MenuItem Header="Guardar" Click="Guardar"/>
+				<Separator />
+				<MenuItem Header="Salir sin guardar" Click="SalirSinGuardar"/>
+				<MenuItem Header="Salir" Click="Salir"/>
+			</MenuItem>
+			<MenuItem Header="Opciones">
+				<MenuItem Header="Guardar al salir" x:Name="Guardar_salir" IsCheckable="True" IsChecked="True" Checked="GuardarSalirC" Unchecked="GuardarSalirU" />
+				<MenuItem Header="Reset después de shiny" x:Name="Reset_shiny" IsCheckable="True" IsChecked="True" Checked="ResetShinyC" Unchecked="ResetShinyU" />
+			</MenuItem>
+		</Menu>
 
 		<!-- Controls -->
 		<Canvas x:Name="ControlsPanel"
@@ -124,6 +124,21 @@
                 Margin="0,72,0,0"
                 Panel.ZIndex="200">
 
+			<!-- Indicador horari -->
+			<Image x:Name="TimeIcon"
+                   Width="18"
+                   Height="18"
+                   Canvas.Left="0"
+                   Canvas.Top="14"
+                   Source="Imgs/play.png"/>
+
+			<Label x:Name="TimeLabel"
+                   Content="Tarde"
+                   Style="{StaticResource HeaderLabel}"
+                   Width="70"
+                   Canvas.Left="100"
+                   Canvas.Top="8"/>
+
 			<!-- Ruta  -->
 			<ComboBox x:Name="ComboRutas"
                       FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font"
@@ -133,6 +148,82 @@
                       Height="21"
                       Canvas.Left="0"
                       Canvas.Top="12"/>
+
+			<ToggleButton x:Name="RadioToggle"
+                          Content="Radio"
+                          FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font"
+                          FontSize="14"
+                          Width="62"
+                          Height="22"
+                          Click="RadioToggle_Click"
+                          Canvas.Left="166"
+                          Canvas.Top="597"/>
+
+			<Label x:Name="RadioStatus"
+                   Content="OFF"
+                   Style="{StaticResource SmallValueLabel}"
+                   Width="40"
+                   Canvas.Left="226"
+                   Canvas.Top="600"/>
+
+			<Label x:Name="Horario"
+				   Content="Horario"
+				   Style="{StaticResource SmallValueLabel}"
+				   FontSize="18"
+				   Width="40"
+				   Canvas.Left="-250"
+				   Canvas.Top="575"/>
+
+			<!-- Dropdown horari -->
+			<ComboBox x:Name="CbHorario"
+					  FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font"
+					  FontSize="18"
+					  Width="120"
+					  Height="21"
+					  SelectionChanged="CbHorario_SelectionChanged"
+					  Canvas.Left="-250"
+					  Canvas.Top="598">
+
+				<ComboBoxItem Content="Auto" Tag="auto" IsSelected="True"/>
+				<ComboBoxItem Content="Mañana" Tag="Mañana"/>
+				<ComboBoxItem Content="Tarde" Tag="Tarde"/>
+				<ComboBoxItem Content="Noche" Tag="Noche"/>
+
+			</ComboBox>
+
+			<Label x:Name="Dia"
+				   Style="{StaticResource SmallValueLabel}"
+				   FontSize="18"
+				   Content="Día"
+				   Width="40"
+				   Canvas.Left="-100"
+				   Canvas.Top="575"/>
+
+			<!-- Dropdown dia -->
+			<ComboBox x:Name="CbDia"
+					  FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font"
+					  FontSize="18"
+					  Width="120"
+					  Height="21"
+					  SelectionChanged="CbDia_SelectionChanged"
+					  Canvas.Left="-100"
+					  Canvas.Top="598">
+
+				<ComboBoxItem Content="Auto" Tag="auto" IsSelected="True"/>
+				<ComboBoxItem Content="Miércoles" Tag="Wednesday"/>
+				<ComboBoxItem Content="Jueves" Tag="Thursday"/>
+
+			</ComboBox>
+
+			<!-- Botó fase -->
+			<Button Content="Reiniciar fase"
+					FontFamily="pack://application:,,,/Fonts/#Pokémon DS Font"
+					FontSize="14"
+					Width="80"
+					Height="22"
+					Click="BtnForzarFase_Click"
+					Canvas.Left="50"
+					Canvas.Top="597"/>
 
 			<!-- Capçaleres agrupades -->
 			<Label Content="Records de la Fase"
@@ -175,13 +266,13 @@
                    Canvas.Left="348"
                    Canvas.Top="24"/>
 
-			<Label Content="Shiny"
+			<Label Content="✨Shinys✨"
                    Style="{StaticResource HeaderLabel}"
                    Width="78"
-                   Canvas.Left="412"
+                   Canvas.Left="410"
                    Canvas.Top="5"/>
 
-			<Label Content="Encontrados"
+			<Label Content="encontrados"
                    Style="{StaticResource HeaderLabel}"
                    Width="92"
                    Canvas.Left="405"
@@ -234,7 +325,7 @@
 
 					<!-- 4 -->
 					<Label x:Name="PhaseSVBest"
-                           Content="2"
+                           Content="-"
                            Style="{StaticResource ValueLabel}"
                            FontSize="17"
                            Width="56"
@@ -244,7 +335,7 @@
 
 					<!-- 5 -->
 					<Label x:Name="PhaseSVWorst"
-                           Content="773"
+                           Content="-"
                            Style="{StaticResource ValueLabel}"
                            FontSize="17"
                            Width="56"
@@ -254,9 +345,9 @@
 
 					<!-- 6 -->
 					<Label x:Name="PhaseIVBest"
-                           Content="186"
+                           Content="-"
                            Style="{StaticResource ValueLabel}"
-                           FontSize="15"
+                           FontSize="17"
                            Width="68"
 						   HorizontalContentAlignment="Center"
                            Canvas.Left="222"
@@ -264,7 +355,7 @@
 
 					<!-- 7 -->
 					<Label x:Name="PhaseIVWorst"
-                           Content="24"
+                           Content="-"
                            Style="{StaticResource ValueLabel}"
                            FontSize="17"
                            Width="68"
@@ -290,7 +381,7 @@
 						   HorizontalContentAlignment="Center"
                            Canvas.Left="294"
                            Canvas.Top="29"/>
-					
+
 					<!-- 10 -->
 					<Label x:Name="TotalEncounters"
                            Content="0"
@@ -303,7 +394,7 @@
 
 					<!-- 11 -->
 					<Label x:Name="TotalShinyRatio"
-                           Content="❤ 0/0"
+                           Content="✨ 0/0"
                            Style="{StaticResource SmallValueLabel}"
                            Width="70"
 						   HorizontalContentAlignment="Center"
@@ -482,7 +573,7 @@
                 Margin="20,0,0,20"
                 Background="Transparent"
                 Panel.ZIndex="100">
-			
+
 			<Label x:Name="EncuentrosLabel"
                    Content="Encuentros:"
                    Style="{StaticResource ValueLabel}"
@@ -512,6 +603,22 @@
                    FontSize="18"
                    Width="60"
                    Margin="561,298,0,0"/>
+
+			<Label x:Name="PhaseTimerLabel"
+                   Content="Temps fase:"
+                   Style="{StaticResource ValueLabel}"
+                   FontSize="22"
+                   Width="120"
+                   HorizontalContentAlignment="Left"
+                   Margin="47,330,0,0"/>
+
+			<Label x:Name="PhaseTimer"
+                   Content="0 h 00 min"
+                   Style="{StaticResource ValueLabel}"
+                   FontSize="22"
+                   Width="180"
+                   HorizontalContentAlignment="Left"
+                   Margin="160,330,0,0"/>
 		</Canvas>
 
 	</Grid>
