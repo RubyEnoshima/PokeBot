@@ -5,6 +5,10 @@ offsetPokeSalvaje = 0x56EB4
 pausado = false
 mode = 1 -- 0: nada; 1: spin; 2: static (Suicune, Lugia...)
 
+-- Estado para reactivar la radio tras salir de combate
+estabaEnCombate = false
+activarRadioPendiente = false
+
 function resetPointer(newpointer) -- Resetea el puntero y encuentra la dirección que tenemos que mirar para obtener el PID
     pointer = newpointer
     pokepointer = pointer + offsetPokeSalvaje -- primer byte del pokemon salvaje
@@ -80,6 +84,46 @@ function enCombate() -- Devuelve true si el juego está en un combate
     return memory.readword(0x021DA704) == 16384
 end
 
+-- Lee si la radio está activa desde config.json o bot.json.
+-- Prioriza config.json porque en la app actual el toggle de radio suele guardarse ahí.
+function radioActivaBot()
+    local cfg = leerArchivo("config.json")
+    if cfg ~= nil and cfg["radio_activa"] ~= nil then
+        return cfg["radio_activa"] == true
+    end
+
+    local bot = leerArchivo("bot.json")
+    if bot ~= nil and bot["radio_activa"] ~= nil then
+        return bot["radio_activa"] == true
+    end
+
+    return false
+end
+
+-- Placeholder para el futuro, por si más adelante consigues un puntero RAM fiable
+-- que indique que el Pokégear está abierto.
+-- Sustituir "puterpokegearxxxxxx" por un puntero/flag real de la RAM del juego
+-- que indique "menú Pokégear abierto".
+function enPokegear()
+    -- Ejemplo futuro:
+    -- return memory.readbyte(puterpokegearxxxxxx) == 1
+    return false
+end
+
+-- Detecta la transición "estaba en combate" -> "ya no está en combate"
+-- y marca una reactivación pendiente de la radio.
+function actualizarEstadoCombate()
+    local ahoraEnCombate = enCombate()
+
+    if estabaEnCombate == true and ahoraEnCombate == false then
+        if radioActivaBot() then
+            activarRadioPendiente = true
+        end
+    end
+
+    estabaEnCombate = ahoraEnCombate
+end
+
 dir = 0
 function buscarCombate() -- Se mueve en circulos hasta que encuentra un combate
     dir = dir + 1
@@ -101,6 +145,50 @@ function huir()
     end
 end
 
+-- Reactiva la radio dentro del juego.
+-- Versión actual: "ciega" pero funcional, sin puntero RAM obligatorio.
+-- Si en el futuro quieres algo 100% fiable, usa enPokegear() con un puntero real.
+function activarRadioEnJuego()
+    if not radioActivaBot() then return end
+    if enCombate() then return end
+
+    -- Toca la zona del Pokégear hasta intentar abrirlo
+    local intentos = 0
+    while intentos < 12 and not enCombate() do
+        tocarPantalla(42,155,6)
+        esperar(6)
+        intentos = intentos + 1
+    end
+
+    -- FUTURO OPCIONAL:
+    -- Si más adelante tenemos un puntero RAM fiable para detectar el Pokégear,
+    -- se podría hacer algo así:
+    --
+    -- local intentos = 0
+    -- while not enPokegear() and intentos < 10 do
+    --     tocarPantalla(42,155,5)
+    --     esperar(5)
+    --     intentos = intentos + 1
+    -- end
+
+    -- Sale del Pokégear pulsando B
+    local intentosB = 0
+    while intentosB < 8 do
+        pulsarBoton("B",10)
+        esperar(6)
+        intentosB = intentosB + 1
+    end
+
+end
+
+-- Si la reactivación está pendiente y estamos fuera de combate, la ejecuta.
+function procesarRadioPendiente()
+    if activarRadioPendiente and not enCombate() then
+        activarRadioEnJuego()
+        activarRadioPendiente = false
+    end
+end
+
 antmode = mode
 antPID = -1
 
@@ -115,7 +203,11 @@ function comprobarPoke()
 end
 
 function pokeSalvaje()
-    if enCombate()==false then buscarCombate() end -- Buscamos combate si no estamos en uno
+    if enCombate()==false then
+        procesarRadioPendiente()
+        buscarCombate()
+        return
+    end -- Buscamos combate si no estamos en uno
 
     pid = comprobarPoke()
     
@@ -131,6 +223,7 @@ end
 pids = {}
 function pokeLegend()
     if enCombate()==false then 
+        procesarRadioPendiente()
         esperarRandom(1,300)
         pulsarBoton("A",2)
     else
@@ -157,6 +250,8 @@ function pokeLegend()
 end
 
 function actuar() -- Decide el procedimiento que hay que seguir segun un modo u otro
+    actualizarEstadoCombate()
+
     if pausado then 
         huir()
     elseif mode == 1 then -- Poke salvaje
@@ -164,6 +259,7 @@ function actuar() -- Decide el procedimiento que hay que seguir segun un modo u 
     elseif mode == 2 then -- Poke estático
         pokeLegend()
     elseif enCombate() == false then -- TODO: PODER DECIDIR QUÉ HACER CUANDO SE SALE DEL COMBATE: PARAR / SEGUIR BUSCANDO
+        procesarRadioPendiente()
         mode = antmode 
     end
 end
@@ -186,5 +282,7 @@ function actualizarBot()
 
     -- hacerlo en otro thread
     nuevaConfig = leerArchivo("bot.json")
-    pausado = nuevaConfig["pausado"]
+    if nuevaConfig ~= nil and nuevaConfig["pausado"] ~= nil then
+        pausado = nuevaConfig["pausado"]
+    end
 end
